@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "removeComments": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": [
+      "es2019",
+      "es2020",
+      "dom"
+    ],
+    "target": "es2017",
+    "module": "commonjs",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "esModuleInterop": true
+  },
+  "include": [
+    ".eslintrc.js",
+    "src/**/*",
+    "test/**/*"
+  ]
+}
