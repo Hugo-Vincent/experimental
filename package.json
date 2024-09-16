@@ -21,9 +21,8 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "@blockrise/common": "^1.0.134",
-    "@nestjs/common": "^7.6.15",
-    "@nestjs/core": "^7.6.15",
+    "@nestjs/common": "9.0.5",
+    "@nestjs/core": "9.0.5",
     "@nestjs/platform-express": "^7.6.15",
     "bip39": "^3.0.4",
     "elliptic": "^6.5.4",

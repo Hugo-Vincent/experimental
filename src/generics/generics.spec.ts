@@ -16,15 +16,21 @@ class A implements Indexable {
   ) {}
 }
 
-const mapFromProperty = <T extends Indexable>(objects: T[], propertyName: keyof T): Record<string, T[]> => {
-  return objects.reduce((acc: Record<string, T[]>, current: T): Record<string, T[]> => {
-    if (!acc[current[propertyName]]) {
-      acc[current[propertyName]] = [];
-    }
-    acc[current[propertyName]].push(current);
-    return acc;
-  }, {});
-}
+const mapFromProperty = <T extends Indexable>(
+  objects: T[],
+  propertyName: keyof T,
+): Record<string, T[]> => {
+  return objects.reduce(
+    (acc: Record<string, T[]>, current: T): Record<string, T[]> => {
+      if (!acc[current[propertyName]]) {
+        acc[current[propertyName]] = [];
+      }
+      acc[current[propertyName]].push(current);
+      return acc;
+    },
+    {},
+  );
+};
 
 describe('examples', () => {
   const exampleClassInstances = [
@@ -46,9 +52,9 @@ describe('examples', () => {
   it('2', () => {
     const example2 = mapFromProperty<A>(exampleClassInstances, 'name');
     expect(example2).toStrictEqual({
-      'a': [exampleClassInstances[0], exampleClassInstances[3]],
-      'b': [exampleClassInstances[1]],
-      'c': [exampleClassInstances[2]],
+      a: [exampleClassInstances[0], exampleClassInstances[3]],
+      b: [exampleClassInstances[1]],
+      c: [exampleClassInstances[2]],
     });
   });
   it('3', () => {
