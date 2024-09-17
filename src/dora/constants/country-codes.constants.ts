@@ -1,5 +1,5 @@
-import { ECompanies } from '../enums/companies.enum';
-import { Countries } from '../enums/countries.enum';
+import { ECompanies } from '../companies/enums/companies.enum';
+import { Countries } from '../companies/enums/countries.enum';
 
 export const COMPANY_COUNTRY_CODES: Record<ECompanies, Countries> = {
   [ECompanies.AFAS]: Countries.NL,
@@ -31,7 +31,7 @@ export const COMPANY_COUNTRY_CODES: Record<ECompanies, Countries> = {
   [ECompanies.SONARCLOUD]: Countries.CH,
   [ECompanies.SUREPAY]: Countries.NL,
   [ECompanies.TWILIO]: Countries.US,
-  [ECompanies.UNIFI]: Countries.US,
+  [ECompanies.UBIQUITI]: Countries.US,
   [ECompanies.VERCEL]: Countries.US,
   [ECompanies.VERIFF]: Countries.EE,
 };

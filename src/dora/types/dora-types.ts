@@ -1,4 +1,4 @@
-import { Countries } from '../enums/countries.enum';
+import { Countries } from '../companies/enums/countries.enum';
 
 export type TCompanyIdentifiers = 'LEI' | 'CRN' | 'VAT' | 'PNR' | 'NIN';
 export type TCodeType =

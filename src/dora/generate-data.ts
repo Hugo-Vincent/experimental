@@ -1,4 +1,4 @@
-import { ECompanies } from './enums/companies.enum';
+import { ECompanies } from './companies/enums/companies.enum';
 import { Company } from './companies/company';
 import { COMPANY_TO_LEGALNAMES } from './companies/constants/legal-names.constants';
 import { COMPANY_TO_TRADEMARKS } from './companies/constants/trade-mark-names.constants';

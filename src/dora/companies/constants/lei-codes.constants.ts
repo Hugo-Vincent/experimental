@@ -1,4 +1,4 @@
-import { ECompanies } from '../../enums/companies.enum';
+import { ECompanies } from '../enums/companies.enum';
 import { Nullable } from '../../../types/types';
 import { ICompanyIndentification } from '../interfaces/company-id.interface';
 
@@ -65,7 +65,18 @@ export const COMPANY_LEI_CODES: Record<
     code: '5493004W8TRGD63APX93',
     link: 'https://leiworldwide.com/lei_record/5493004W8TRGD63APX93',
   },
-  [ECompanies.UNIFI]: null,
+  [ECompanies.UBIQUITI]: null,
   [ECompanies.VERCEL]: null,
   [ECompanies.VERIFF]: null,
+
+  [ECompanies.BLOCKCHAINDOTCOM]: null,
+  [ECompanies.GLASSNODE]: null,
+  [ECompanies.GRAFANA]: null,
+  [ECompanies.GRCTOOL]: null,
+  [ECompanies.HEXNODE]: null,
+  [ECompanies.ING]: null,
+  [ECompanies.KWINZO]: null,
+  [ECompanies.MEMPOOL]: null,
+  [ECompanies.SHIFTBASE]: null,
+  [ECompanies.ZENDESK]: null,
 };

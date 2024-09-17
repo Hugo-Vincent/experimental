@@ -31,7 +31,7 @@ export enum ECompanyTradeMarks {
   SONARCLOUD = 'SonarCloud',
   SUREPAY = 'SurePay',
   TWILIO = 'Twilio',
-  UNIFI = 'Unifi',
+  UBIQUITI = 'Ubiquiti',
   VERCEL = 'Vercel',
   VERIFF = 'Veriff',
 }

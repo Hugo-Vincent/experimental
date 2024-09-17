@@ -1,4 +1,4 @@
-import { ECompanies } from '../enums/companies.enum';
+import { ECompanies } from '../companies/enums/companies.enum';
 import { TCompanyIdentifiers } from '../types/dora-types';
 import { COMPANY_LEI_CODES } from '../companies/constants/lei-codes.constants';
 import { ICompanyIndentification } from '../companies/interfaces/company-id.interface';

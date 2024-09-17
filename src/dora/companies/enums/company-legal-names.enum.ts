@@ -31,7 +31,7 @@ export enum ECompanyLegalNames {
   SONARCLOUD = 'SonarSource SA',
   SUREPAY = 'SurePay B.V.',
   TWILIO = 'Twilio Inc.',
-  UNIFI = 'Ubiquiti Inc.',
+  UBIQUITI = 'Ubiquiti Inc.',
   VERCEL = 'Vercel Inc.',
   VERIFF = 'Veriff OÜ',
 }

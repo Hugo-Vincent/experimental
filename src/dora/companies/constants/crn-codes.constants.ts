@@ -1,4 +1,4 @@
-import { ECompanies } from '../../enums/companies.enum';
+import { ECompanies } from '../enums/companies.enum';
 import { Nullable } from '../../../types/types';
 import { ICompanyIndentification } from '../interfaces/company-id.interface';
 
@@ -137,7 +137,7 @@ export const COMPANY_CRN_CODES: Record<
   [ECompanies.GOOGLE]: null, // Registered in multiple states with multiple codes it seems
 
   // New York
-  [ECompanies.UNIFI]: {
+  [ECompanies.UBIQUITI]: {
     code: '4803376', // New York DOS ID
     link: 'https://apps.dos.ny.gov/publicInquiry/',
   },
@@ -153,4 +153,19 @@ export const COMPANY_CRN_CODES: Record<
     code: '20091597249', // Colorado ID Number
     link: 'https://www.sos.state.co.us/biz/BusinessEntityDetail.do?quitButtonDestination=BusinessEntityResults&nameTyp=ENT&masterFileId=20091597249&entityId2=20091597249&fileId=20091597249&srchTyp=ENTITY',
   },
+
+  [ECompanies.BLOCKCHAINDOTCOM]: null, // HQ in Luxembourg, York, London, Miami, Estonia, Cayman Islands? And it has a LEI code on the British Virgin Isles, which one is it
+  [ECompanies.GLASSNODE]: {
+    // Only used by Corporate for something
+    code: 'CHE297410093',
+    link: 'https://www.zefix.ch/en/search/entity/list/firm/1505165',
+  },
+  [ECompanies.GRAFANA]: null,
+  [ECompanies.GRCTOOL]: null,
+  [ECompanies.HEXNODE]: null,
+  [ECompanies.ING]: null,
+  [ECompanies.KWINZO]: null,
+  [ECompanies.MEMPOOL]: null,
+  [ECompanies.SHIFTBASE]: null,
+  [ECompanies.ZENDESK]: null,
 };
