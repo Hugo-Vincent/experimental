@@ -1,0 +1,132 @@
+1. LEI Identification
+724500J6RZI9SE1AAP41 Blockrise Capital B.V. (https://lei-nederland.nl/gedetailleerde-informatie/37238014/724500J6RZI9SE1AAP41/blockrise-capital-b-v/)
+-------------------- Afas Software B.V.
+724500MX2WBKDJP9HE56 Bitvavo B.V. (https://lei-nederland.nl/gedetailleerde-informatie/46438246/724500MX2WBKDJP9HE56/bitvavo-b-v/)
+-------------------- Bitwarden Inc.
+7245002ZUXNOEJ0QPZ44 Bunq B.V. (https://lei-nederland.nl/gedetailleerde-informatie/1040476/7245002ZUXNOEJ0QPZ44/bunq-b-v/)
+-------------------- Chainstack Pte. Ltd.
+5493007DY18BGNLDWU14 Cloudflare Inc. (https://leiworldwide.com/lei_record/5493007DY18BGNLDWU14)
+2138004U3BWMFNR4ZW05 Colt Technology Services Europe Ltd. (https://leiworldwide.com/lei_record/2138004U3BWMFNR4ZW05)
+-------------------- Gecko Labs Pte. Ltd. (with trademark "CoinGecko")
+-------------------- Compliance Advantage Ltd.
+-------------------- Elliptic Enterprises Ltd.
+-------------------- Github Inc. (only Github India has an LEI)
+7ZW8QJWVPR4P1J1KQY45 Google LLC (https://leiworldwide.com/lei_search?lei=Google)
+-------------------- iDIN B.V.
+-------------------- ipapi (ipapi.co NOT .com) (we are ditching this probably)
+-------------------- Payward Continental Services Limited (with trademark "Kraken")
+-------------------- Linear Orbit Inc.
+INR2EJN1ERAN0W5ZP974 Microsoft Corporation (https://lei.info/fullsearch?for=Microsoft)
+-------------------- Notion Labs Inc.
+-------------------- Postcode API B.V.
+724500NG2W3S69V8WP89 Tintel B.V. (with trademark "Pay.")
+-------------------- Sanity US, Inc.
+-------------------- Scrive AB (= Aktiebolag = Ltd.)
+549300PAZSY4OW33YX23 Sendgrid Inc. (LEI CODE LAPSED, USE OTHER CODE UNTIL RENEWED?)
+-------------------- Functional Software Inc. (with trademark "Sentry")
+5493001KJTIIGC8Y1R12 Slack Technologies Inc. (LEI CODE LAPSED, USE OTHER CODE UNTIL RENEWED?)
+-------------------- SonarSource SA
+7245002VP75ES3R96S70 SurePay B.V.
+5493004W8TRGD63APX93 Twilio (https://leiworldwide.com/lei_record/5493004W8TRGD63APX93)
+-------------------- Ubiquiti Inc. (with trademark "Unifi")
+-------------------- Vercel Inc.
+-------------------- Veriff OÜ (= osaühing = Ltd.)
+--------------------
+--------------------
+--------------------
+
+
+2. Corporate Registry Identification
+
+NL
+KVK
+74879782    Blockrise Capital B.V.
+31046821    Afas Software B.V.
+68743424    Bitvavo B.V.
+54992060    Bunq B.V.
+67439594    iDIN B.V.
+68503326    Postcode API B.V.
+24283498    Tintel B.V.
+77251733    Surepay B.V.
+
+
+Singapore
+Accounting and Corporate Regulatory Authority (ARCA) - Unique Entity Number (UEN)
+201813548K  Chainstack Pte. Ltd. (https://www.sgpbusiness.com/company/Chainstack-Pte-Ltd)
+201510008G  Gecko Labs Pte. Ltd. (Coingecko) (https://www.coingecko.com/en/terms)
+
+
+
+UK
+Companies House - Company Registration Number (CRN)
+11654191    Compliance Advantage Ltd. (https://find-and-update.company-information.service.gov.uk/company/11654191)
+8458210     Elliptic Enterprises Ltd. (https://find-and-update.company-information.service.gov.uk/company/08458210)
+03218510    Colt Technology Services Europe Ltd. (https://find-and-update.company-information.service.gov.uk/company/03218510)
+            (check invoice on whether this is the correct branch that we deal with, since there are multiple)
+
+
+Ireland
+Company Registration Office (CRO) - Company Number
+701536      Payward Continental Services Ltd. (https://core.cro.ie/search "Payward")
+            Kraken has many branch offices. On this website (https://www.kraken.com/legal) it says if we are in NL, then
+            we are dealing with "Payward Continental Services Limited".
+
+
+
+Sweden
+Swedish Companies Registration Office - Registration Number
+556816-6804 Scrive AB (https://foretagsinfo.bolagsverket.se/sok-foretagsinformation-web/foretag/5568166804/foretagsform/AB)
+
+
+
+Switzerland
+Swiss Commercial Registry - Company Identification Number (UID, for Unternehmens-Identifikationsnummer)
+CHE464234583 Securosys SA (https://www.zefix.ch/en/search/entity/list/firm/1177182)
+CHE114587664 SonarSource SA (https://www.zefix.ch/en/search/entity/list/firm/926929)
+
+
+
+Estonia
+Commercial Register (Äriregister) of the Estonian Centre of Registers and Information Systems (RIK) - Registration Code
+12932944    Veriff OÜ (https://ariregister.rik.ee/eng/company/12932944/Veriff-O%C3%9C?search_id=e5b6efe&pos=1)
+
+
+
+USA
+SoS (Secretary of State)
+
+California (San Francisco really) - Business Account Number (https://data.sfgov.org/widgets/g8m3-pdis)
+1146312     Bitwarden Inc.
+0460442     Cloudflare Inc.
+0456831     Github Inc.
+1100568     Linear Orbit Inc.
+0480836     Notion Labs Inc.
+1128541     Sanity US Inc.
+1016210     Functional Software Inc.
+0453681     Slack Technologies Inc.
+0447370     Twilio Inc.
+1073781     Vercel Inc.
+
+New York - Department of State (DOS) ID
+4803376     Ubiquiti Inc. (https://apps.dos.ny.gov/publicInquiry/ search "Ubiquiti" with entity type "Corporation")
+
+Washington - UBI Number
+600413485   Microsoft Corporation (https://ccfs.sos.wa.gov/#/BusinessSearch "Microsoft")
+
+
+Sendgrid Notes:
+The Sendgrid page for Colorado SoS says "SendGrid, Inc., Colorado Authority Relinquished May 13, 2020"
+The Delaware SoS says the statement is "not in good standing".
+The LEI of Sendgrid has also lapsed.
+Let's go with their VAT.
+
+Github Notes:
+Note sure why Github Inc. is also registered in Delaware with another number. Let's go with California.
+
+
+Colorado - ID number (?)
+20091597249 Sendgrid, Inc. (https://www.sos.state.co.us/biz/BusinessEntityDetail.do?quitButtonDestination=BusinessEntityResults&nameTyp=ENT&masterFileId=20091597249&entityId2=20091597249&fileId=20091597249&srchTyp=ENTITY)
+
+Delaware - File number (https://icis.corp.delaware.gov/eCorp/EntitySearch/NameSearch.aspx)
+4711439     Sendgrid, Inc.
+5157550     Github Inc.  (also https://opencorporates.com/companies/us_de/5157550)

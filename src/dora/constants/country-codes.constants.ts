@@ -1,10 +1,12 @@
 import { ECompanies } from '../companies/enums/companies.enum';
 import { Countries } from '../companies/enums/countries.enum';
 
+// @ts-ignore
 export const COMPANY_COUNTRY_CODES: Record<ECompanies, Countries> = {
   [ECompanies.AFAS]: Countries.NL,
   [ECompanies.BITVAVO]: Countries.NL,
   [ECompanies.BITWARDEN]: Countries.US,
+  [ECompanies.BLOCKCHAINDOTCOM]: Countries.GB,
   [ECompanies.BLOCKRISE]: Countries.NL,
   [ECompanies.BUNQ]: Countries.NL,
   [ECompanies.CHAINSTACK]: Countries.SG,
@@ -14,8 +16,12 @@ export const COMPANY_COUNTRY_CODES: Record<ECompanies, Countries> = {
   [ECompanies.COMPLYADVANTAGE]: Countries.GB,
   [ECompanies.ELLIPTIC]: Countries.GB,
   [ECompanies.GITHUB]: Countries.US,
+  [ECompanies.GLASSNODE]: Countries.US,
   [ECompanies.GOOGLE]: Countries.US,
+  [ECompanies.GRAFANA]: Countries.GB,
+  [ECompanies.HEXNODE]: Countries.US,
   [ECompanies.IDIN]: Countries.NL,
+  [ECompanies.ING]: Countries.NL,
   [ECompanies.KRAKEN]: Countries.IE,
   [ECompanies.LINEAR]: Countries.US,
   [ECompanies.MICROSOFT]: Countries.US,
@@ -34,4 +40,8 @@ export const COMPANY_COUNTRY_CODES: Record<ECompanies, Countries> = {
   [ECompanies.UBIQUITI]: Countries.US,
   [ECompanies.VERCEL]: Countries.US,
   [ECompanies.VERIFF]: Countries.EE,
+  [ECompanies.KWINZO]: Countries.US,
+  [ECompanies.MEMPOOL]: Countries.US,
+  [ECompanies.SHIFTBASE]: Countries.EE,
+  [ECompanies.ZENDESK]: Countries.EE,
 };

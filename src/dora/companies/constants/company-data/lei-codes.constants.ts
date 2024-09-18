@@ -1,6 +1,6 @@
-import { ECompanies } from '../enums/companies.enum';
-import { Nullable } from '../../../types/types';
-import { ICompanyIndentification } from '../interfaces/company-id.interface';
+import { ECompanies } from '../../enums/companies.enum';
+import { Nullable } from '../../../../types/types';
+import { ICompanyIndentification } from '../../interfaces/company-id.interface';
 
 export const COMPANY_LEI_CODES: Record<
   ECompanies,
@@ -16,6 +16,7 @@ export const COMPANY_LEI_CODES: Record<
     code: '724500J6RZI9SE1AAP41',
     link: 'https://lei-nederland.nl/gedetailleerde-informatie/37238014/724500J6RZI9SE1AAP41/blockrise-capital-b-v/',
   },
+  [ECompanies.STICHTING_BLOCKRISE]: null,
   [ECompanies.BUNQ]: {
     code: '7245002ZUXNOEJ0QPZ44',
     link: 'https://lei-nederland.nl/gedetailleerde-informatie/1040476/7245002ZUXNOEJ0QPZ44/bunq-b-v/',
@@ -38,6 +39,10 @@ export const COMPANY_LEI_CODES: Record<
     link: 'https://leiworldwide.com/lei_record/7ZW8QJWVPR4P1J1KQY45',
   },
   [ECompanies.IDIN]: null,
+  [ECompanies.ING]: {
+    code: '3TK20IVIUJ8J3ZU0QE75',
+    link: 'https://lei-nederland.nl/gedetailleerde-informatie/417638/3TK20IVIUJ8J3ZU0QE75/ing-bank-n-v/',
+  },
   [ECompanies.KRAKEN]: null,
   [ECompanies.LINEAR]: null,
   [ECompanies.MICROSOFT]: {
@@ -72,11 +77,9 @@ export const COMPANY_LEI_CODES: Record<
   [ECompanies.BLOCKCHAINDOTCOM]: null,
   [ECompanies.GLASSNODE]: null,
   [ECompanies.GRAFANA]: null,
-  [ECompanies.GRCTOOL]: null,
   [ECompanies.HEXNODE]: null,
-  [ECompanies.ING]: null,
   [ECompanies.KWINZO]: null,
   [ECompanies.MEMPOOL]: null,
   [ECompanies.SHIFTBASE]: null,
   [ECompanies.ZENDESK]: null,
-};
+} as const;

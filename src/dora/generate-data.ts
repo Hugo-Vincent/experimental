@@ -1,10 +1,10 @@
 import { ECompanies } from './companies/enums/companies.enum';
 import { Company } from './companies/company';
-import { COMPANY_TO_LEGALNAMES } from './companies/constants/legal-names.constants';
-import { COMPANY_TO_TRADEMARKS } from './companies/constants/trade-mark-names.constants';
-import { COMPANY_LEI_CODES } from './companies/constants/lei-codes.constants';
+import { COMPANY_LEGAL_NAMES } from './companies/constants/company-data/legal-names.constants';
+import { COMPANY_TRADEMARKS } from './companies/constants/company-data/trade-mark-names.constants';
+import { COMPANY_LEI_CODES } from './companies/constants/company-data/lei-codes.constants';
 import { TCompanyIdentifiers } from './types/dora-types';
-import { COMPANY_CRN_CODES } from './companies/constants/crn-codes.constants';
+import { COMPANY_CRN_CODES } from './companies/constants/company-data/crn-codes.constants';
 import { CODETYPE_TO_CODEMAP } from './constants/mappings.constants';
 import { COMPANY_COUNTRY_CODES } from './constants/country-codes.constants';
 import { TJson } from './types/json.type';
@@ -18,8 +18,8 @@ export function generateData(): Company[] {
 }
 
 function createCompany(company: ECompanies) {
-  const legalName = COMPANY_TO_LEGALNAMES[company];
-  const tradeMarkName = COMPANY_TO_TRADEMARKS[company];
+  const legalName = COMPANY_LEGAL_NAMES[company];
+  const tradeMarkName = COMPANY_TRADEMARKS[company];
   const companyIdType = getIdType(company);
   const country = COMPANY_COUNTRY_CODES[company];
   const companyIdentification = CODETYPE_TO_CODEMAP[companyIdType][company];
@@ -89,8 +89,8 @@ export class JsonGenerator {
   }
 
   private createCompany(company: ECompanies) {
-    const legalName = COMPANY_TO_LEGALNAMES[company];
-    const tradeMarkName = COMPANY_TO_TRADEMARKS[company];
+    const legalName = COMPANY_LEGAL_NAMES[company];
+    const tradeMarkName = COMPANY_TRADEMARKS[company];
     const companyIdType = getIdType(company);
     const country = COMPANY_COUNTRY_CODES[company];
     const companyIdentification = CODETYPE_TO_CODEMAP[companyIdType][company];
