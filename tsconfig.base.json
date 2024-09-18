@@ -22,17 +22,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "noImplicitAny": false,
-    "paths": {
-      "@blockrise/common/*": [
-        "libs/common/src/*"
-      ],
-      "@blockrise/exchange/*": [
-        "libs/exchange/src/*"
-      ],
-      "@blockrise/proxies/*": [
-        "libs/proxies/src/*"
-      ]
-    },
     "types": [
       "jest"
     ],
