@@ -1,13 +1,13 @@
 import { ECompanies } from '../companies/enums/companies.enum';
 import { Countries } from '../companies/enums/countries.enum';
 
-// @ts-ignore
 export const COMPANY_COUNTRY_CODES: Record<ECompanies, Countries> = {
   [ECompanies.AFAS]: Countries.NL,
   [ECompanies.BITVAVO]: Countries.NL,
   [ECompanies.BITWARDEN]: Countries.US,
   [ECompanies.BLOCKCHAINDOTCOM]: Countries.GB,
   [ECompanies.BLOCKRISE]: Countries.NL,
+  [ECompanies.STICHTING_BLOCKRISE]: Countries.NL,
   [ECompanies.BUNQ]: Countries.NL,
   [ECompanies.CHAINSTACK]: Countries.SG,
   [ECompanies.CLOUDFLARE]: Countries.US,
@@ -25,9 +25,11 @@ export const COMPANY_COUNTRY_CODES: Record<ECompanies, Countries> = {
   [ECompanies.KRAKEN]: Countries.IE,
   [ECompanies.LINEAR]: Countries.US,
   [ECompanies.MICROSOFT]: Countries.US,
+  [ECompanies.NEXTNOVATE]: Countries.NL,
   [ECompanies.NOTION]: Countries.US,
   [ECompanies.POSTCODEAPI]: Countries.NL,
   [ECompanies.PAY_DOT]: Countries.NL,
+  [ECompanies.QUICKNODE]: Countries.US,
   [ECompanies.SANITY]: Countries.US,
   [ECompanies.SCRIVE]: Countries.SE,
   [ECompanies.SECUROSYS]: Countries.CH,
@@ -38,6 +40,7 @@ export const COMPANY_COUNTRY_CODES: Record<ECompanies, Countries> = {
   [ECompanies.SUREPAY]: Countries.NL,
   [ECompanies.TWILIO]: Countries.US,
   [ECompanies.UBIQUITI]: Countries.US,
+  [ECompanies.UNISCAPE]: Countries.NL,
   [ECompanies.VERCEL]: Countries.US,
   [ECompanies.VERIFF]: Countries.EE,
   [ECompanies.KWINZO]: Countries.US,

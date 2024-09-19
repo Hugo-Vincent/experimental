@@ -1,35 +1,15 @@
 import { ECompanies } from './companies/enums/companies.enum';
 import { Company } from './companies/company';
-import { COMPANY_LEGAL_NAMES } from './companies/constants/company-data/legal-names.constants';
-import { COMPANY_TRADEMARKS } from './companies/constants/company-data/trade-mark-names.constants';
 import { COMPANY_LEI_CODES } from './companies/constants/company-data/lei-codes.constants';
-import { TCompanyIdentifiers } from './types/dora-types';
+import { TCompanyIdentifiers, TJson } from './types/general-types';
 import { COMPANY_CRN_CODES } from './companies/constants/company-data/crn-codes.constants';
-import { CODETYPE_TO_CODEMAP } from './constants/mappings.constants';
-import { COMPANY_COUNTRY_CODES } from './constants/country-codes.constants';
-import { TJson } from './types/json.type';
-import { TABLE_SPECS } from './tables/table-specs.constants';
+import { TABLE_SPECS } from './tables/constants/table-specs.constants';
 
 export function generateData(): Company[] {
   const companyKeysArray = Object.keys(ECompanies).map(
     (x) => ECompanies[x],
   ) as ECompanies[];
-  return companyKeysArray.map((x) => createCompany(x));
-}
-
-function createCompany(company: ECompanies) {
-  const legalName = COMPANY_LEGAL_NAMES[company];
-  const tradeMarkName = COMPANY_TRADEMARKS[company];
-  const companyIdType = getIdType(company);
-  const country = COMPANY_COUNTRY_CODES[company];
-  const companyIdentification = CODETYPE_TO_CODEMAP[companyIdType][company];
-  return new Company(
-    legalName,
-    tradeMarkName,
-    companyIdType,
-    country,
-    companyIdentification,
-  );
+  return companyKeysArray.map((x) => new Company(x));
 }
 
 function getIdType(company: ECompanies): TCompanyIdentifiers {
@@ -55,7 +35,7 @@ export class JsonGenerator {
     const companyKeysArray = Object.keys(ECompanies).map(
       (x) => ECompanies[x],
     ) as ECompanies[];
-    return companyKeysArray.map((x) => this.createCompany(x));
+    return companyKeysArray.map((x) => new Company(x));
   }
 
   generateExcelTables(): { [K in string]: TJson } {
@@ -86,21 +66,6 @@ export class JsonGenerator {
       table[key] = null;
     }
     return table;
-  }
-
-  private createCompany(company: ECompanies) {
-    const legalName = COMPANY_LEGAL_NAMES[company];
-    const tradeMarkName = COMPANY_TRADEMARKS[company];
-    const companyIdType = getIdType(company);
-    const country = COMPANY_COUNTRY_CODES[company];
-    const companyIdentification = CODETYPE_TO_CODEMAP[companyIdType][company];
-    return new Company(
-      legalName,
-      tradeMarkName,
-      companyIdType,
-      country,
-      companyIdentification,
-    );
   }
 
   private stringifyNumbers(nr: number): string {

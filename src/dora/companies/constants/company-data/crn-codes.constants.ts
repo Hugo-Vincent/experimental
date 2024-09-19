@@ -39,6 +39,10 @@ export const COMPANY_CRN_CODES: Record<
     code: '92088805',
     link: 'https://www.kvk.nl/bestellen/#/92088805000057733570',
   },
+  [ECompanies.NEXTNOVATE]: {
+    code: '67656684',
+    link: 'https://www.kvk.nl/bestellen/#/67656684000011865849/'
+  },
   [ECompanies.PAY_DOT]: {
     code: '24283498',
     link: 'https://www.kvk.nl/bestellen/#/24283498/',
@@ -54,6 +58,10 @@ export const COMPANY_CRN_CODES: Record<
   [ECompanies.SUREPAY]: {
     code: '77251733',
     link: 'https://www.kvk.nl/bestellen/#/77251733/',
+  },
+  [ECompanies.UNISCAPE]: {
+    code: '59444797',
+    link: 'https://www.kvk.nl/bestellen/#/59444797000028742621',
   },
 
   // Singapore - Accounting and Corporate Regulatory Authority (ARCA) - Unique Entity Number (UEN)
@@ -177,6 +185,16 @@ export const COMPANY_CRN_CODES: Record<
     link: 'https://data.sfgov.org/widgets/g8m3-pdis',
   },
   [ECompanies.GOOGLE]: null, // Registered in multiple states with multiple codes it seems
+
+  // Florida - Registration number
+  [ECompanies.QUICKNODE]: {
+    // Quicknode does not show up in the official Florida SoS government website
+    // https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResults/EntityName/Quicknode/Page1?searchNameOrder=QUICKNODE
+    // They mention literally nothing on their website, and their terms of service document is a joke.
+    // Only thing I could find is QuickNode LLC, and a document saying how it converted to QuickNode Inc. in 2021.
+    code: '6032866',
+    link: 'https://trademarks.justia.com/886/12/quiknode-88612857.html',
+  },
 
   // New York - DOS ID
   [ECompanies.UBIQUITI]: {

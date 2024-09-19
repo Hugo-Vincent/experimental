@@ -1,5 +1,5 @@
 import { ECompanies } from '../companies/enums/companies.enum';
-import { TCompanyIdentifiers } from '../types/dora-types';
+import { TCompanyIdentifiers } from '../types/general-types';
 import { COMPANY_LEI_CODES } from '../companies/constants/company-data/lei-codes.constants';
 import { ICompanyIndentification } from '../companies/interfaces/company-id.interface';
 import { COMPANY_CRN_CODES } from '../companies/constants/company-data/crn-codes.constants';

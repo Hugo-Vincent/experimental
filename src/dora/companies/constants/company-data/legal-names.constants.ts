@@ -26,9 +26,11 @@ const _COMPANY_LEGAL_NAMES = {
   [ECompanies.LINEAR]: 'Linear Orbit Inc.',
   [ECompanies.MEMPOOL]: 'Mempool Space Co. Ltd.', // Or Mempool Space K.K. (K.K. = Kabushiki Kaisha = Co. Ltd.)
   [ECompanies.MICROSOFT]: 'Microsoft Corporation',
+  [ECompanies.NEXTNOVATE]: 'NextNovate B.V.',
   [ECompanies.NOTION]: 'Notion Labs Inc.',
   [ECompanies.POSTCODEAPI]: 'Postcode API B.V.',
   [ECompanies.PAY_DOT]: 'Tintel B.V.',
+  [ECompanies.QUICKNODE]: '',
   [ECompanies.SANITY]: 'Sanity US, Inc.',
   [ECompanies.SCRIVE]: 'Scrive AB', // (AB = Aktiebolag = Ltd.)
   [ECompanies.SECUROSYS]: 'Securosys SA', // (SA = Société Anonyme = Public Limited Company = PLC)
@@ -40,6 +42,7 @@ const _COMPANY_LEGAL_NAMES = {
   [ECompanies.SUREPAY]: 'SurePay B.V.',
   [ECompanies.TWILIO]: 'Twilio Inc.',
   [ECompanies.UBIQUITI]: 'Ubiquiti Inc.',
+  [ECompanies.UNISCAPE]: 'Uniscape B.V.',
   [ECompanies.VERCEL]: 'Vercel Inc.',
   [ECompanies.VERIFF]: 'Veriff OÜ', // (OÜ = osaühing = Ltd.)
   [ECompanies.ZENDESK]: 'Zendesk Inc.',

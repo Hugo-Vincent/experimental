@@ -1,6 +1,4 @@
-export const TABLE_SPECS: {
-  [P in number]: { [K in number]: number };
-} = {
+export const TABLE_SPECS = {
   1: {
     1: 6,
     2: 11,
@@ -29,4 +27,4 @@ export const TABLE_SPECS: {
   7: {
     1: 12,
   },
-};
+} as const;

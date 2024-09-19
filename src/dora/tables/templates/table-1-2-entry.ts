@@ -1,9 +1,11 @@
-import { Countries } from '../companies/enums/countries.enum';
-import { TEntityType } from '../constants/entity-types.constants';
+import { Countries } from '../../companies/enums/countries.enum';
+import { TEntityType } from '../../constants/entity-types.constants';
 import { Table } from './table';
-import { TDate } from '../types/dora-types';
+import { TDate } from '../../types/general-types';
+import { Currencies } from '../../companies/enums/currencies.enum';
+import { Company } from '../../companies/company';
 
-export class Table1_2_Entry extends Table {
+export class EntryTable1_2 extends Table {
   lei: string;
   legalName: string;
   country: Countries;
@@ -17,23 +19,20 @@ export class Table1_2_Entry extends Table {
   totalAssetValue: string;
 
   constructor(
-    lei: string,
-    legalName: string,
-    country: Countries,
-    entityType: TEntityType,
+    company: Company,
     hierarchy: string,
     parentLei: string,
     lastUpdate: TDate,
     integrationDate: TDate,
     deletionDate: TDate,
-    currency: string,
+    currency: Currencies,
     totalAssetValue: string,
   ) {
     super(1, 2);
-    this.lei = lei;
-    this.legalName = legalName;
-    this.country = country;
-    this.entityType = entityType;
+    this.lei = company.companyIdentification.code;
+    this.legalName = company.legalName;
+    this.country = company.country;
+    this.entityType = company.entityType;
     this.hierarchy = hierarchy;
     this.parentLei = parentLei;
     this.lastUpdate = lastUpdate;

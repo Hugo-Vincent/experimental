@@ -8,3 +8,10 @@ export type TCodeType =
  * 2024-08-23
  */
 export type TDate = `${string}-${string}-${string}`;
+export type TJson =
+  | string
+  | number
+  | boolean
+  | null
+  | TJson[]
+  | { [key: string]: TJson };

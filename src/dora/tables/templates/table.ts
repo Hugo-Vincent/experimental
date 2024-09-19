@@ -1,7 +1,7 @@
-import { TJson } from '../types/json.type';
-import { TABLE_SPECS } from './table-specs.constants';
+import { TABLE_SPECS } from '../constants/table-specs.constants';
+import { TJson } from '../../types/general-types';
 
-export class Table {
+export abstract class Table {
   protected tableNr: number;
   protected subTableNr: number;
   protected superClassPropertyNames: string[];

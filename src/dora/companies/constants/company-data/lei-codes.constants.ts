@@ -49,12 +49,14 @@ export const COMPANY_LEI_CODES: Record<
     code: 'INR2EJN1ERAN0W5ZP974',
     link: 'https://lei.info/fullsearch?for=Microsoft',
   },
+  [ECompanies.NEXTNOVATE]: null,
   [ECompanies.NOTION]: null,
   [ECompanies.POSTCODEAPI]: null,
   [ECompanies.PAY_DOT]: {
     code: '724500NG2W3S69V8WP89',
     link: 'https://lei-nederland.nl/gedetailleerde-informatie/1098440/724500NG2W3S69V8WP89/tintel-b-v/',
   },
+  [ECompanies.QUICKNODE]: null,
   [ECompanies.SANITY]: null,
   [ECompanies.SCRIVE]: null,
   [ECompanies.SECUROSYS]: null,
@@ -71,6 +73,7 @@ export const COMPANY_LEI_CODES: Record<
     link: 'https://leiworldwide.com/lei_record/5493004W8TRGD63APX93',
   },
   [ECompanies.UBIQUITI]: null,
+  [ECompanies.UNISCAPE]: null,
   [ECompanies.VERCEL]: null,
   [ECompanies.VERIFF]: null,
 

@@ -1,6 +1,7 @@
 import { generateData, JsonGenerator } from './generate-data';
 import { ECompanies } from './companies/enums/companies.enum';
-import { Table1_1 } from './tables/table-1-1';
+import { EntryTable1_1 } from './tables/templates/table-1-1-entry';
+import { COMPANY_INSTANCES } from './companies/constants/company-instances.constants';
 
 describe('generate data', () => {
   it('generate data', () => {
@@ -9,7 +10,13 @@ describe('generate data', () => {
   });
 
   it('generate tables', () => {
-    console.log(new Table1_1().toJSON());
+    console.log(new EntryTable1_1('2024-09-19').toJSON());
+    console.log(new EntryTable1_1('2024-09-19').toJSON());
+    console.log(new EntryTable1_1('2024-09-19').toJSON());
+  });
+
+  it('generate Tables 1', async () => {
+
   });
 });
 // [{

@@ -1,4 +1,4 @@
-import { TCodeType } from '../../types/dora-types';
+import { TCodeType } from '../../types/general-types';
 import { ICompanyIndentification } from './company-id.interface';
 
 export interface ICompanyInfo {
