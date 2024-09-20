@@ -1,11 +1,11 @@
 import { Countries } from '../../companies/enums/countries.enum';
 import { TEntityType } from '../../constants/entity-types.constants';
-import { Table } from './table';
+import { TableEntry } from './table-entry';
 import { TDate } from '../../types/general-types';
 import { Currencies } from '../../companies/enums/currencies.enum';
 import { Company } from '../../companies/company';
 
-export class EntryTable1_2 extends Table {
+export class EntryTable1_2 extends TableEntry {
   lei: string;
   legalName: string;
   country: Countries;

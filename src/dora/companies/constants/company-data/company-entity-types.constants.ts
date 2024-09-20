@@ -6,7 +6,7 @@ export const COMPANY_ENTITY_TYPES: Record<ECompanies, TEntityType> = {
   [ECompanies.BITVAVO]: ENTITY_TYPES[1],
   [ECompanies.BITWARDEN]: ENTITY_TYPES[1],
   [ECompanies.BLOCKCHAINDOTCOM]: ENTITY_TYPES[1],
-  [ECompanies.BLOCKRISE]: ENTITY_TYPES[1],
+  [ECompanies.BLOCKRISE]: ENTITY_TYPES[6],
   [ECompanies.STICHTING_BLOCKRISE]: ENTITY_TYPES[1],
   [ECompanies.BUNQ]: ENTITY_TYPES[1],
   [ECompanies.CHAINSTACK]: ENTITY_TYPES[1],

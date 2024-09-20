@@ -1,2 +1,2 @@
-export const FIRST_REPORTING_DATE = '01-01-2024';
+export const FIRST_REPORTING_DATE = '2024-01-01';
 export const DELETION_DATE_PLACEHOLDER = '9999-12-31';

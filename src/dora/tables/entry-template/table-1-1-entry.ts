@@ -4,14 +4,14 @@ import { COMPANY_COUNTRY_CODES } from '../../constants/country-codes.constants';
 import { COMPANY_LEGAL_NAMES, TLegalName } from '../../companies/constants/company-data/legal-names.constants';
 import { Countries } from '../../companies/enums/countries.enum';
 import { TEntityType } from '../../constants/entity-types.constants';
-import { Table } from './table';
+import { TableEntry } from './table-entry';
 import { COMPANY_ENTITY_TYPES } from '../../companies/constants/company-data/company-entity-types.constants';
 import { TDate } from '../../types/general-types';
 
 /**
  * REPORTING ENTITY (BLOCKRISE)
  */
-export class EntryTable1_1 extends Table {
+export class EntryTable1_1 extends TableEntry {
   lei: string;
   legalName: TLegalName;
   country: Countries;

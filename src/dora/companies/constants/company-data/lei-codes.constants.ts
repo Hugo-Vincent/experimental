@@ -34,8 +34,8 @@ export const COMPANY_LEI_CODES: Record<
   [ECompanies.COMPLYADVANTAGE]: null,
   [ECompanies.ELLIPTIC]: null,
   [ECompanies.GITHUB]: null,
-  [ECompanies.GOOGLE]: {
-    code: '7ZW8QJWVPR4P1J1KQY45',
+  [ECompanies.GOOGLE]: { // LEI van Google IRELAND LIMITED , NIET LLC?
+    code: '7ZW8QJWVPR4P1J1KQY45', // YYPPRNO5HB304LHFVG31
     link: 'https://leiworldwide.com/lei_record/7ZW8QJWVPR4P1J1KQY45',
   },
   [ECompanies.IDIN]: null,

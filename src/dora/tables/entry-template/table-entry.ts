@@ -1,7 +1,7 @@
 import { TABLE_SPECS } from '../constants/table-specs.constants';
 import { TJson } from '../../types/general-types';
 
-export abstract class Table {
+export abstract class TableEntry {
   protected tableNr: number;
   protected subTableNr: number;
   protected superClassPropertyNames: string[];
@@ -22,7 +22,7 @@ export abstract class Table {
       )}.0${this.stringifyNumbers(i)}0`;
       table[key] = values[i - 1];
     }
-    return JSON.stringify(table);
+    return table;
   }
 
   private getValuesForJson(): unknown[] {
