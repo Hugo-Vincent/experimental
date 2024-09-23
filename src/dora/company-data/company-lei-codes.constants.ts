@@ -1,12 +1,16 @@
-import { ECompanies } from '../../enums/companies.enum';
-import { Nullable } from '../../../../types/types';
-import { ICompanyIndentification } from '../../interfaces/company-id.interface';
+import { ECompanies } from '../companies/constants/companies.enum';
+import { Nullable } from '../../types/types';
+import { ICompanyIndentification } from '../companies/interfaces/company-id.interface';
 
 export const COMPANY_LEI_CODES: Record<
   ECompanies,
   Nullable<ICompanyIndentification>
 > = {
   [ECompanies.AFAS]: null,
+  [ECompanies.ALPHABET]: {
+    code: '5493006MHB84DD0ZWV18',
+    link: 'https://leiworldwide.com/lei_record/5493006MHB84DD0ZWV18',
+  },
   [ECompanies.BITVAVO]: {
     code: '724500MX2WBKDJP9HE56',
     link: 'https://lei-nederland.nl/gedetailleerde-informatie/46438246/724500MX2WBKDJP9HE56/bitvavo-b-v/',
@@ -17,6 +21,7 @@ export const COMPANY_LEI_CODES: Record<
     link: 'https://lei-nederland.nl/gedetailleerde-informatie/37238014/724500J6RZI9SE1AAP41/blockrise-capital-b-v/',
   },
   [ECompanies.STICHTING_BLOCKRISE]: null,
+  [ECompanies.BLOCKRISE_GROUP]: null,
   [ECompanies.BUNQ]: {
     code: '7245002ZUXNOEJ0QPZ44',
     link: 'https://lei-nederland.nl/gedetailleerde-informatie/1040476/7245002ZUXNOEJ0QPZ44/bunq-b-v/',
@@ -37,6 +42,14 @@ export const COMPANY_LEI_CODES: Record<
   [ECompanies.GOOGLE]: { // LEI van Google IRELAND LIMITED , NIET LLC?
     code: '7ZW8QJWVPR4P1J1KQY45', // YYPPRNO5HB304LHFVG31
     link: 'https://leiworldwide.com/lei_record/7ZW8QJWVPR4P1J1KQY45',
+  },
+  [ECompanies.GOOGLE]: {
+    code: '7ZW8QJWVPR4P1J1KQY45',
+    link: 'https://leiworldwide.com/lei_record/7ZW8QJWVPR4P1J1KQY45',
+  },
+  [ECompanies.GOOGLE_IRELAND]: {
+    code: 'YYPPRNO5HB304LHFVG31',
+    link: 'https://leiworldwide.com/lei_record/YYPPRNO5HB304LHFVG31',
   },
   [ECompanies.IDIN]: null,
   [ECompanies.ING]: {

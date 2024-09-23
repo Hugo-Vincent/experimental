@@ -1,6 +1,6 @@
-import { ECompanies } from '../../enums/companies.enum';
-import { Nullable } from '../../../../types/types';
-import { ICompanyIndentification } from '../../interfaces/company-id.interface';
+import { ECompanies } from '../companies/constants/companies.enum';
+import { Nullable } from '../../types/types';
+import { ICompanyIndentification } from '../companies/interfaces/company-id.interface';
 
 export const COMPANY_CRN_CODES: Record<
   ECompanies,
@@ -18,6 +18,10 @@ export const COMPANY_CRN_CODES: Record<
   [ECompanies.BLOCKRISE]: {
     code: '74879782',
     link: 'https://www.kvk.nl/bestellen/#/74879782/',
+  },
+  [ECompanies.BLOCKRISE_GROUP]: {
+    code: '87242311',
+    link: 'https://www.kvk.nl/bestellen/#/87242311/',
   },
   [ECompanies.STICHTING_BLOCKRISE]: {
     code: '86823728',
@@ -184,7 +188,9 @@ export const COMPANY_CRN_CODES: Record<
     code: '0444588',
     link: 'https://data.sfgov.org/widgets/g8m3-pdis',
   },
+  [ECompanies.ALPHABET]: null, // Google Parent Company
   [ECompanies.GOOGLE]: null, // Registered in multiple states with multiple codes it seems
+  [ECompanies.GOOGLE_IRELAND]: null, // Registered in multiple states with multiple codes it seems
 
   // Florida - Registration number
   [ECompanies.QUICKNODE]: {

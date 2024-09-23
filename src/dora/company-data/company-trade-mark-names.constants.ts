@@ -1,11 +1,13 @@
-import { ECompanies } from '../../enums/companies.enum';
+import { ECompanies } from '../companies/constants/companies.enum';
 
 const _COMPANY_TRADEMARKS = {
   [ECompanies.AFAS]: 'AFAS',
+  [ECompanies.ALPHABET]: 'Alphabet',
   [ECompanies.BITVAVO]: 'Bitvavo',
   [ECompanies.BITWARDEN]: 'Bitwarden',
   [ECompanies.BLOCKCHAINDOTCOM]: 'Blockchain',
   [ECompanies.BLOCKRISE]: 'Blockrise',
+  [ECompanies.BLOCKRISE_GROUP]: 'Blockrise Group',
   [ECompanies.STICHTING_BLOCKRISE]: 'Stichting Blockrise',
   [ECompanies.BUNQ]: 'Bunq',
   [ECompanies.CHAINSTACK]: 'Chainstack',
@@ -17,6 +19,7 @@ const _COMPANY_TRADEMARKS = {
   [ECompanies.GITHUB]: 'Github',
   [ECompanies.GLASSNODE]: 'Glassnode',
   [ECompanies.GOOGLE]: 'Google',
+  [ECompanies.GOOGLE_IRELAND]: 'Google (Ireland)',
   [ECompanies.GRAFANA]: 'Grafana',
   [ECompanies.HEXNODE]: 'HexNode',
   [ECompanies.IDIN]: 'iDIN',

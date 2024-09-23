@@ -1,13 +1,20 @@
-import { ECompanies } from '../../enums/companies.enum';
-import { ENTITY_TYPES, TEntityType } from '../../../constants/entity-types.constants';
+import { ECompanies } from '../companies/constants/companies.enum';
+import { ENTITY_TYPES, TEntity } from '../constant-data/entity-types.constants';
 
-export const COMPANY_ENTITY_TYPES: Record<ECompanies, TEntityType> = {
+export const COMPANY_ENTITY_TYPES: Record<ECompanies, TEntity> = {
+  [ECompanies.ALPHABET]: ENTITY_TYPES[1],
   [ECompanies.AFAS]: ENTITY_TYPES[1],
   [ECompanies.BITVAVO]: ENTITY_TYPES[1],
   [ECompanies.BITWARDEN]: ENTITY_TYPES[1],
   [ECompanies.BLOCKCHAINDOTCOM]: ENTITY_TYPES[1],
+
+  /**
+   * Blockrise
+   */
   [ECompanies.BLOCKRISE]: ENTITY_TYPES[6],
-  [ECompanies.STICHTING_BLOCKRISE]: ENTITY_TYPES[1],
+  [ECompanies.BLOCKRISE_GROUP]:ENTITY_TYPES[1],
+  [ECompanies.STICHTING_BLOCKRISE]: ENTITY_TYPES[23],
+
   [ECompanies.BUNQ]: ENTITY_TYPES[1],
   [ECompanies.CHAINSTACK]: ENTITY_TYPES[1],
   [ECompanies.CLOUDFLARE]: ENTITY_TYPES[1],
@@ -18,6 +25,7 @@ export const COMPANY_ENTITY_TYPES: Record<ECompanies, TEntityType> = {
   [ECompanies.GITHUB]: ENTITY_TYPES[1],
   [ECompanies.GLASSNODE]: ENTITY_TYPES[1],
   [ECompanies.GOOGLE]: ENTITY_TYPES[1],
+  [ECompanies.GOOGLE_IRELAND]: ENTITY_TYPES[1],
   [ECompanies.GRAFANA]: ENTITY_TYPES[1],
   [ECompanies.HEXNODE]: ENTITY_TYPES[1],
   [ECompanies.IDIN]: ENTITY_TYPES[1],
@@ -47,4 +55,4 @@ export const COMPANY_ENTITY_TYPES: Record<ECompanies, TEntityType> = {
   [ECompanies.VERCEL]: ENTITY_TYPES[1],
   [ECompanies.VERIFF]: ENTITY_TYPES[1],
   [ECompanies.ZENDESK]: ENTITY_TYPES[1],
-};
+} as const;

@@ -1,11 +1,13 @@
-import { ECompanies } from '../../enums/companies.enum';
+import { ECompanies } from '../companies/constants/companies.enum';
 
 const _COMPANY_LEGAL_NAMES = {
   [ECompanies.AFAS]: 'Afas Software B.V.',
+  [ECompanies.ALPHABET]: 'Alphabet Inc.',
   [ECompanies.BITVAVO]: 'Bitvavo B.V.',
   [ECompanies.BITWARDEN]: 'Bitwarden Inc.',
   [ECompanies.BLOCKCHAINDOTCOM]: 'Blockchain Ltd.',
   [ECompanies.BLOCKRISE]: 'Blockrise Capital B.V.',
+  [ECompanies.BLOCKRISE_GROUP]: 'Blockrise Group B.V.',
   [ECompanies.STICHTING_BLOCKRISE]: 'Stichting Blockrise',
   [ECompanies.BUNQ]: 'Bunq B.V.',
   [ECompanies.CHAINSTACK]: 'Chainstack Pte. Ltd.',
@@ -17,6 +19,7 @@ const _COMPANY_LEGAL_NAMES = {
   [ECompanies.GITHUB]: 'Github Inc.',
   [ECompanies.GLASSNODE]: 'Glassnode Services AG',
   [ECompanies.GOOGLE]: 'Google LLC',
+  [ECompanies.GOOGLE_IRELAND]: 'Google Ireland Ltd.',
   [ECompanies.GRAFANA]: 'Grafana Labs Ltd.',
   [ECompanies.HEXNODE]: 'Mitsogo Technologies Pte. Ltd.',
   [ECompanies.IDIN]: 'iDIN B.V.',

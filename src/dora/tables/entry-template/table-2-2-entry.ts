@@ -1,6 +1,6 @@
 import { TableEntry } from './table-entry';
 import { TCodeType, TDate } from '../../types/general-types';
-import { Countries } from '../../companies/enums/countries.enum';
+import { Countries } from '../../constant-data/enums/countries.enum';
 
 export class EntryTable2_2 extends TableEntry {
   contractReferenceNumber: string; // uuid;

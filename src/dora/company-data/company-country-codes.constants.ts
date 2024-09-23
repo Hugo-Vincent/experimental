@@ -1,12 +1,14 @@
-import { ECompanies } from '../companies/enums/companies.enum';
-import { Countries } from '../companies/enums/countries.enum';
+import { ECompanies } from '../companies/constants/companies.enum';
+import { Countries } from '../constant-data/enums/countries.enum';
 
 export const COMPANY_COUNTRY_CODES: Record<ECompanies, Countries> = {
   [ECompanies.AFAS]: Countries.NL,
+  [ECompanies.ALPHABET]: Countries.US,
   [ECompanies.BITVAVO]: Countries.NL,
   [ECompanies.BITWARDEN]: Countries.US,
   [ECompanies.BLOCKCHAINDOTCOM]: Countries.GB,
   [ECompanies.BLOCKRISE]: Countries.NL,
+  [ECompanies.BLOCKRISE_GROUP]: Countries.NL,
   [ECompanies.STICHTING_BLOCKRISE]: Countries.NL,
   [ECompanies.BUNQ]: Countries.NL,
   [ECompanies.CHAINSTACK]: Countries.SG,
@@ -18,6 +20,7 @@ export const COMPANY_COUNTRY_CODES: Record<ECompanies, Countries> = {
   [ECompanies.GITHUB]: Countries.US,
   [ECompanies.GLASSNODE]: Countries.US,
   [ECompanies.GOOGLE]: Countries.US,
+  [ECompanies.GOOGLE_IRELAND]: Countries.IE,
   [ECompanies.GRAFANA]: Countries.GB,
   [ECompanies.HEXNODE]: Countries.US,
   [ECompanies.IDIN]: Countries.NL,

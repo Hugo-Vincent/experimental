@@ -1,0 +1,58 @@
+import { ECompanies } from '../companies/constants/companies.enum';
+import { HIERARCHY_TYPES, THierarchy } from '../constant-data/hierarchy-types.constants';
+
+export const COMPANY_HIERARCHY_TYPES: Record<ECompanies, THierarchy> = {
+  [ECompanies.ALPHABET]: undefined,
+  [ECompanies.AFAS]: HIERARCHY_TYPES[1],
+  [ECompanies.BITVAVO]: HIERARCHY_TYPES[1],
+  [ECompanies.BITWARDEN]: HIERARCHY_TYPES[1],
+  [ECompanies.BLOCKCHAINDOTCOM]: HIERARCHY_TYPES[1],
+
+  /**
+   * Blockrise
+   */
+  [ECompanies.BLOCKRISE]: HIERARCHY_TYPES[3],
+  [ECompanies.BLOCKRISE_GROUP]: undefined,
+  [ECompanies.STICHTING_BLOCKRISE]: HIERARCHY_TYPES[3],
+
+  [ECompanies.BUNQ]: HIERARCHY_TYPES[1],
+  [ECompanies.CHAINSTACK]: HIERARCHY_TYPES[1],
+  [ECompanies.CLOUDFLARE]: HIERARCHY_TYPES[1],
+  [ECompanies.COLT]: HIERARCHY_TYPES[1],
+  [ECompanies.COINGECKO]: HIERARCHY_TYPES[1],
+  [ECompanies.COMPLYADVANTAGE]: HIERARCHY_TYPES[1],
+  [ECompanies.ELLIPTIC]: HIERARCHY_TYPES[1],
+  [ECompanies.GITHUB]: HIERARCHY_TYPES[1],
+  [ECompanies.GLASSNODE]: HIERARCHY_TYPES[1],
+  [ECompanies.GOOGLE]: undefined,
+  [ECompanies.GOOGLE_IRELAND]: HIERARCHY_TYPES[1],
+  [ECompanies.GRAFANA]: HIERARCHY_TYPES[1],
+  [ECompanies.HEXNODE]: HIERARCHY_TYPES[1],
+  [ECompanies.IDIN]: HIERARCHY_TYPES[1],
+  [ECompanies.ING]: HIERARCHY_TYPES[1],
+  [ECompanies.KRAKEN]: HIERARCHY_TYPES[1],
+  [ECompanies.KWINZO]: HIERARCHY_TYPES[1],
+  [ECompanies.LINEAR]: HIERARCHY_TYPES[1],
+  [ECompanies.MEMPOOL]: HIERARCHY_TYPES[1],
+  [ECompanies.MICROSOFT]: HIERARCHY_TYPES[1],
+  [ECompanies.NEXTNOVATE]: HIERARCHY_TYPES[1],
+  [ECompanies.NOTION]: HIERARCHY_TYPES[1],
+  [ECompanies.POSTCODEAPI]: HIERARCHY_TYPES[1],
+  [ECompanies.PAY_DOT]: HIERARCHY_TYPES[1],
+  [ECompanies.QUICKNODE]: HIERARCHY_TYPES[1],
+  [ECompanies.SANITY]: HIERARCHY_TYPES[1],
+  [ECompanies.SCRIVE]: HIERARCHY_TYPES[1],
+  [ECompanies.SECUROSYS]: HIERARCHY_TYPES[1],
+  [ECompanies.SENDGRID]: HIERARCHY_TYPES[1],
+  [ECompanies.SENTRY]: HIERARCHY_TYPES[1],
+  [ECompanies.SHIFTBASE]: HIERARCHY_TYPES[1],
+  [ECompanies.SLACK]: HIERARCHY_TYPES[1],
+  [ECompanies.SONARCLOUD]: HIERARCHY_TYPES[1],
+  [ECompanies.SUREPAY]: HIERARCHY_TYPES[1],
+  [ECompanies.TWILIO]: HIERARCHY_TYPES[1],
+  [ECompanies.UBIQUITI]: HIERARCHY_TYPES[1],
+  [ECompanies.UNISCAPE]: HIERARCHY_TYPES[1],
+  [ECompanies.VERCEL]: HIERARCHY_TYPES[1],
+  [ECompanies.VERIFF]: HIERARCHY_TYPES[1],
+  [ECompanies.ZENDESK]: HIERARCHY_TYPES[1],
+} as const;

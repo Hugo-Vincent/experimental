@@ -23,5 +23,5 @@ const _ENTITY_TYPES = {
   22: "(22) Non-financial entity: ICT intra-group service provider",
   23: "(23) Non-financial entity: Other"
 } as const;
-export type TEntityType = typeof _ENTITY_TYPES[keyof typeof _ENTITY_TYPES];
-export const ENTITY_TYPES: Record<number, TEntityType> = _ENTITY_TYPES;
+export type TEntity = typeof _ENTITY_TYPES[keyof typeof _ENTITY_TYPES];
+export const ENTITY_TYPES: Record<number, TEntity> = _ENTITY_TYPES;

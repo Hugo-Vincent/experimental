@@ -1,5 +1,5 @@
 import { TableEntry } from './table-entry';
-import { Currencies } from '../../companies/enums/currencies.enum';
+import { Currencies } from '../../constant-data/enums/currencies.enum';
 
 export class EntryTable2_1 extends TableEntry {
   contractReferenceNumber: string;
