@@ -1,4 +1,4 @@
-const _ENTITY_TYPES = {
+export const ENTITY_TYPES = {
   1: "(1) credit institutions",
   2: "(2) payment institutions, including payment institutions exempted pursuant to Directive (EU) 2015/2366",
   3: "(3) account information service providers",
@@ -23,6 +23,5 @@ const _ENTITY_TYPES = {
   22: "(22) Non-financial entity: ICT intra-group service provider",
   23: "(23) Non-financial entity: Other"
 } as const;
-export type TEntityKey = keyof typeof _ENTITY_TYPES;
-export type TEntity = typeof _ENTITY_TYPES[TEntityKey];
-export const ENTITY_TYPES: Record<TEntityKey, TEntity> = _ENTITY_TYPES;
+export type TEntityKey = keyof typeof ENTITY_TYPES;
+export type TEntity = typeof ENTITY_TYPES[TEntityKey];

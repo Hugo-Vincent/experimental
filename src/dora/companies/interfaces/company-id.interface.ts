@@ -1,4 +1,4 @@
-import { Countries } from '../../constant-data/enums/countries.enum';
+import { Countries } from '../../general/countries.enum';
 
 export interface ICompanyIndentification {
   country: Countries;

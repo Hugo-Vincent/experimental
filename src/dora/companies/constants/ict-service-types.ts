@@ -1,4 +1,4 @@
-const _ICT_SERVICE_TYPES = {
+export const ICT_SERVICE_TYPES = {
   1: "(S01) ICT project management",
   2: "(S02) ICT Development",
   3: "(S03) ICT help desk and first level support",
@@ -19,6 +19,5 @@ const _ICT_SERVICE_TYPES = {
   18: "(S18) Cloud services: PaaS",
   19: "(S19) Cloud services: SaaS"
 } as const;
-export type TICTServiceKey = keyof typeof _ICT_SERVICE_TYPES;
-export type TICTService = typeof _ICT_SERVICE_TYPES[TICTServiceKey];
-export const ICT_SERVICE_TYPES: Record<TICTServiceKey, TICTService> = _ICT_SERVICE_TYPES;
+export type TICTServiceKey = keyof typeof ICT_SERVICE_TYPES;
+export type TICTService = typeof ICT_SERVICE_TYPES[TICTServiceKey];

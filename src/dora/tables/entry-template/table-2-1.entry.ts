@@ -1,6 +1,6 @@
 import { TableEntry } from './table-entry';
-import { Currencies } from '../../constant-data/enums/currencies.enum';
-import { TContractualArrangement } from '../../constant-data/contracts/contractual-arrangement-types.constants';
+import { Currencies } from '../../general/currencies.enum';
+import { TContractualArrangement } from '../../contracts/constants/contractual-arrangement-types.constants';
 import { Contract } from '../../contracts/contract';
 
 export class EntryTable2_1 extends TableEntry {

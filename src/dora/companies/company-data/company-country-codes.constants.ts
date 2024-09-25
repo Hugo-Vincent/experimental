@@ -1,5 +1,5 @@
-import { ECompanies } from '../companies/constants/companies.enum';
-import { Countries } from '../constant-data/enums/countries.enum';
+import { ECompanies } from '../constants/companies.enum';
+import { Countries } from '../../general/countries.enum';
 
 export const COMPANY_COUNTRY_CODES: Record<ECompanies, Countries> = {
   [ECompanies.AFAS]: Countries.NL,

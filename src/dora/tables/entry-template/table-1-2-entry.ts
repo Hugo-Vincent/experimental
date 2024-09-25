@@ -1,8 +1,8 @@
 import { TableEntry } from './table-entry';
-import { TDate } from '../../types/general-types';
-import { Currencies } from '../../constant-data/enums/currencies.enum';
+import { TDate } from '../../general/general-types';
+import { Currencies } from '../../general/currencies.enum';
 import { Company } from '../../companies/company.template';
-import { DELETION_DATE_PLACEHOLDER } from '../../constant-data/data-constants';
+import { DELETION_DATE_PLACEHOLDER } from '../../general/data-constants';
 
 export class EntryTable1_2 extends TableEntry {
   lei:  Company['companyIdentification']['code'];
@@ -29,7 +29,7 @@ export class EntryTable1_2 extends TableEntry {
     this.country = company.country;
     this.entityType = company.entityType;
     this.hierarchy = company.hierarchy;
-    this.parentLei = company.parentLei ?? company.parentCrn ?? '/';
+    this.parentLei = company.parent?.companyIdentification.code ?? null;
     this.lastUpdate = lastUpdate;
     this.integrationDate = integrationDate;
     this.deletionDate = deletionDate;

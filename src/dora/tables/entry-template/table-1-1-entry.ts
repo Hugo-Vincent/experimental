@@ -1,12 +1,12 @@
-import { COMPANY_LEI_CODES } from '../../company-data/company-lei-codes.constants';
+import { COMPANY_LEI_CODES } from '../../companies/company-data/company-lei-codes.constants';
 import { ECompanies } from '../../companies/constants/companies.enum';
-import { COMPANY_COUNTRY_CODES } from '../../company-data/company-country-codes.constants';
-import { COMPANY_LEGAL_NAMES, TLegalName } from '../../company-data/company-legal-names.constants';
-import { Countries } from '../../constant-data/enums/countries.enum';
-import { ENTITY_TYPES, TEntity } from '../../constant-data/entity-types.constants';
+import { COMPANY_COUNTRY_CODES } from '../../companies/company-data/company-country-codes.constants';
+import { COMPANY_LEGAL_NAMES, TLegalName } from '../../companies/company-data/company-legal-names.constants';
+import { Countries } from '../../general/countries.enum';
+import { ENTITY_TYPES, TEntity } from '../../companies/constants/entity-types.constants';
 import { TableEntry } from './table-entry';
-import { COMPANY_ENTITY_TYPE_KEYS } from '../../company-data/company-entity-types.constants';
-import { TDate } from '../../types/general-types';
+import { COMPANY_ENTITY_TYPE_KEYS } from '../../companies/company-data/company-entity-type-keys.constants';
+import { TDate } from '../../general/general-types';
 
 /**
  * REPORTING ENTITY (BLOCKRISE)

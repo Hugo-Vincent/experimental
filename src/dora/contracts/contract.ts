@@ -1,18 +1,18 @@
 import {
   CONTRACTUAL_ARRANGEMENT_TYPES,
   TContractualArrangement, TContractualArrangementKey,
-} from '../constant-data/contracts/contractual-arrangement-types.constants';
-import { Currencies } from '../constant-data/enums/currencies.enum';
+} from './constants/contractual-arrangement-types.constants';
+import { Currencies } from '../general/currencies.enum';
 import { Company } from '../companies/company.template';
-import { TDate } from '../types/general-types';
-import { CONTRACT_TERMINATION_REASONS, TTerminationReason } from '../constant-data/contracts/termination-reasons';
-import { Countries } from '../constant-data/enums/countries.enum';
+import { TDate } from '../general/general-types';
+import { CONTRACT_TERMINATION_REASONS, TTerminationReason } from './constants/termination-reasons';
+import { Countries } from '../general/countries.enum';
 import {
   CONTRACT_RELIANCE_LEVELS,
   TRelianceLevel,
   TRelianceLevelKey,
-} from '../constant-data/contracts/reliance-levels';
-import { ICT_SERVICE_TYPES, TICTService, TICTServiceKey } from '../constant-data/ict-service-types';
+} from './constants/reliance-levels';
+import { ICT_SERVICE_TYPES, TICTService, TICTServiceKey } from '../companies/constants/ict-service-types';
 import { ALL_COMPANY_INSTANCES } from '../companies/company-instances.constants';
 import { ECompanies } from '../companies/constants/companies.enum';
 

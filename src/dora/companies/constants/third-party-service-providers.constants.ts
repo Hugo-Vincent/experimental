@@ -93,7 +93,7 @@ const _CRITICAL_TPSPS: Record<TCriticalTPSP, ECompanies> = {
   [ECompanies.VERCEL]: undefined,
   [ECompanies.ZENDESK]: undefined,
 };
-export const CRITICAL_TPSPS = Object.keys(_CRITICAL_TPSPS) as TCriticalTPSP[];
+export const CRITICAL_TPSP_KEYS = Object.keys(_CRITICAL_TPSPS) as TCriticalTPSP[];
 
 
 export type TNonCriticalTPSP = keyof {
@@ -123,4 +123,4 @@ const _NON_CRITICAL_TPSPS: Record<TNonCriticalTPSP, ECompanies> = {
   UNISCAPE: undefined,
   VERIFF: undefined
 };
-export const NON_CRITICAL_TPSPS = Object.keys(_NON_CRITICAL_TPSPS) as TNonCriticalTPSP[];
+export const NON_CRITICAL_TPSPS_KEYS = Object.keys(_NON_CRITICAL_TPSPS) as TNonCriticalTPSP[];

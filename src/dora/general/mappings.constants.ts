@@ -1,8 +1,8 @@
 import { ECompanies } from '../companies/constants/companies.enum';
-import { TCompanyIdentifiers } from '../types/general-types';
-import { COMPANY_LEI_CODES } from '../company-data/company-lei-codes.constants';
+import { TCompanyIdentifiers } from './general-types';
+import { COMPANY_LEI_CODES } from '../companies/company-data/company-lei-codes.constants';
 import { ICompanyIndentification } from '../companies/interfaces/company-id.interface';
-import { COMPANY_CRN_CODES } from '../company-data/company-registration-numbers.constants';
+import { COMPANY_CRN_CODES } from '../companies/company-data/company-registration-numbers.constants';
 
 export const CODETYPE_TO_CODEMAP: Record<
   TCompanyIdentifiers,

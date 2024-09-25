@@ -1,5 +1,5 @@
 import { TableEntry } from './table-entry';
-import { Countries } from '../../constant-data/enums/countries.enum';
+import { Countries } from '../../general/countries.enum';
 
 export class EntryTable1_3 extends TableEntry {
   branchIdCode: string;

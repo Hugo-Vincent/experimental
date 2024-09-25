@@ -1,12 +1,12 @@
 import { TableEntry } from './table-entry';
-import { TCodeType } from '../../types/general-types';
 import { Contract } from '../../contracts/contract';
+import { Company } from '../../companies/company.template';
 
 export class EntryTable2_2 extends TableEntry {
-  contractReferenceNumber: Contract['referenceNumber']; // uuid;
-  financialEntityLei: string
-  tpspCompanyIdentificationCode: string;
-  typeOfCode: TCodeType;
+  contractReferenceNumber: Contract['referenceNumber'];
+  financialEntityLei: Contract['financialEntityLei'];
+  tpspCompanyIdentificationCode: Company['companyIdentification']['code'];
+  typeOfCode:  Company['companyIdentification']['typeOfCode'];
   functionIdentifier: Contract['functionIdentifier'];
 
   ictServicesType: Contract['ictServicesType'];
@@ -19,20 +19,18 @@ export class EntryTable2_2 extends TableEntry {
   contractGoverningLawCountry: Contract['contractGoverningLawCountry'];
   provisionCountry: Contract['provisionCountry'];
   storageOfData: Contract['storageOfData'];
-  dataLocation: Contract['dataLocation']
+  dataLocation: Contract['dataLocation'];
 
   processingLocation: Contract['processingLocation']
   dataSensitivity: Contract['dataSensitivity']
   relianceLevel: Contract['relianceLevel'];
-
-  companyName: string;
 
   constructor(contract: Contract) {
     super(2, 2);
     this.contractReferenceNumber = contract.referenceNumber;
     this.financialEntityLei = contract.financialEntityLei;
     this.tpspCompanyIdentificationCode = contract.tpsp.companyIdentification.code;
-    this.typeOfCode = contract.tpsp.typeOfCode;
+    this.typeOfCode = contract.tpsp.companyIdentification.typeOfCode;
     this.functionIdentifier = contract.functionIdentifier;
 
     this.ictServicesType = contract.ictServicesType;
@@ -50,7 +48,5 @@ export class EntryTable2_2 extends TableEntry {
     this.processingLocation = contract.processingLocation;
     this.dataSensitivity = contract.dataSensitivity;
     this.relianceLevel = contract.relianceLevel;
-
-    this.companyName = contract.tpsp.tradeMark;
   }
 }

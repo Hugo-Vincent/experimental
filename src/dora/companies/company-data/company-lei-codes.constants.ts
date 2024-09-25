@@ -1,7 +1,7 @@
-import { ECompanies } from '../companies/constants/companies.enum';
-import { Nullable } from '../../types/types';
-import { ICompanyIndentification } from '../companies/interfaces/company-id.interface';
-import { Countries } from '../constant-data/enums/countries.enum';
+import { ECompanies } from '../constants/companies.enum';
+import { Nullable } from '../../../types/types';
+import { ICompanyIndentification } from '../interfaces/company-id.interface';
+import { Countries } from '../../general/countries.enum';
 
 export const COMPANY_LEI_CODES: Record<
   ECompanies,

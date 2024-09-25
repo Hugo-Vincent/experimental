@@ -1,7 +1,7 @@
 import { TableGenerator } from './tables/table-generator';
 import fs from 'fs';
 import { TableEntry } from './tables/entry-template/table-entry';
-import { TJson } from './types/general-types';
+import { TJson } from './general/general-types';
 
 const jsonFilePath = 'src/dora/output/json-tables/';
 const txtFilePath = 'src/dora/output/text-tables/';

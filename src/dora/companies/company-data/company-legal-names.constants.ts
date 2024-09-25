@@ -1,4 +1,4 @@
-import { ECompanies } from '../companies/constants/companies.enum';
+import { ECompanies } from '../constants/companies.enum';
 
 const _COMPANY_LEGAL_NAMES = {
   [ECompanies.AFAS]: 'Afas Software B.V.',

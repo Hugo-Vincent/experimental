@@ -1,5 +1,5 @@
 import { TABLE_SPECS } from '../constants/table-specs.constants';
-import { TJson } from '../../types/general-types';
+import { TJson } from '../../general/general-types';
 
 export abstract class TableEntry {
   protected tableNr: number;

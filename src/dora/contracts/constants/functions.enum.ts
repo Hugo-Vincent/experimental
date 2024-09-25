@@ -1,0 +1,16 @@
+export enum EFunctions {
+  CLIENT_ONBOARDING_KYC = 'Client Onboarding (inc. KYC)',
+  CLIENT_DATA_STORAGE_MANAGEMENT = 'Client (personal) data storage, management',
+  TRANSFERRING_ASSETS = 'Transferring assets to/from client accounts or wallets (incl. backup)',
+  TRADING = 'Trading',
+  PORTFOLIO_MANAGEMENT = 'Portfolio Management',
+  BLOCKRISE_DASHBOARD = 'Blockrise dashboard (Client, backoffice, App)',
+  CLIENT_TRANSACTION_MONITORING = 'Client (transaction) monitoring',
+  RISK_MANAGEMENT = 'Risk management: Monitoring, analysis and reporting',
+  HR_TALENT_MANAGEMENT = 'HR and Talent management',
+  RECORD_KEEPING_DOCUMENTATION = 'Record Keeping + Documentation',
+  MARKETING_COMMUNICATION = 'Marketing + ext. Communication',
+  EMAILING_SMS = 'E-mailing incl. SMS',
+  IT_SYSTEM_MANAGEMENT = 'IT system management (Hardware)',
+  INVOICING_PAYMENT_ACCEPTANCE = 'Invoicing / payment acceptance',
+}
