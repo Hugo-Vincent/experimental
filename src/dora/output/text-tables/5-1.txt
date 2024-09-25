@@ -1,0 +1,207 @@
+31046821
+724500MX2WBKDJP9HE56
+7245002ZUXNOEJ0QPZ44
+201813548K
+5493007DY18BGNLDWU14
+11654191
+08458210
+CHE297410093
+YYPPRNO5HB304LHFVG31
+10856224
+1101827
+701536
+92088805
+INR2EJN1ERAN0W5ZP974
+0480836
+1128541
+CHE464234583
+20091597249
+5493004W8TRGD63APX93
+4803376
+1073781
+0444588
+
+NL_CRN
+LEI
+LEI
+SG_CRN
+LEI
+GB_CRN
+GB_CRN
+CH_CRN
+LEI
+GB_CRN
+US_CRN
+IE_CRN
+NL_CRN
+LEI
+US_CRN
+US_CRN
+CH_CRN
+US_CRN
+LEI
+US_CRN
+US_CRN
+US_CRN
+
+Afas Software B.V.
+Bitvavo B.V.
+Bunq B.V.
+Chainstack Pte. Ltd.
+Cloudflare Inc.
+Compliance Advantage Ltd.
+Elliptic Enterprises Ltd.
+Glassnode Services AG
+Google Ireland Ltd.
+Grafana Labs Ltd.
+Mitsogo Technologies Pte. Ltd.
+Payward Continental Services Limited
+Kwinzo B.V.
+Microsoft Corporation
+Notion Labs Inc.
+Sanity US, Inc.
+Securosys SA
+Sendgrid Inc.
+Twilio Inc.
+Ubiquiti Inc.
+Vercel Inc.
+Zendesk Inc.
+
+Legal person
+Legal person
+Legal person
+Legal person
+Legal person
+Legal person
+Legal person
+Legal person
+Legal person
+Legal person
+Legal person
+Legal person
+Legal person
+Legal person
+Legal person
+Legal person
+Legal person
+Legal person
+Legal person
+Legal person
+Legal person
+Legal person
+
+NL
+NL
+NL
+SG
+US
+GB
+GB
+CH
+IE
+GB
+US
+IE
+NL
+US
+US
+US
+CH
+US
+US
+US
+US
+US
+
+EUR
+EUR
+EUR
+EUR
+EUR
+EUR
+EUR
+EUR
+EUR
+EUR
+EUR
+EUR
+EUR
+EUR
+EUR
+EUR
+EUR
+EUR
+EUR
+EUR
+EUR
+EUR
+
+15000
+15000
+15000
+15000
+15000
+15000
+15000
+15000
+15000
+15000
+15000
+15000
+15000
+15000
+15000
+15000
+15000
+15000
+15000
+15000
+15000
+15000
+
+null
+null
+null
+null
+null
+null
+null
+null
+5493006MHB84DD0ZWV18
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+
+NL_CRN
+NL_CRN
+NL_CRN
+NL_CRN
+NL_CRN
+NL_CRN
+NL_CRN
+NL_CRN
+LEI
+NL_CRN
+NL_CRN
+NL_CRN
+NL_CRN
+NL_CRN
+NL_CRN
+NL_CRN
+NL_CRN
+NL_CRN
+NL_CRN
+NL_CRN
+NL_CRN
+NL_CRN
+

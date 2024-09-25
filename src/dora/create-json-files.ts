@@ -3,61 +3,60 @@ import fs from 'fs';
 import { TableEntry } from './tables/entry-template/table-entry';
 import { TJson } from './types/general-types';
 
-const jsonFilePath = 'src/dora/json-tables/';
-const txtFilePath = 'src/dora/text-tables/';
+const jsonFilePath = 'src/dora/output/json-tables/';
+const txtFilePath = 'src/dora/output/text-tables/';
 
 export function createJsonFiles(): void {
-  const tableGenerator = new TableGenerator();
-  const mapOfTables = tableGenerator.generateAll();
-
+  const mapOfTables = new TableGenerator().generateAll();
+  console.log(mapOfTables);
  // Object.entries(mapOfTables).forEach((x: [string, TableEntry[]]) => {
- //   writeJsonToFile(x[1].map((y) => y.toJSON()), x[0]);
+ //   fileWriter.writeJsonToFile(x[1].map((y) => y.toJSON()), x[0]);
  //  });
-
+  const fileWriter = new FileWriter();
   Object.entries(mapOfTables).forEach((x: [string, TableEntry[]]) => {
-    writeTxtToFile(x[1].map((y) => y.toJSON()), x[0]);
+    fileWriter.writeTxtToFile(x[1].map((y) => y.toJSON()), x[0]);
   });
 }
 
+export class FileWriter {
+  textFilePath: `${string}/`;
 
-const writeJsonToFile = (objectToWrite: Record<string, any>, tableName: string, wipeData = true): void => {
-  const path = jsonFilePath + tableName + '.json';
-  if (wipeData) {
-    wipeFile(path);
-  }
-  // Preserve keys with null values.
-  // for (const key in objectToWrite) {
-  //   if (!objectToWrite[key]) {
-  //     objectToWrite[key] = null;
-  //   }
-  // }
-  const stream = fs.createWriteStream(path, { flags: 'a' });
-  stream.write(JSON.stringify(objectToWrite) + '\n');
-  stream.end();
-};
+  writeJsonToFile(objectToWrite: Record<string, any>, fileName: string, wipeData = true): void {
+    const path = jsonFilePath + fileName + '.json';
+    if (wipeData) this.wipeFile(path);
+    // Preserve keys with null values.
+    // for (const key in objectToWrite) {
+    //   if (!objectToWrite[key]) {
+    //     objectToWrite[key] = null;
+    //   }
+    // }
+
+    const stream = fs.createWriteStream(path, { flags: 'a' });
+    stream.write(JSON.stringify(objectToWrite) + '\n');
+    stream.end();
+  };
 
 
-const writeTxtToFile = (objectsToWrite: TJson[], tableName: string, wipeData = true): void => {
-  const path = txtFilePath + tableName + '.txt';
-  if (wipeData) {
-    wipeFile(path);
-  }
+  writeTxtToFile(objectsToWrite: TJson[], fileName: string, wipeData = true): void {
+    const path = txtFilePath + fileName + '.txt';
+    if (wipeData) this.wipeFile(path);
 
-  const stream = fs.createWriteStream(path, { flags: 'a' });
-  const exampleEntry = objectsToWrite[0];
-  const keys = Object.keys(exampleEntry);
-  let txt = '';
-  for (const key of keys) {
-    for (const element of objectsToWrite) {
-      txt += element[key];
+    const stream = fs.createWriteStream(path, { flags: 'a' });
+    const exampleEntry = objectsToWrite[0];
+    const keys = Object.keys(exampleEntry);
+    let txt = '';
+    for (const key of keys) {
+      for (const element of objectsToWrite) {
+        txt += element[key];
+        txt += '\n';
+      }
       txt += '\n';
     }
-    txt += '\n';
-  }
-  stream.write(txt);
-  stream.end();
-};
+    stream.write(txt);
+    stream.end();
+  };
 
-const wipeFile = (path: string) => {
-  fs.writeFileSync(path, '');
-};
+  wipeFile = (path: string) => {
+    fs.writeFileSync(path, '');
+  };
+}

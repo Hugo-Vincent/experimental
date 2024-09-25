@@ -2,9 +2,7 @@ import { TableEntry } from './table-entry';
 import { TDate } from '../../types/general-types';
 import { Currencies } from '../../constant-data/enums/currencies.enum';
 import { Company } from '../../companies/company.template';
-import { DELETION_DATE_PLACEHOLDER } from '../constants/data-constants';
-
-type TEntryTable1_2 = Pick<Company, 'legalName' | 'country'>
+import { DELETION_DATE_PLACEHOLDER } from '../../constant-data/data-constants';
 
 export class EntryTable1_2 extends TableEntry {
   lei:  Company['companyIdentification']['code'];

@@ -1,7 +1,7 @@
 import { ECompanies } from '../companies/constants/companies.enum';
-import { TEntityKey } from '../constant-data/entity-types.constants';
+import { THierarchyKey } from '../constant-data/hierarchy-types.constants';
 
-export const COMPANY_ENTITY_TYPE_KEYS: Record<ECompanies, TEntityKey> = {
+export const COMPANY_HIERARCHY_TYPE_KEYS: Record<ECompanies, THierarchyKey> = {
   [ECompanies.ALPHABET]: 1,
   [ECompanies.AFAS]: 1,
   [ECompanies.BITVAVO]: 1,
@@ -11,9 +11,9 @@ export const COMPANY_ENTITY_TYPE_KEYS: Record<ECompanies, TEntityKey> = {
   /**
    * Blockrise
    */
-  [ECompanies.BLOCKRISE]: 6,
-  [ECompanies.BLOCKRISE_GROUP]:1,
-  [ECompanies.STICHTING_BLOCKRISE]: 23,
+  [ECompanies.BLOCKRISE]: 3,
+  [ECompanies.BLOCKRISE_GROUP]: 1,
+  [ECompanies.STICHTING_BLOCKRISE]: 3,
 
   [ECompanies.BUNQ]: 1,
   [ECompanies.CHAINSTACK]: 1,
@@ -25,7 +25,7 @@ export const COMPANY_ENTITY_TYPE_KEYS: Record<ECompanies, TEntityKey> = {
   [ECompanies.GITHUB]: 1,
   [ECompanies.GLASSNODE]: 1,
   [ECompanies.GOOGLE]: 1,
-  [ECompanies.GOOGLE_IRELAND]: 1,
+  [ECompanies.GOOGLE_IRELAND]: 3,
   [ECompanies.GRAFANA]: 1,
   [ECompanies.HEXNODE]: 1,
   [ECompanies.IDIN]: 1,
