@@ -7,11 +7,11 @@ export interface IDbTx {
   o: IDbOutput[]; // outputs
 }
 export interface IDbInput {
-  p: string;   // prev vout index
-  t: string | null;   // txid (undefined for minting txs)
+  p?: string;   // prev vout index
+  t: string;   // txid (undefined for minting txs)
 }
 export interface IDbOutput {
-  v: string; // value
   a: string; // address
   i: string; // output index
+  v: string; // value
 }

@@ -4,8 +4,8 @@ export interface ITx {
   outputs: ITxOutput[]; // outputs
 }
 export interface ITxInput {
-  previousTxOutputIndex: number;   // prev vout index
-  previousTxId: string | null;   // txid (undefined for minting txs)
+  previousTxOutputIndex?: number;   // prev vout index
+  previousTxId: string;   // txid (we call it 'mint' for minting txs)
 }
 export interface ITxOutput {
   valueBtc: number; // value

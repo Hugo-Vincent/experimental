@@ -18,23 +18,37 @@ export class TxDto implements ITx {
   }
 
   static fromRawBlockchainTx(rawTx: IRawBlockTx, blockNr: number): TxDto {
-    const inputs = this.parseBlockchainInputs(rawTx.vin);
-    const outputs = this.parseBlockchainOutputs(rawTx.vout);
-    return new TxDto(blockNr, rawTx.txid, inputs, outputs);
+    return new TxDto(
+      blockNr,
+      rawTx.txid,
+      rawTx.vin.map((input) => TxInputDto.fromBlockchainData(input)),
+      rawTx.vout.map((output, i) => TxOutputDto.fromBlockchainData(output, i)),
+    );
   }
 
-  static fromDbData(txId: string, dbTx: string): TxDto {
-    const parsedDbTx: IDbTx = JSON.parse(dbTx);
+  static fromDbData(txId: string, dbJsonTx: string): TxDto {
+    const parsedDbTx: IDbTx = JSON.parse(dbJsonTx);
     return new TxDto(
       Number(parsedDbTx.n),
       txId,
       parsedDbTx.i.map((i) => TxInputDto.fromDbData(i)),
-      parsedDbTx.o.map((o) => TxOutputDto.fromDbData(o))
+      parsedDbTx.o.map((o) => TxOutputDto.fromDbData(o)),
     );
   }
 
-  toStorageFormat(): string {
-    return
+  toDbStorageFormat(): string {
+    const storageFormat: IDbTx = {
+      n: String(this.blockNumber),
+      i: this.inputs.map((input) => {
+        if (input.previousTxId === 'mint') {
+          return { t: input.previousTxId };
+        } else {
+          return { t: input.previousTxId, p: String(input.previousTxOutputIndex) };
+        }
+      }),
+      o: this.outputs.map((output) => ({ a: output.address, i: String(output.outputIndex), v: String(output.valueBtc) })),
+    }
+    return JSON.stringify(storageFormat);
   }
 
   private static parseBlockchainInputs(ins: IVin[]): ITxInput[] {
