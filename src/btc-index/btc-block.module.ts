@@ -1,10 +1,12 @@
+import { HttpModule } from '@nestjs/axios';
 import { Module } from '@nestjs/common';
 import { BtcBlockService } from './btc-block.service';
-import { HttpModule } from '@nestjs/axios';
+import { BlockDbService } from './db.service';
+import { BlockchainService } from './blockchain.service';
 
 @Module({
   imports: [HttpModule],
-  providers: [BtcBlockService],
+  providers: [BtcBlockService, BlockDbService, BlockchainService],
   exports: [BtcBlockService],
 })
 export class BtcBlockModule {}

@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { Level } from 'level';
-import { IParsedTx } from './interfaces/parsed-tx.interface';
+import { TxDto } from './dtos/tx.dto';
 
 @Injectable()
 export class BlockDbService {
@@ -12,15 +12,29 @@ export class BlockDbService {
     this.db = new Level('./db', { valueEncoding: 'json' });
   }
 
-  storeTx(parsedBlock: IParsedTx): Promise<void> {
-    return this.db.put(parsedBlock.t, JSON.stringify(parsedBlock));
+  async getMostRecentlyStoredBlockNr(): Promise<string> {
+    return this.db.get(this.blockCountKey);
+  }
+  async storeMostRecentlyProcessedBlockNr(latestProcessedBlockNr: number): Promise<void> {
+    return this.db.put(this.blockCountKey, String(latestProcessedBlockNr));
   }
 
-  async getMostRecentlyStoredBlock(): Promise<number> {
-    return Number(await this.db.get(this.blockCountKey));
+  storeTx(parsedTx: TxDto): Promise<void> {
+    const { t, ...rest } = parsedTx;
+    return this.db.put(parsedTx.t, JSON.stringify(rest));
+  }
+  getTx(txId: string): Promise<string> {
+    return this.db.get(txId);
   }
 
   storeBlockHash(blockNumber: number, blockHash: string): Promise<void> {
-    return this.db.put(blockNumber.toString(), blockHash);
+    return this.db.put(String(blockNumber), blockHash);
+  }
+  getBlockHash(blockNumber: number): Promise<string> {
+    return this.db.get(String(blockNumber));
+  }
+
+  getAllKeys(): Promise<string[]> {
+    return this.db.keys().all();
   }
 }
