@@ -1,13 +1,16 @@
-import { createJsonFiles } from './create-json-files';
+import { createJsonFiles, createTxtFiles } from './generate-dora-files';
 import { COMPANY_COUNTRY_CODES } from './companies/company-data/company-country-codes.constants';
 import { COMPANY_LEI_CODES } from './companies/company-data/company-lei-codes.constants';
 import { ECompanies } from './companies/constants/companies.enum';
 import { COMPANY_CRN_CODES } from './companies/company-data/company-registration-numbers.constants';
 
 
-describe('Create JSON files', () => {
-  it('create JSON files', () => {
+describe('Create Files', () => {
+  it('Create JSON files', () => {
     createJsonFiles();
+  });
+  it('Create TXT files', () => {
+    createTxtFiles();
   });
 
   it('check data consistency', () => {
@@ -28,7 +31,6 @@ describe('Create JSON files', () => {
     });
   });
 });
-
 
   // it('generate data', () => {
   //   const companies = generateData();

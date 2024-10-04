@@ -1,5 +1,5 @@
 import { TABLE_SPECS } from '../constants/table-specs.constants';
-import { TJson } from '../../general/general-types';
+import { TAny } from '../../general/general-types';
 
 export abstract class TableEntry {
   protected tableNr: number;
@@ -12,7 +12,7 @@ export abstract class TableEntry {
     this.superClassPropertyNames = ['superClassPropertyNames', ...Object.getOwnPropertyNames(this)];
   }
 
-  toJSON(): TJson {
+  toJSONFormat(): TAny {
     const values = this.getValuesForJson();
     const table = {};
     const cols = TABLE_SPECS[this.tableNr][this.subTableNr];

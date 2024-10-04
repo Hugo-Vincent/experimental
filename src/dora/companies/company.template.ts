@@ -9,7 +9,7 @@ import { ECompanies } from './constants/companies.enum';
 import { COMPANY_LEI_CODES } from './company-data/company-lei-codes.constants';
 import { COMPANY_CRN_CODES } from './company-data/company-registration-numbers.constants';
 import { Countries } from '../general/countries.enum';
-import { ENTITY_TYPES, TEntity, TEntityKey } from './constants/entity-types.constants';
+import { ENTITY_TYPES, TEntity } from './constants/entity-types.constants';
 import { COMPANY_ENTITY_TYPE_KEYS } from './company-data/company-entity-type-keys.constants';
 import { Nullable, Optional } from '../../types/types';
 import { HIERARCHY_TYPES, THierarchy } from './constants/hierarchy-types.constants';

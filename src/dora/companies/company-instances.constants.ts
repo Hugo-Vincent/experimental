@@ -31,4 +31,3 @@ export const ALL_COMPANY_INSTANCES: Record<ECompanies, Company> = {
   ...NON_CRITICAL_TPSP_INSTANCES,
   ..._OTHER_COMPANIES,
 };
-

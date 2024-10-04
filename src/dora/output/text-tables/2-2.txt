@@ -412,26 +412,3 @@ High
 (4) Full reliance
 (4) Full reliance
 
-AFAS
-Bitvavo
-Bunq
-Chainstack
-Cloudflare
-ComplyAdvantage
-Elliptic
-Glassnode
-Google (Ireland)
-Grafana
-HexNode
-Kraken
-Kwinzo
-Microsoft
-Notion
-Sanity
-Securosys
-Sendgrid
-Twilio
-Ubiquiti
-Vercel
-Zendesk
-

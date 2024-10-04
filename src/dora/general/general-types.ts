@@ -8,10 +8,10 @@ export type TCodeType =
  * 2024-08-23
  */
 export type TDate = `${string}-${string}-${string}`;
-export type TJson =
-  | string
-  | number
-  | boolean
+export type TObjectKey = string | number | symbol;
+export type TObject = { [P in TObjectKey]: TAny } ;
+export type TAny =
+  TObjectKey
+  | TObject
   | null
-  | TJson[]
-  | { [key: string]: TJson };
+  | TAny[];

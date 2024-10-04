@@ -12,9 +12,11 @@ import {
 } from './constants/discontinue-impact-types';
 import { ALL_COMPANY_INSTANCES } from '../companies/company-instances.constants';
 import { ECompanies } from '../companies/constants/companies.enum';
+import { FUNCTION_DESCRIPTIONS } from './function-data/function-descriptions.constants';
+import { EFunctions } from './constants/functions.enum';
 
 export class CriticalFunction {
-  id: `FUNCTION_${number}`;
+  id: EFunctions;
   licensedActivity: TEntityActivity;
   name: string;
   leiFinancialEntity: string;
@@ -26,9 +28,8 @@ export class CriticalFunction {
   discontinuationImpact: TDiscontinuationImpact;
 
   constructor(
-    id: number,
+    id: EFunctions,
     licensedActivityKey: TEntityActivityKey,
-    name: string,
     criticalityAssessmentKey: TCriticalityAssessmentKey,
     reasonsForCriticality: string,
     dateOfLastAssessment: TDate,
@@ -36,9 +37,9 @@ export class CriticalFunction {
     recoveryPoint: number,
     discontinuationImpactKey: TDiscontinuationImpactKey,
   ) {
-    this.id = `FUNCTION_${id}`;
+    this.id = id;
     this.licensedActivity = ENTITY_ACTIVITIES[licensedActivityKey];
-    this.name = name;
+    this.name = FUNCTION_DESCRIPTIONS[id];
     this.leiFinancialEntity = ALL_COMPANY_INSTANCES[ECompanies.BLOCKRISE].companyIdentification.code;
     this.criticalityAssessment = CRITICALITY_ASSESSMENT_TYPES[criticalityAssessmentKey];
     this.reasonsForCriticality = reasonsForCriticality;
