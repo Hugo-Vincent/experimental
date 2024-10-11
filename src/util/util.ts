@@ -14,15 +14,15 @@ export class CustomMaps {
    * @param key - The property to get the value of and group the objects by
    * @returns - A map of objects grouped by the specified property value
    */
-  static groupByProperty<K extends TIndexableKey<K, T>, T extends { [P in K]: T[K] }>(
+  static groupByProperty<K extends TIndexableKey<K, T>, T extends Record<K, T[K]>>(
     objects: T[],
     key: K,
-  ): TMap<T[K], T[]> {
-    return objects.reduce((acc: TMap<T[K], T[]>, obj: T) => {
-      if (acc[obj[key]]?.push(obj)) {
-        return acc;
+  ): Record<T[K], T[]> {
+    return objects.reduce((acc: Record<T[K], T[]>, obj: T) => {
+      if (!acc[obj[key]]) {
+        acc[obj[key]] = [];
       }
-      acc[obj[key]] = [obj];
+      acc[obj[key]].push(obj);
       return acc;
     }, {});
   }
@@ -33,11 +33,11 @@ export class CustomMaps {
    * @param key - The property to get the unique value of and group the objects by
    * @returns - A map of objects indexed by a specified property value
    */
-  static groupByUniqueProperty<K extends TIndexableKey<K, T>, T extends { [P in K]: T[K] }>(
+  static groupByUniqueProperty<K extends TIndexableKey<K, T>, T extends Record<K, T[K]>>(
     objects: T[],
     key: K,
-  ): TMap<T[K], T> {
-    return objects.reduce((acc: TMap<T[K], T>, x: T) => {
+  ): Record<T[K], T> {
+    return objects.reduce((acc: Record<T[K], T>, x: T) => {
       if (acc[x[key]]) {
         throw new Error('Key not unique.');
       }
