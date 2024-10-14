@@ -1,5 +1,4 @@
-import { TAny, TObject } from '../dora/general/general-types';
-import { TIndexableKey, TMap, TObjectKey } from './types/generic-types';
+import { TAny, TIndexableKey, TMap, TObject, TObjectKey } from './types/generic-types';
 
 export class Util {
   static isObject(obj: TAny): obj is TObject {
@@ -17,7 +16,7 @@ export class CustomMaps {
   static groupByProperty<K extends TIndexableKey<K, T>, T extends Record<K, T[K]>>(
     objects: T[],
     key: K,
-  ): Record<T[K], T[]> {
+  ): Partial<Record<T[K], T[]>> {
     return objects.reduce((acc: Record<T[K], T[]>, obj: T) => {
       if (!acc[obj[key]]) {
         acc[obj[key]] = [];

@@ -1,5 +1,5 @@
 import { TABLE_SPECS } from '../constants/table-specs.constants';
-import { TAny } from '../../general/general-types';
+import { TAny } from '../../../util/types/generic-types';
 
 export abstract class TableEntry {
   protected tableNr: number;

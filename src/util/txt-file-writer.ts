@@ -1,5 +1,5 @@
-import { TAny } from '../dora/general/general-types';
 import { FileWriter } from './file-writer';
+import { TAny } from './types/generic-types';
 
 export class TxtFileWriter extends FileWriter {
   constructor(basePath?: string) {

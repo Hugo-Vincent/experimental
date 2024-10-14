@@ -1,5 +1,5 @@
 import { FileWriter } from './file-writer';
-import { TAny } from '../dora/general/general-types';
+import { TAny } from './types/generic-types';
 
 export class JsonFileWriter extends FileWriter {
   constructor(basePath?: string) {
