@@ -2,7 +2,7 @@ import { ECompanies } from '../constants/companies.enum';
 
 export const COMPANY_PARENT_UNDERTAKINGS: Record<ECompanies, ECompanies> = {
   [ECompanies.AFAS]: undefined,
-  [ECompanies.ALPHABET]: null,
+  [ECompanies.ALPHABET]: ECompanies.ALPHABET,
   [ECompanies.BITVAVO]: undefined,
   [ECompanies.BITWARDEN]: undefined,
   [ECompanies.BLOCKCHAINDOTCOM]: undefined,
@@ -20,8 +20,8 @@ export const COMPANY_PARENT_UNDERTAKINGS: Record<ECompanies, ECompanies> = {
   [ECompanies.ELLIPTIC]: undefined,
   [ECompanies.GITHUB]: undefined,
   [ECompanies.GLASSNODE]: undefined,
-  [ECompanies.GOOGLE]: null,
-  [ECompanies.GOOGLE_IRELAND]: ECompanies.GOOGLE,
+  [ECompanies.GOOGLE]: ECompanies.ALPHABET,
+  [ECompanies.GOOGLE_IRELAND]: ECompanies.ALPHABET,
   [ECompanies.GRAFANA]: undefined,
   [ECompanies.HEXNODE]: undefined,
   [ECompanies.IDIN]: undefined,
@@ -30,7 +30,7 @@ export const COMPANY_PARENT_UNDERTAKINGS: Record<ECompanies, ECompanies> = {
   [ECompanies.KWINZO]: undefined,
   [ECompanies.LINEAR]: undefined,
   [ECompanies.MEMPOOL]: undefined,
-  [ECompanies.MICROSOFT]: undefined,
+  [ECompanies.MICROSOFT]: ECompanies.MICROSOFT,
   [ECompanies.NEXTNOVATE]: undefined,
   [ECompanies.NOTION]: undefined,
   [ECompanies.PAY_DOT]: undefined,
@@ -48,7 +48,7 @@ export const COMPANY_PARENT_UNDERTAKINGS: Record<ECompanies, ECompanies> = {
   [ECompanies.TWILIO]: undefined,
   [ECompanies.UBIQUITI]: undefined,
   [ECompanies.UNISCAPE]: undefined,
-  [ECompanies.VERCEL]: undefined,
+  [ECompanies.VERCEL]: ECompanies.VERCEL,
   [ECompanies.VERIFF]: undefined,
   [ECompanies.ZENDESK]: undefined,
 };
