@@ -1,38 +1,34 @@
-import { ECompanies } from './companies.enum';
+import { ECompanies } from '../../common/companies.enum';
 
 const CRITICALITY_TPSPS = {
   /**
    * CRITICAL
    */
-  AFAS: 'critical',
-  BITVAVO: 'critical',
   BUNQ: 'critical',
-  CHAINSTACK: 'critical',
-  CLOUDFLARE: 'critical',
   COMPLYADVANTAGE: 'critical',
   ELLIPTIC: 'critical',
   GOOGLE_IRELAND: 'critical',
-  HEXNODE: 'critical',
-  KRAKEN: 'critical',
-  KWINZO: 'critical',
   MICROSOFT: 'critical',
-  NOTION: 'critical',
-  SANITY: 'critical',
   SECUROSYS: 'critical',
-  SENDGRID: 'critical',
-  TWILIO: 'critical',
-  UBIQUITI: 'critical',
   VERCEL: 'critical',
-  ZENDESK: 'critical',
-  /**
-   * Are these 2 really critical?
-   */
-  GLASSNODE: 'critical',
-  GRAFANA: 'critical',
 
   /**
    * NOT CRITICAL
    */
+  AFAS: 'non-critical',
+  BITVAVO: 'non-critical',
+  CHAINSTACK: 'non-critical',
+  HEXNODE: 'non-critical',
+  KRAKEN: 'non-critical',
+  KWINZO: 'non-critical',
+  NOTION: 'non-critical',
+  SANITY: 'non-critical',
+  SENDGRID: 'non-critical',
+  TWILIO: 'non-critical',
+  UBIQUITI: 'non-critical',
+  ZENDESK: 'non-critical',
+  GLASSNODE: 'non-critical',
+  GRAFANA: 'non-critical',
   BITWARDEN: 'non-critical',
   BLOCKCHAINDOTCOM: 'non-critical',
   COINGECKO: 'non-critical',
@@ -63,6 +59,8 @@ const CRITICALITY_TPSPS = {
   BLOCKRISE: 'not applicable',
   BLOCKRISE_GROUP: 'not applicable',
   STICHTING_BLOCKRISE: 'not applicable',
+
+  // CLOUDFLARE: 'deleted',
 } as const;
 
 
@@ -70,28 +68,13 @@ export type TCriticalTPSP = keyof {
   [P in keyof typeof CRITICALITY_TPSPS as typeof CRITICALITY_TPSPS[P] extends 'critical' ? P : never]: true;
 };
 const _CRITICAL_TPSPS: Record<TCriticalTPSP, ECompanies> = {
-  [ECompanies.AFAS]: undefined,
-  [ECompanies.BITVAVO]: undefined,
   [ECompanies.BUNQ]: undefined,
-  [ECompanies.CHAINSTACK]: undefined,
-  [ECompanies.CLOUDFLARE]: undefined,
   [ECompanies.COMPLYADVANTAGE]: undefined,
   [ECompanies.ELLIPTIC]: undefined,
-  [ECompanies.GLASSNODE]: undefined,
   [ECompanies.GOOGLE_IRELAND]: undefined,
-  [ECompanies.GRAFANA]: undefined,
-  [ECompanies.HEXNODE]: undefined,
-  [ECompanies.KRAKEN]: undefined,
-  [ECompanies.KWINZO]: undefined,
   [ECompanies.MICROSOFT]: undefined,
-  [ECompanies.NOTION]: undefined,
-  [ECompanies.SANITY]: undefined,
   [ECompanies.SECUROSYS]: undefined,
-  [ECompanies.SENDGRID]: undefined,
-  [ECompanies.TWILIO]: undefined,
-  [ECompanies.UBIQUITI]: undefined,
   [ECompanies.VERCEL]: undefined,
-  [ECompanies.ZENDESK]: undefined,
 };
 export const CRITICAL_TPSP_KEYS = Object.keys(_CRITICAL_TPSPS) as TCriticalTPSP[];
 
@@ -100,7 +83,21 @@ export type TNonCriticalTPSP = keyof {
   [P in keyof typeof CRITICALITY_TPSPS as typeof CRITICALITY_TPSPS[P] extends 'non-critical' ? P : never]: true;
 }
 const _NON_CRITICAL_TPSPS: Record<TNonCriticalTPSP, ECompanies> = {
+  AFAS: undefined,
+  BITVAVO: undefined,
   BITWARDEN: undefined,
+  CHAINSTACK: undefined,
+  HEXNODE: undefined,
+  KRAKEN: undefined,
+  KWINZO: undefined,
+  NOTION: undefined,
+  SANITY: undefined,
+  SENDGRID: undefined,
+  TWILIO: undefined,
+  UBIQUITI: undefined,
+  ZENDESK: undefined,
+  GLASSNODE: undefined,
+  GRAFANA: undefined,
   BLOCKCHAINDOTCOM: undefined,
   COINGECKO: undefined,
   COLT: undefined,
@@ -121,6 +118,6 @@ const _NON_CRITICAL_TPSPS: Record<TNonCriticalTPSP, ECompanies> = {
   SONARCLOUD: undefined,
   SUREPAY: undefined,
   UNISCAPE: undefined,
-  VERIFF: undefined
+  VERIFF: undefined,
 };
 export const NON_CRITICAL_TPSPS_KEYS = Object.keys(_NON_CRITICAL_TPSPS) as TNonCriticalTPSP[];

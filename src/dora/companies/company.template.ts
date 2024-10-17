@@ -1,14 +1,14 @@
 import { ICompanyInfo } from './interfaces/company.interface';
-import { TCodeType, TCompanyIdentifiers } from '../general/general-types';
+import { TCodeType, TCompanyIdentifiers } from '../common/general-types';
 import { ICompanyIndentification } from './interfaces/company-id.interface';
 import { COMPANY_LEGAL_NAMES, TLegalName } from './company-data/company-legal-names.constants';
 import { COMPANY_TRADEMARKS } from './company-data/company-trade-mark-names.constants';
 import { COMPANY_COUNTRY_CODES } from './company-data/company-country-codes.constants';
-import { CODETYPE_TO_CODEMAP } from '../general/mappings.constants';
-import { ECompanies } from './constants/companies.enum';
+import { CODETYPE_TO_CODEMAP } from '../common/mappings.constants';
+import { ECompanies } from '../common/companies.enum';
 import { COMPANY_LEI_CODES } from './company-data/company-lei-codes.constants';
 import { COMPANY_CRN_CODES } from './company-data/company-registration-numbers.constants';
-import { Countries } from '../general/countries.enum';
+import { Countries } from '../common/countries.enum';
 import { ENTITY_TYPES, TEntity } from './constants/entity-types.constants';
 import { COMPANY_ENTITY_TYPE_KEYS } from './company-data/company-entity-type-keys.constants';
 import { Nullable, Optional } from '../../types/types';

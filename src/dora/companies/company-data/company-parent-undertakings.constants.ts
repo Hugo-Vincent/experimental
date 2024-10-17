@@ -1,8 +1,8 @@
-import { ECompanies } from '../constants/companies.enum';
+import { ECompanies } from '../../common/companies.enum';
 
 export const COMPANY_PARENT_UNDERTAKINGS: Record<ECompanies, ECompanies> = {
   [ECompanies.AFAS]: undefined,
-  [ECompanies.ALPHABET]: ECompanies.ALPHABET,
+  [ECompanies.ALPHABET]: null,
   [ECompanies.BITVAVO]: undefined,
   [ECompanies.BITWARDEN]: undefined,
   [ECompanies.BLOCKCHAINDOTCOM]: undefined,
@@ -13,7 +13,7 @@ export const COMPANY_PARENT_UNDERTAKINGS: Record<ECompanies, ECompanies> = {
 
   [ECompanies.BUNQ]: undefined,
   [ECompanies.CHAINSTACK]: undefined,
-  [ECompanies.CLOUDFLARE]: undefined,
+  // [ECompanies.CLOUDFLARE]: undefined,
   [ECompanies.COINGECKO]: undefined,
   [ECompanies.COLT]: undefined,
   [ECompanies.COMPLYADVANTAGE]: undefined,
@@ -30,7 +30,7 @@ export const COMPANY_PARENT_UNDERTAKINGS: Record<ECompanies, ECompanies> = {
   [ECompanies.KWINZO]: undefined,
   [ECompanies.LINEAR]: undefined,
   [ECompanies.MEMPOOL]: undefined,
-  [ECompanies.MICROSOFT]: ECompanies.MICROSOFT,
+  [ECompanies.MICROSOFT]: null,
   [ECompanies.NEXTNOVATE]: undefined,
   [ECompanies.NOTION]: undefined,
   [ECompanies.PAY_DOT]: undefined,
@@ -48,7 +48,7 @@ export const COMPANY_PARENT_UNDERTAKINGS: Record<ECompanies, ECompanies> = {
   [ECompanies.TWILIO]: undefined,
   [ECompanies.UBIQUITI]: undefined,
   [ECompanies.UNISCAPE]: undefined,
-  [ECompanies.VERCEL]: ECompanies.VERCEL,
+  [ECompanies.VERCEL]: undefined,
   [ECompanies.VERIFF]: undefined,
   [ECompanies.ZENDESK]: undefined,
 };

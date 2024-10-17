@@ -1,10 +1,12 @@
-import { CRITICAL_TPSP_INSTANCES } from '../companies/company-instances.constants';
+import {
+  CRITICAL_TPSP_INSTANCES_ARRAY,
+} from '../companies/company-instances.constants';
 import { Contract } from './contract';
-import { Currencies } from '../general/currencies.enum';
-import { DELETION_DATE_PLACEHOLDER } from '../general/data-constants';
-import { Countries } from '../general/countries.enum';
+import { Currencies } from '../common/currencies.enum';
+import { DELETION_DATE_PLACEHOLDER } from '../common/data-constants';
+import { Countries } from '../common/countries.enum';
 
-export const CONTRACT_INSTANCES = Object.values(CRITICAL_TPSP_INSTANCES).map((x, i) => {
+export const CONTRACT_INSTANCES = CRITICAL_TPSP_INSTANCES_ARRAY.map((x, i) => {
   const contract = new Contract(
     x,
     `CONTRACT_${i + 1}`,

@@ -1,7 +1,7 @@
 import { createJsonFiles, createTxtFiles } from './generate-dora-files';
 import { COMPANY_COUNTRY_CODES } from './companies/company-data/company-country-codes.constants';
 import { COMPANY_LEI_CODES } from './companies/company-data/company-lei-codes.constants';
-import { ECompanies } from './companies/constants/companies.enum';
+import { ECompanies } from './common/companies.enum';
 import { COMPANY_CRN_CODES } from './companies/company-data/company-registration-numbers.constants';
 
 

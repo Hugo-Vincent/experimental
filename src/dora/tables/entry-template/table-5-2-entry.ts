@@ -1,9 +1,9 @@
 import { TableEntry } from './table-entry';
 import { TICTService } from '../../companies/constants/ict-service-types';
-import { TCodeType } from '../../general/general-types';
+import { TCodeType } from '../../common/general-types';
 import { Company } from '../../companies/company.template';
 import { ALL_COMPANY_INSTANCES } from '../../companies/company-instances.constants';
-import { ECompanies } from '../../companies/constants/companies.enum';
+import { ECompanies } from '../../common/companies.enum';
 
 export class EntryTable5_2 extends TableEntry {
   contractRefNumber: string;
@@ -16,6 +16,7 @@ export class EntryTable5_2 extends TableEntry {
 
   constructor(company: Company) {
     super(5, 2);
+    console.log(company);
     this.contractRefNumber = company.contract.referenceNumber;
     this.ictServiceType = company.contract.ictServicesType;
     this.idCodeTPSP = company.companyIdentification.code;

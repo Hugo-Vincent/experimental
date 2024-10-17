@@ -1,7 +1,7 @@
-import { ECompanies } from '../constants/companies.enum';
+import { ECompanies } from '../../common/companies.enum';
 import { Nullable } from '../../../types/types';
 import { ICompanyIndentification } from '../interfaces/company-id.interface';
-import { Countries } from '../../general/countries.enum';
+import { Countries } from '../../common/countries.enum';
 
 export const COMPANY_LEI_CODES: Record<
   ECompanies,
@@ -32,11 +32,11 @@ export const COMPANY_LEI_CODES: Record<
     link: 'https://lei-nederland.nl/gedetailleerde-informatie/1040476/7245002ZUXNOEJ0QPZ44/bunq-b-v/',
   },
   [ECompanies.CHAINSTACK]: null,
-  [ECompanies.CLOUDFLARE]: {
-    country: Countries.US,
-    code: '5493007DY18BGNLDWU14',
-    link: 'https://leiworldwide.com/lei_record/5493007DY18BGNLDWU14',
-  },
+  // [ECompanies.CLOUDFLARE]: {
+  //   country: Countries.US,
+  //   code: '5493007DY18BGNLDWU14',
+  //   link: 'https://leiworldwide.com/lei_record/5493007DY18BGNLDWU14',
+  // },
   [ECompanies.COLT]: {
     country: Countries.GB,
     code: '2138004U3BWMFNR4ZW05',

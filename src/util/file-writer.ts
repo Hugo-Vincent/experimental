@@ -1,6 +1,6 @@
 import * as fs from 'fs';
-import { TAny } from '../dora/general/general-types';
 import { Util } from './util';
+import { TAny } from './types/generic-types';
 
 export abstract class FileWriter {
   basePath: `${string}/`;

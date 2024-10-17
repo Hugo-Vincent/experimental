@@ -1,7 +1,7 @@
 import { CONTRACT_INSTANCES } from '../../contracts/contract-instances';
 import { EntryTable4_1 } from '../entry-template/table-4-1-entry';
 import { ALL_COMPANY_INSTANCES } from '../../companies/company-instances.constants';
-import { ECompanies } from '../../companies/constants/companies.enum';
+import { ECompanies } from '../../common/companies.enum';
 
 export function generateTable4_1(): EntryTable4_1[] {
   return CONTRACT_INSTANCES.map((x) => {

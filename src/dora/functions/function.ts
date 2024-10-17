@@ -4,14 +4,14 @@ import {
   TCriticalityAssessment,
   TCriticalityAssessmentKey,
 } from './constants/criticality-assessment-types';
-import { TDate } from '../general/general-types';
+import { TDate } from '../common/general-types';
 import {
   DISCONTINUATION_IMPACT_TYPES,
   TDiscontinuationImpact,
   TDiscontinuationImpactKey,
 } from './constants/discontinue-impact-types';
 import { ALL_COMPANY_INSTANCES } from '../companies/company-instances.constants';
-import { ECompanies } from '../companies/constants/companies.enum';
+import { ECompanies } from '../common/companies.enum';
 import { FUNCTION_DESCRIPTIONS } from './function-data/function-descriptions.constants';
 import { EFunctions } from './constants/functions.enum';
 

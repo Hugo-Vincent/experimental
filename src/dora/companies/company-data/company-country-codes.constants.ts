@@ -1,5 +1,5 @@
-import { ECompanies } from '../constants/companies.enum';
-import { Countries } from '../../general/countries.enum';
+import { ECompanies } from '../../common/companies.enum';
+import { Countries } from '../../common/countries.enum';
 
 export const COMPANY_COUNTRY_CODES: Record<ECompanies, Countries> = {
   [ECompanies.AFAS]: Countries.NL,
@@ -12,7 +12,7 @@ export const COMPANY_COUNTRY_CODES: Record<ECompanies, Countries> = {
   [ECompanies.STICHTING_BLOCKRISE]: Countries.NL,
   [ECompanies.BUNQ]: Countries.NL,
   [ECompanies.CHAINSTACK]: Countries.SG,
-  [ECompanies.CLOUDFLARE]: Countries.US,
+  // [ECompanies.CLOUDFLARE]: Countries.US,
   [ECompanies.COLT]: Countries.GB,
   [ECompanies.COINGECKO]: Countries.SG,
   [ECompanies.COMPLYADVANTAGE]: Countries.GB,

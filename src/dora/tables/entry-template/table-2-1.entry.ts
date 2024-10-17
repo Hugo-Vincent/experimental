@@ -1,5 +1,5 @@
 import { TableEntry } from './table-entry';
-import { Currencies } from '../../general/currencies.enum';
+import { Currencies } from '../../common/currencies.enum';
 import { TContractualArrangement } from '../../contracts/constants/contractual-arrangement-types.constants';
 import { Contract } from '../../contracts/contract';
 

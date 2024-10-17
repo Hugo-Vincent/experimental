@@ -1,4 +1,4 @@
-import { ECompanies } from '../constants/companies.enum';
+import { ECompanies } from '../../common/companies.enum';
 
 const _COMPANY_TRADEMARKS = {
   [ECompanies.AFAS]: 'AFAS',
@@ -11,7 +11,7 @@ const _COMPANY_TRADEMARKS = {
   [ECompanies.STICHTING_BLOCKRISE]: 'Stichting Blockrise',
   [ECompanies.BUNQ]: 'Bunq',
   [ECompanies.CHAINSTACK]: 'Chainstack',
-  [ECompanies.CLOUDFLARE]: 'Cloudflare',
+  // [ECompanies.CLOUDFLARE]: 'Cloudflare',
   [ECompanies.COLT]: 'Colt',
   [ECompanies.COINGECKO]: 'CoinGecko',
   [ECompanies.COMPLYADVANTAGE]: 'ComplyAdvantage',

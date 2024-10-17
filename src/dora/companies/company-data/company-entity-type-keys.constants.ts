@@ -1,4 +1,4 @@
-import { ECompanies } from '../constants/companies.enum';
+import { ECompanies } from '../../common/companies.enum';
 import { TEntityKey } from '../constants/entity-types.constants';
 
 export const COMPANY_ENTITY_TYPE_KEYS: Record<ECompanies, TEntityKey> = {
@@ -17,7 +17,7 @@ export const COMPANY_ENTITY_TYPE_KEYS: Record<ECompanies, TEntityKey> = {
 
   [ECompanies.BUNQ]: 1,
   [ECompanies.CHAINSTACK]: 1,
-  [ECompanies.CLOUDFLARE]: 1,
+  // [ECompanies.CLOUDFLARE]: 1,
   [ECompanies.COLT]: 1,
   [ECompanies.COINGECKO]: 1,
   [ECompanies.COMPLYADVANTAGE]: 1,

@@ -1,4 +1,4 @@
-import { ECompanies } from '../constants/companies.enum';
+import { ECompanies } from '../../common/companies.enum';
 
 const _COMPANY_LEGAL_NAMES = {
   [ECompanies.AFAS]: 'Afas Software B.V.',
@@ -11,7 +11,7 @@ const _COMPANY_LEGAL_NAMES = {
   [ECompanies.STICHTING_BLOCKRISE]: 'Stichting Blockrise',
   [ECompanies.BUNQ]: 'Bunq B.V.',
   [ECompanies.CHAINSTACK]: 'Chainstack Pte. Ltd.',
-  [ECompanies.CLOUDFLARE]: 'Cloudflare Inc.',
+  // [ECompanies.CLOUDFLARE]: 'Cloudflare Inc.',
   [ECompanies.COLT]: 'Colt Technology Services Europe Ltd.',
   [ECompanies.COINGECKO]: 'Gecko Labs Pte. Ltd.',
   [ECompanies.COMPLYADVANTAGE]: 'Compliance Advantage Ltd.',

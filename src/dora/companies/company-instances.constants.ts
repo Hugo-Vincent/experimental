@@ -1,11 +1,10 @@
-import { ECompanies } from './constants/companies.enum';
+import { ECompanies } from '../common/companies.enum';
 import { Company } from './company.template';
 import {
   CRITICAL_TPSP_KEYS, NON_CRITICAL_TPSPS_KEYS,
   TCriticalTPSP,
   TNonCriticalTPSP,
 } from './constants/third-party-service-providers.constants';
-
 
 const _OTHER_COMPANIES: Record<Exclude<ECompanies, TNonCriticalTPSP | TCriticalTPSP>, Company> = {
   [ECompanies.ALPHABET]: new Company(ECompanies.ALPHABET),
@@ -22,6 +21,8 @@ export const CRITICAL_TPSP_INSTANCES = CRITICAL_TPSP_KEYS.reduce((map, x) => {
   map[x] = new Company(x);
   return map;
 }, {} as Record<TCriticalTPSP, Company>);
+export const CRITICAL_TPSP_INSTANCES_ARRAY = Object.values(CRITICAL_TPSP_INSTANCES);
+
 export const NON_CRITICAL_TPSP_INSTANCES = NON_CRITICAL_TPSPS_KEYS.reduce((map, x) => {
   map[x] = new Company(x);
   return map;
@@ -31,3 +32,4 @@ export const ALL_COMPANY_INSTANCES: Record<ECompanies, Company> = {
   ...NON_CRITICAL_TPSP_INSTANCES,
   ..._OTHER_COMPANIES,
 };
+export const NON_CRITICAL_TPSP_INSTANCES_ARRAY = Object.values(NON_CRITICAL_TPSP_INSTANCES);

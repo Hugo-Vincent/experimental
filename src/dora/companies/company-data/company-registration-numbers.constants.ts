@@ -1,7 +1,7 @@
-import { ECompanies } from '../constants/companies.enum';
+import { ECompanies } from '../../common/companies.enum';
 import { Nullable } from '../../../types/types';
 import { ICompanyIndentification } from '../interfaces/company-id.interface';
-import { Countries } from '../../general/countries.enum';
+import { Countries } from '../../common/countries.enum';
 
 export const COMPANY_CRN_CODES: Record<
   ECompanies,
@@ -175,11 +175,11 @@ export const COMPANY_CRN_CODES: Record<
     code: '1146312',
     link: 'https://data.sfgov.org/widgets/g8m3-pdis',
   },
-  [ECompanies.CLOUDFLARE]: {
-    country: Countries.US,
-    code: '0460442',
-    link: 'https://data.sfgov.org/widgets/g8m3-pdis',
-  },
+  // [ECompanies.CLOUDFLARE]: {
+  //   country: Countries.US,
+  //   code: '0460442',
+  //   link: 'https://data.sfgov.org/widgets/g8m3-pdis',
+  // },
   [ECompanies.GITHUB]: {
     country: Countries.US,
     code: '0456831',

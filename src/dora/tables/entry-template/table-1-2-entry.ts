@@ -1,8 +1,8 @@
 import { TableEntry } from './table-entry';
-import { TDate } from '../../general/general-types';
-import { Currencies } from '../../general/currencies.enum';
+import { TDate } from '../../common/general-types';
+import { Currencies } from '../../common/currencies.enum';
 import { Company } from '../../companies/company.template';
-import { DELETION_DATE_PLACEHOLDER } from '../../general/data-constants';
+import { DELETION_DATE_PLACEHOLDER } from '../../common/data-constants';
 
 export class EntryTable1_2 extends TableEntry {
   lei:  Company['companyIdentification']['code'];

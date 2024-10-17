@@ -1,12 +1,12 @@
 import { TableEntry } from './table-entry';
 import { Company } from '../../companies/company.template';
-import { TCodeType } from '../../general/general-types';
-import { Countries } from '../../general/countries.enum';
-import { Currencies } from '../../general/currencies.enum';
+import { TCodeType } from '../../common/general-types';
+import { Countries } from '../../common/countries.enum';
+import { Currencies } from '../../common/currencies.enum';
 
 export class EntryTable5_1 extends TableEntry {
   idCode: string;
-  typeOfCode: TCodeType
+  typeOfCode: TCodeType;
   name: string;
   typeOfPerson: string;
   countryOfHQ: Countries;
