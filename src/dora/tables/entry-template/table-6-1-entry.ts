@@ -1,5 +1,5 @@
 import { TableEntry } from './table-entry';
-import { CriticalFunction } from '../../functions/function';
+import { CriticalFunction } from '../../classes/function';
 
 export class EntryTable6_1 extends TableEntry {
   functionIdenfifier: CriticalFunction['id'];

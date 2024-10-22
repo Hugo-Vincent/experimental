@@ -1,4 +1,4 @@
-import { ECompanies } from '../../common/companies.enum';
+import { ECompanies } from '../common/companies.enum';
 
 export const COMPANY_PARENT_UNDERTAKINGS: Record<ECompanies, ECompanies> = {
   [ECompanies.AFAS]: undefined,

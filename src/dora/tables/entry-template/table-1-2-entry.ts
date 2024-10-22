@@ -1,7 +1,7 @@
 import { TableEntry } from './table-entry';
 import { TDate } from '../../common/general-types';
 import { Currencies } from '../../common/currencies.enum';
-import { Company } from '../../companies/company.template';
+import { Company } from '../../classes/company';
 import { DELETION_DATE_PLACEHOLDER } from '../../common/data-constants';
 
 export class EntryTable1_2 extends TableEntry {

@@ -1,6 +1,5 @@
-import { CONTRACT_INSTANCES } from '../../contracts/contract-instances';
+import { ALL_COMPANY_INSTANCES, CONTRACT_INSTANCES } from '../../classes/instances';
 import { EntryTable4_1 } from '../entry-template/table-4-1-entry';
-import { ALL_COMPANY_INSTANCES } from '../../companies/company-instances.constants';
 import { ECompanies } from '../../common/companies.enum';
 
 export function generateTable4_1(): EntryTable4_1[] {

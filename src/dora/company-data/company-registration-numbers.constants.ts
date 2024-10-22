@@ -1,7 +1,7 @@
-import { ECompanies } from '../../common/companies.enum';
-import { Nullable } from '../../../types/types';
+import { ECompanies } from '../common/companies.enum';
+import { Nullable } from '../../types/types';
 import { ICompanyIndentification } from '../interfaces/company-id.interface';
-import { Countries } from '../../common/countries.enum';
+import { Countries } from '../common/countries.enum';
 
 export const COMPANY_CRN_CODES: Record<
   ECompanies,

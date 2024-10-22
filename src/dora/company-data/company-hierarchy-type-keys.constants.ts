@@ -1,5 +1,5 @@
-import { ECompanies } from '../../common/companies.enum';
-import { THierarchyKey } from '../constants/hierarchy-types.constants';
+import { ECompanies } from '../common/companies.enum';
+import { THierarchyKey } from '../closed-options/hierarchy-types.constants';
 
 export const COMPANY_HIERARCHY_TYPE_KEYS: Record<ECompanies, THierarchyKey> = {
   [ECompanies.ALPHABET]: 1,

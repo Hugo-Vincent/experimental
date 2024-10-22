@@ -1,6 +1,6 @@
 import { TableEntry } from './table-entry';
 import { TCodeType } from '../../common/general-types';
-import { Contract } from '../../contracts/contract';
+import { Contract } from '../../classes/contract';
 
 export class EntryTable3_2 extends TableEntry {
   contractReferenceNumber: string;

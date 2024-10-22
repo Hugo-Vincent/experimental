@@ -1,9 +1,9 @@
 import { TableEntry } from './table-entry';
-import { TICTService } from '../../companies/constants/ict-service-types';
+import { TICTService } from '../../closed-options/ict-service-types';
 import { TCodeType } from '../../common/general-types';
-import { Company } from '../../companies/company.template';
-import { ALL_COMPANY_INSTANCES } from '../../companies/company-instances.constants';
+import { Company } from '../../classes/company';
 import { ECompanies } from '../../common/companies.enum';
+import { ALL_COMPANY_INSTANCES } from '../../classes/instances';
 
 export class EntryTable5_2 extends TableEntry {
   contractRefNumber: string;

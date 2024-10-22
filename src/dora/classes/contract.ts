@@ -1,20 +1,20 @@
 import {
   CONTRACTUAL_ARRANGEMENT_TYPES,
   TContractualArrangement, TContractualArrangementKey,
-} from './constants/contractual-arrangement-types.constants';
+} from '../closed-options/contractual-arrangement-types.constants';
 import { Currencies } from '../common/currencies.enum';
-import { Company } from '../companies/company.template';
+import { Company } from './company';
 import { TDate } from '../common/general-types';
-import { CONTRACT_TERMINATION_REASONS, TTerminationReason } from './constants/termination-reasons';
+import { CONTRACT_TERMINATION_REASONS, TTerminationReason } from '../closed-options/termination-reasons';
 import { Countries } from '../common/countries.enum';
 import {
   CONTRACT_RELIANCE_LEVELS,
   TRelianceLevel,
   TRelianceLevelKey,
-} from './constants/reliance-levels';
-import { ICT_SERVICE_TYPES, TICTService, TICTServiceKey } from '../companies/constants/ict-service-types';
-import { ALL_COMPANY_INSTANCES } from '../companies/company-instances.constants';
+} from '../closed-options/reliance-levels';
+import { ICT_SERVICE_TYPES, TICTService, TICTServiceKey } from '../closed-options/ict-service-types';
 import { ECompanies } from '../common/companies.enum';
+import { ALL_COMPANY_INSTANCES } from './instances';
 
 export class Contract {
   tpsp: Company;
@@ -38,7 +38,7 @@ export class Contract {
   noticePeriodFinEntity: number;
   // How many days the tpsp must give us before they cancel their contract with us.
   noticePeriodTpsp: number;
-  // Which country's law applies to countract.
+  // Which country's law applies to contract.
   contractGoverningLawCountry: Countries;
   provisionCountry: Countries;
   // Is ICT service related to storage of data?

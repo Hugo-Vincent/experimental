@@ -1,5 +1,5 @@
-import { ECompanies } from '../../common/companies.enum';
-import { TEntityKey } from '../constants/entity-types.constants';
+import { ECompanies } from '../common/companies.enum';
+import { TEntityKey } from '../closed-options/entity-types.constants';
 
 export const COMPANY_ENTITY_TYPE_KEYS: Record<ECompanies, TEntityKey> = {
   [ECompanies.ALPHABET]: 1,

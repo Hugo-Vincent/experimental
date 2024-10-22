@@ -1,7 +1,7 @@
 import { TableEntry } from './table-entry';
 import { Currencies } from '../../common/currencies.enum';
-import { TContractualArrangement } from '../../contracts/constants/contractual-arrangement-types.constants';
-import { Contract } from '../../contracts/contract';
+import { TContractualArrangement } from '../../closed-options/contractual-arrangement-types.constants';
+import { Contract } from '../../classes/contract';
 
 export class EntryTable2_1 extends TableEntry {
   contractReferenceNumber: string;

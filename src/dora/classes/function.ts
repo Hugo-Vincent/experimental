@@ -1,19 +1,19 @@
-import { ENTITY_ACTIVITIES, TEntityActivity, TEntityActivityKey } from './constants/entity-activities.constants';
+import { ENTITY_ACTIVITIES, TEntityActivity, TEntityActivityKey } from '../closed-options/entity-activities.constants';
 import {
   CRITICALITY_ASSESSMENT_TYPES,
   TCriticalityAssessment,
   TCriticalityAssessmentKey,
-} from './constants/criticality-assessment-types';
+} from '../closed-options/criticality-assessment-types';
 import { TDate } from '../common/general-types';
 import {
   DISCONTINUATION_IMPACT_TYPES,
   TDiscontinuationImpact,
   TDiscontinuationImpactKey,
-} from './constants/discontinue-impact-types';
-import { ALL_COMPANY_INSTANCES } from '../companies/company-instances.constants';
+} from '../closed-options/discontinue-impact-types';
 import { ECompanies } from '../common/companies.enum';
-import { FUNCTION_DESCRIPTIONS } from './function-data/function-descriptions.constants';
-import { EFunctions } from './constants/functions.enum';
+import { FUNCTION_DESCRIPTIONS } from '../function-data/function-descriptions.constants';
+import { EFunctions } from '../common/functions.enum';
+import { ALL_COMPANY_INSTANCES } from './instances';
 
 export class CriticalFunction {
   id: EFunctions;

@@ -1,6 +1,6 @@
 import { TableEntry } from './table-entry';
-import { Contract } from '../../contracts/contract';
-import { Company } from '../../companies/company.template';
+import { Contract } from '../../classes/contract';
+import { Company } from '../../classes/company';
 
 export class EntryTable2_2 extends TableEntry {
   contractReferenceNumber: Contract['referenceNumber'];

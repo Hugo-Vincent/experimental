@@ -1,5 +1,5 @@
 import { TableEntry } from './table-entry';
-import { Company } from '../../companies/company.template';
+import { Company } from '../../classes/company';
 import { TCodeType } from '../../common/general-types';
 import { Countries } from '../../common/countries.enum';
 import { Currencies } from '../../common/currencies.enum';

@@ -1,5 +1,52 @@
-import { ECompanies } from '../../common/companies.enum';
+import { ECompanies } from '../common/companies.enum';
 
+const _CRITICAL_TPSPS: Record<TCriticalTPSP, ECompanies> = {
+  [ECompanies.BUNQ]: undefined,
+  [ECompanies.COMPLYADVANTAGE]: undefined,
+  [ECompanies.ELLIPTIC]: undefined,
+  [ECompanies.GOOGLE_IRELAND]: undefined,
+  [ECompanies.MICROSOFT]: undefined,
+  [ECompanies.SECUROSYS]: undefined,
+  [ECompanies.VERCEL]: undefined,
+};
+const _NON_CRITICAL_TPSPS: Record<TNonCriticalTPSP, ECompanies> = {
+  AFAS: undefined,
+  BITVAVO: undefined,
+  BITWARDEN: undefined,
+  CHAINSTACK: undefined,
+  HEXNODE: undefined,
+  KRAKEN: undefined,
+  KWINZO: undefined,
+  NOTION: undefined,
+  SANITY: undefined,
+  SENDGRID: undefined,
+  TWILIO: undefined,
+  UBIQUITI: undefined,
+  ZENDESK: undefined,
+  GLASSNODE: undefined,
+  GRAFANA: undefined,
+  BLOCKCHAINDOTCOM: undefined,
+  COINGECKO: undefined,
+  COLT: undefined,
+  GITHUB: undefined,
+  GOOGLE: undefined,
+  IDIN: undefined,
+  ING: undefined,
+  LINEAR: undefined,
+  MEMPOOL: undefined,
+  NEXTNOVATE: undefined,
+  PAY_DOT: undefined,
+  POSTCODEAPI: undefined,
+  QUICKNODE: undefined,
+  SCRIVE: undefined,
+  SENTRY: undefined,
+  SHIFTBASE: undefined,
+  SLACK: undefined,
+  SONARCLOUD: undefined,
+  SUREPAY: undefined,
+  UNISCAPE: undefined,
+  VERIFF: undefined,
+};
 const CRITICALITY_TPSPS = {
   /**
    * CRITICAL
@@ -63,61 +110,12 @@ const CRITICALITY_TPSPS = {
   // CLOUDFLARE: 'deleted',
 } as const;
 
-
+export const CRITICAL_TPSP_KEYS = Object.keys(_CRITICAL_TPSPS) as TCriticalTPSP[];
+export const NON_CRITICAL_TPSPS_KEYS = Object.keys(_NON_CRITICAL_TPSPS) as TNonCriticalTPSP[];
 export type TCriticalTPSP = keyof {
   [P in keyof typeof CRITICALITY_TPSPS as typeof CRITICALITY_TPSPS[P] extends 'critical' ? P : never]: true;
 };
-const _CRITICAL_TPSPS: Record<TCriticalTPSP, ECompanies> = {
-  [ECompanies.BUNQ]: undefined,
-  [ECompanies.COMPLYADVANTAGE]: undefined,
-  [ECompanies.ELLIPTIC]: undefined,
-  [ECompanies.GOOGLE_IRELAND]: undefined,
-  [ECompanies.MICROSOFT]: undefined,
-  [ECompanies.SECUROSYS]: undefined,
-  [ECompanies.VERCEL]: undefined,
-};
-export const CRITICAL_TPSP_KEYS = Object.keys(_CRITICAL_TPSPS) as TCriticalTPSP[];
-
-
 export type TNonCriticalTPSP = keyof {
   [P in keyof typeof CRITICALITY_TPSPS as typeof CRITICALITY_TPSPS[P] extends 'non-critical' ? P : never]: true;
 }
-const _NON_CRITICAL_TPSPS: Record<TNonCriticalTPSP, ECompanies> = {
-  AFAS: undefined,
-  BITVAVO: undefined,
-  BITWARDEN: undefined,
-  CHAINSTACK: undefined,
-  HEXNODE: undefined,
-  KRAKEN: undefined,
-  KWINZO: undefined,
-  NOTION: undefined,
-  SANITY: undefined,
-  SENDGRID: undefined,
-  TWILIO: undefined,
-  UBIQUITI: undefined,
-  ZENDESK: undefined,
-  GLASSNODE: undefined,
-  GRAFANA: undefined,
-  BLOCKCHAINDOTCOM: undefined,
-  COINGECKO: undefined,
-  COLT: undefined,
-  GITHUB: undefined,
-  GOOGLE: undefined,
-  IDIN: undefined,
-  ING: undefined,
-  LINEAR: undefined,
-  MEMPOOL: undefined,
-  NEXTNOVATE: undefined,
-  PAY_DOT: undefined,
-  POSTCODEAPI: undefined,
-  QUICKNODE: undefined,
-  SCRIVE: undefined,
-  SENTRY: undefined,
-  SHIFTBASE: undefined,
-  SLACK: undefined,
-  SONARCLOUD: undefined,
-  SUREPAY: undefined,
-  UNISCAPE: undefined,
-  VERIFF: undefined,
-};
-export const NON_CRITICAL_TPSPS_KEYS = Object.keys(_NON_CRITICAL_TPSPS) as TNonCriticalTPSP[];
+
