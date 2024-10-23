@@ -35,4 +35,47 @@ describe('CustomMaps', () => {
     const a = kittyMap3[KittyColor.WHITE].color;
     console.log(a);
   });
+
+  it('a', async () => {
+    const settledPromises = await Promise.allSettled([
+      Promise.resolve(1),
+      Promise.reject(2),
+      Promise.resolve(3),
+    ]);
+    const b = new ExtArray(settledPromises);
+    console.log(b);
+    console.log(b.getSettledResults());
+  });
+
 });
+
+
+
+export class ExtArray extends Array {
+  constructor(items: any[]) {
+    super(...items);
+  }
+
+  getSettledResults<T>(): {
+    [K in PromiseFulfilledResult<T>['status']]: T[];
+  } & {
+    [K in PromiseRejectedResult['status']]: PromiseRejectedResult['reason'][];
+  } {
+    return this.reduce(
+      (
+        map: { [K in PromiseFulfilledResult<T>['status']]: T[] } & {
+          [K in PromiseRejectedResult['status']]: PromiseRejectedResult['reason'][];
+        },
+        x: PromiseSettledResult<T>,
+      ) => {
+        if (x.status === 'fulfilled') {
+          map.fulfilled.push(x.value);
+        } else {
+          map.rejected.push(x.reason);
+        }
+        return map;
+      },
+      { fulfilled: [], rejected: [] },
+    );
+  }
+}

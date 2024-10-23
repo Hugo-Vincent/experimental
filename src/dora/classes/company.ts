@@ -13,7 +13,7 @@ import { COMPANY_ENTITY_TYPE_KEYS } from '../company-data/company-entity-type-ke
 import { Nullable, Optional } from '../../types/types';
 import { HIERARCHY_TYPES, THierarchy } from '../closed-options/hierarchy-types.constants';
 import { COMPANY_HIERARCHY_TYPE_KEYS } from '../company-data/company-hierarchy-type-keys.constants';
-import { TCriticalTPSP, TNonCriticalTPSP } from './tpsp-instances';
+import { TCriticalTPSP, TNonCriticalTPSP } from './company-instances';
 import { Contract } from './contract';
 import { ENTITY_ACTIVITIES, TEntityActivity } from '../closed-options/entity-activities.constants';
 import { COMPANY_PARENT_UNDERTAKINGS } from '../company-data/company-parent-undertakings.constants';

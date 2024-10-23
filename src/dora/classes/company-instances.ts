@@ -1,0 +1,119 @@
+import { ECompanies } from '../common/companies.enum';
+
+const CRITICALITY_TPSPS = {
+  /**
+   * CRITICAL
+   */
+  [ECompanies.BUNQ]: 'critical',
+  [ECompanies.COMPLYADVANTAGE]: 'critical',
+  [ECompanies.ELLIPTIC]: 'critical',
+  [ECompanies.GOOGLE_IRELAND]: 'critical',
+  [ECompanies.MICROSOFT]: 'critical',
+  [ECompanies.SECUROSYS]: 'critical',
+  [ECompanies.VERCEL]: 'critical',
+
+  /**
+   * NOT CRITICAL
+   */
+  [ECompanies.AFAS]: 'non-critical',
+  [ECompanies.BITVAVO]: 'non-critical',
+  [ECompanies.CHAINSTACK]: 'non-critical',
+  [ECompanies.HEXNODE]: 'non-critical',
+  [ECompanies.KRAKEN]: 'non-critical',
+  [ECompanies.KWINZO]: 'non-critical',
+  [ECompanies.NOTION]: 'non-critical',
+  [ECompanies.SANITY]: 'non-critical',
+  [ECompanies.SENDGRID]: 'non-critical',
+  [ECompanies.TWILIO]: 'non-critical',
+  [ECompanies.UBIQUITI]: 'non-critical',
+  [ECompanies.ZENDESK]: 'non-critical',
+  [ECompanies.GLASSNODE]: 'non-critical',
+  [ECompanies.GRAFANA]: 'non-critical',
+  [ECompanies.BITWARDEN]: 'non-critical',
+  [ECompanies.BLOCKCHAINDOTCOM]: 'non-critical',
+  [ECompanies.COINGECKO]: 'non-critical',
+  [ECompanies.COLT]: 'non-critical',
+  [ECompanies.GITHUB]: 'non-critical',
+  [ECompanies.GOOGLE]: 'non-critical',
+  [ECompanies.IDIN]: 'non-critical',
+  [ECompanies.ING]: 'non-critical',
+  [ECompanies.LINEAR]: 'non-critical',
+  [ECompanies.MEMPOOL]: 'non-critical',
+  [ECompanies.NEXTNOVATE]: 'non-critical',
+  [ECompanies.PAY_DOT]: 'non-critical',
+  [ECompanies.POSTCODEAPI]: 'non-critical',
+  [ECompanies.QUICKNODE]: 'non-critical',
+  [ECompanies.SCRIVE]: 'non-critical',
+  [ECompanies.SENTRY]: 'non-critical',
+  [ECompanies.SHIFTBASE]: 'non-critical',
+  [ECompanies.SLACK]: 'non-critical',
+  [ECompanies.SONARCLOUD]: 'non-critical',
+  [ECompanies.SUREPAY]: 'non-critical',
+  [ECompanies.UNISCAPE]: 'non-critical',
+  [ECompanies.VERIFF]: 'non-critical',
+
+  /**
+   * COMPANIES THAT ARE NOT TPSPS.
+   */
+  [ECompanies.ALPHABET]: 'not applicable',
+  [ECompanies.BLOCKRISE]: 'not applicable',
+  [ECompanies.BLOCKRISE_GROUP]: 'not applicable',
+  [ECompanies.STICHTING_BLOCKRISE]: 'not applicable',
+
+  // CLOUDFLARE: 'deleted',
+} as const;
+const _CRITICAL_TPSPS: Record<TCriticalTPSP, boolean> = {
+  [ECompanies.BUNQ]: undefined,
+  [ECompanies.COMPLYADVANTAGE]: undefined,
+  [ECompanies.ELLIPTIC]: undefined,
+  [ECompanies.GOOGLE_IRELAND]: undefined,
+  [ECompanies.MICROSOFT]: undefined,
+  [ECompanies.SECUROSYS]: undefined,
+  [ECompanies.VERCEL]: undefined,
+} as const;
+const _NON_CRITICAL_TPSPS: Record<TNonCriticalTPSP, boolean> = {
+  [ECompanies.AFAS]: undefined,
+  [ECompanies.BITVAVO]: undefined,
+  [ECompanies.BITWARDEN]: undefined,
+  [ECompanies.CHAINSTACK]: undefined,
+  [ECompanies.HEXNODE]: undefined,
+  [ECompanies.KRAKEN]: undefined,
+  [ECompanies.KWINZO]: undefined,
+  [ECompanies.NOTION]: undefined,
+  [ECompanies.SANITY]: undefined,
+  [ECompanies.SENDGRID]: undefined,
+  [ECompanies.TWILIO]: undefined,
+  [ECompanies.UBIQUITI]: undefined,
+  [ECompanies.ZENDESK]: undefined,
+  [ECompanies.GLASSNODE]: undefined,
+  [ECompanies.GRAFANA]: undefined,
+  [ECompanies.BLOCKCHAINDOTCOM]: undefined,
+  [ECompanies.COINGECKO]: undefined,
+  [ECompanies.COLT]: undefined,
+  [ECompanies.GITHUB]: undefined,
+  [ECompanies.GOOGLE]: undefined,
+  [ECompanies.IDIN]: undefined,
+  [ECompanies.ING]: undefined,
+  [ECompanies.LINEAR]: undefined,
+  [ECompanies.MEMPOOL]: undefined,
+  [ECompanies.NEXTNOVATE]: undefined,
+  [ECompanies.PAY_DOT]: undefined,
+  [ECompanies.POSTCODEAPI]: undefined,
+  [ECompanies.QUICKNODE]: undefined,
+  [ECompanies.SCRIVE]: undefined,
+  [ECompanies.SENTRY]: undefined,
+  [ECompanies.SHIFTBASE]: undefined,
+  [ECompanies.SLACK]: undefined,
+  [ECompanies.SONARCLOUD]: undefined,
+  [ECompanies.SUREPAY]: undefined,
+  [ECompanies.UNISCAPE]: undefined,
+  [ECompanies.VERIFF]: undefined,
+} as const;
+export type TCriticalTPSP = keyof {
+  [P in keyof typeof CRITICALITY_TPSPS as typeof CRITICALITY_TPSPS[P] extends 'critical' ? P : never]: true;
+};
+export type TNonCriticalTPSP = keyof {
+  [P in keyof typeof CRITICALITY_TPSPS as typeof CRITICALITY_TPSPS[P] extends 'non-critical' ? P : never]: true;
+}
+export const CRITICAL_TPSP_KEYS: TCriticalTPSP[] = Object.keys(_CRITICAL_TPSPS) as TCriticalTPSP[];
+export const NON_CRITICAL_TPSPS_KEYS: TNonCriticalTPSP[] = Object.keys(_NON_CRITICAL_TPSPS) as TNonCriticalTPSP[];

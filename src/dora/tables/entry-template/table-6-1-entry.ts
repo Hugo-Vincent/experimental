@@ -1,19 +1,19 @@
 import { TableEntry } from './table-entry';
-import { CriticalFunction } from '../../classes/function';
+import { FunctionDescriptor } from '../../classes/function';
 
 export class EntryTable6_1 extends TableEntry {
-  functionIdenfifier: CriticalFunction['id'];
-  licensedActivity: CriticalFunction['licensedActivity'];
-  functionName: CriticalFunction['name'];
-  leiFinancialEntity: CriticalFunction['leiFinancialEntity'];
-  criticalityAssessment: CriticalFunction['criticalityAssessment'];
-  reasonsForCriticality: CriticalFunction['reasonsForCriticality'];
-  dateLastAssessment: CriticalFunction['dateOfLastAssessment'];
-  recoveryTime: CriticalFunction['recoveryTime'];
-  recoveryPoint: CriticalFunction['recoveryPoint'];
-  discontinuationImpact: CriticalFunction['discontinuationImpact'];
+  functionIdenfifier: FunctionDescriptor['id'];
+  licensedActivity: FunctionDescriptor['licensedActivity'];
+  functionName: FunctionDescriptor['name'];
+  leiFinancialEntity: FunctionDescriptor['leiFinancialEntity'];
+  criticalityAssessment: FunctionDescriptor['criticalityAssessment'];
+  reasonsForCriticality: FunctionDescriptor['reasonsForCriticality'];
+  dateLastAssessment: FunctionDescriptor['dateOfLastAssessment'];
+  recoveryTime: FunctionDescriptor['recoveryTime'];
+  recoveryPoint: FunctionDescriptor['recoveryPoint'];
+  discontinuationImpact: FunctionDescriptor['discontinuationImpact'];
 
-  constructor(func: CriticalFunction) {
+  constructor(func: FunctionDescriptor) {
     super(6, 1);
     this.functionIdenfifier = func.id;
     this.licensedActivity = func.licensedActivity;

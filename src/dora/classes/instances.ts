@@ -3,14 +3,14 @@ import { Currencies } from '../common/currencies.enum';
 import { DELETION_DATE_PLACEHOLDER } from '../common/data-constants';
 import { Countries } from '../common/countries.enum';
 import { EFunctions } from '../common/functions.enum';
-import { CriticalFunction } from './function';
+import { FunctionDescriptor } from './function';
 import { ECompanies } from '../common/companies.enum';
 import {
   CRITICAL_TPSP_KEYS,
   NON_CRITICAL_TPSPS_KEYS,
   TCriticalTPSP,
   TNonCriticalTPSP,
-} from './tpsp-instances';
+} from './company-instances';
 import { Company } from './company';
 
 /**
@@ -81,8 +81,8 @@ export const CONTRACT_INSTANCES = CRITICAL_TPSP_INSTANCES_ARRAY.map((x, i) => {
  * FUNCTIONS
  */
 export const FUNCTION_INSTANCES = Object.values(EFunctions)
-  .reduce((map: Record<EFunctions, CriticalFunction>, functionId, i: number) => {
-    map[functionId] = new CriticalFunction(functionId, 6, 3, 'Fill in reasons for Criticality.', '2000-12-31', 4, 4, 3);
+  .reduce((map: Record<EFunctions, FunctionDescriptor>, functionId, i: number) => {
+    map[functionId] = new FunctionDescriptor(functionId, 6, 3, 'Fill in reasons for Criticality.', '2000-12-31', 4, 4, 3);
     return map;
-  }, {} as Record<EFunctions, CriticalFunction>);
+  }, {} as Record<EFunctions, FunctionDescriptor>);
 

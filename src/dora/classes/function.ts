@@ -15,7 +15,7 @@ import { FUNCTION_DESCRIPTIONS } from '../function-data/function-descriptions.co
 import { EFunctions } from '../common/functions.enum';
 import { ALL_COMPANY_INSTANCES } from './instances';
 
-export class CriticalFunction {
+export class FunctionDescriptor {
   id: EFunctions;
   licensedActivity: TEntityActivity;
   name: string;
