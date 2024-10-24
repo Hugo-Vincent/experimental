@@ -11,13 +11,15 @@ import {
   TDiscontinuationImpactKey,
 } from '../closed-options/discontinue-impact-types';
 import { ECompanies } from '../common/companies.enum';
-import { FUNCTION_DESCRIPTIONS } from '../function-data/function-descriptions.constants';
 import { EFunctions } from '../common/functions.enum';
-import { ALL_COMPANY_INSTANCES } from './instances';
+import { FUNCTION_DESCRIPTIONS } from '../function-data/function-descriptions.constants';
+import { ALL_COMPANY_INSTANCES } from './company-instances';
+import { Nullable } from '../../types/types';
+import { Company } from './company';
 
 export class FunctionDescriptor {
   id: EFunctions;
-  licensedActivity: TEntityActivity;
+  licensedActivity: Nullable <TEntityActivity>;
   name: string;
   leiFinancialEntity: string;
   criticalityAssessment: TCriticalityAssessment;
@@ -26,10 +28,11 @@ export class FunctionDescriptor {
   recoveryTime: number;
   recoveryPoint: number;
   discontinuationImpact: TDiscontinuationImpact;
+  companies: Company[];
 
   constructor(
     id: EFunctions,
-    licensedActivityKey: TEntityActivityKey,
+    licensedActivityKey: Nullable<TEntityActivityKey>,
     criticalityAssessmentKey: TCriticalityAssessmentKey,
     reasonsForCriticality: string,
     dateOfLastAssessment: TDate,
@@ -38,7 +41,7 @@ export class FunctionDescriptor {
     discontinuationImpactKey: TDiscontinuationImpactKey,
   ) {
     this.id = id;
-    this.licensedActivity = ENTITY_ACTIVITIES[licensedActivityKey];
+    this.licensedActivity = licensedActivityKey ? ENTITY_ACTIVITIES[licensedActivityKey] : null;
     this.name = FUNCTION_DESCRIPTIONS[id];
     this.leiFinancialEntity = ALL_COMPANY_INSTANCES[ECompanies.BLOCKRISE].companyIdentification.code;
     this.criticalityAssessment = CRITICALITY_ASSESSMENT_TYPES[criticalityAssessmentKey];
@@ -47,5 +50,6 @@ export class FunctionDescriptor {
     this.recoveryTime = recoveryTime;
     this.recoveryPoint = recoveryPoint;
     this.discontinuationImpact = DISCONTINUATION_IMPACT_TYPES[discontinuationImpactKey];
+    this.companies = [];
   }
 }

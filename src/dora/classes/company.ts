@@ -13,12 +13,12 @@ import { COMPANY_ENTITY_TYPE_KEYS } from '../company-data/company-entity-type-ke
 import { Nullable, Optional } from '../../types/types';
 import { HIERARCHY_TYPES, THierarchy } from '../closed-options/hierarchy-types.constants';
 import { COMPANY_HIERARCHY_TYPE_KEYS } from '../company-data/company-hierarchy-type-keys.constants';
-import { TCriticalTPSP, TNonCriticalTPSP } from './company-instances';
+import { ALL_COMPANY_INSTANCES, TCriticalTPSP, TNonCriticalTPSP } from './company-instances';
 import { Contract } from './contract';
 import { ENTITY_ACTIVITIES, TEntityActivity } from '../closed-options/entity-activities.constants';
 import { COMPANY_PARENT_UNDERTAKINGS } from '../company-data/company-parent-undertakings.constants';
 import { TPersonTPSP, TPSP_PERSON_TYPE } from '../closed-options/person-type.constants';
-import { ALL_COMPANY_INSTANCES } from './instances';
+import { FunctionDescriptor } from './function';
 
 interface ICompanyOptions {
   parent?: Optional<{
@@ -30,6 +30,7 @@ interface ICompanyOptions {
 }
 
 export class Company {
+  id: ECompanies;
   legalName: TLegalName;
   tradeMark: string;
   country: Countries;
@@ -44,12 +45,14 @@ export class Company {
   totalAssetValue: Nullable<number>;
   typeOfPerson: TPersonTPSP;
   contract: Contract;
+  functions: FunctionDescriptor[];
 
 
   constructor(
     company: ECompanies | TCriticalTPSP | TNonCriticalTPSP,
     options: Nullable<ICompanyOptions> = null,
   ) {
+    this.id = company;
     this.legalName = COMPANY_LEGAL_NAMES[company];
     this.tradeMark = COMPANY_TRADEMARKS[company];
     this.country = COMPANY_COUNTRY_CODES[company];
@@ -66,6 +69,8 @@ export class Company {
     this.parentID = COMPANY_PARENT_UNDERTAKINGS[company];
     this.totalAssetValue = options?.totalAssetValue ?? null;
     this.typeOfPerson = TPSP_PERSON_TYPE[1];
+
+    this.functions = [];
   }
 
   private getIdType(company: ECompanies | TCriticalTPSP | TNonCriticalTPSP): TCompanyIdentifiers {

@@ -14,7 +14,7 @@ import {
 } from '../closed-options/reliance-levels';
 import { ICT_SERVICE_TYPES, TICTService, TICTServiceKey } from '../closed-options/ict-service-types';
 import { ECompanies } from '../common/companies.enum';
-import { ALL_COMPANY_INSTANCES } from './instances';
+import { ALL_COMPANY_INSTANCES } from './company-instances';
 
 export class Contract {
   tpsp: Company;
@@ -49,7 +49,6 @@ export class Contract {
   relianceLevel: TRelianceLevel;
 
   constructor(
-    tpsp: Company,
     referenceNumber: string,
     contractTypeKey: TContractualArrangementKey,
     annualCostcurrency: Currencies,
@@ -71,7 +70,6 @@ export class Contract {
     dataLocation?: Countries,
     processingLocation?: Countries,
   ) {
-    this.tpsp = tpsp;
     this.financialEntityLei = ALL_COMPANY_INSTANCES[ECompanies.BLOCKRISE].companyIdentification.code;
     this.referenceNumber = referenceNumber;
     this.contractType = CONTRACTUAL_ARRANGEMENT_TYPES[contractTypeKey];

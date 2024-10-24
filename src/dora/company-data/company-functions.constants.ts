@@ -1,0 +1,78 @@
+import { ECompanies } from '../common/companies.enum';
+import { EFunctions } from '../common/functions.enum';
+
+export const COMPANY_FUNCTIONS: Record<ECompanies, EFunctions[]> = {
+  /**
+   * CRITICAL
+   */
+  BUNQ: [EFunctions.FUNCTION_3_TRANSFERRING_ASSETS],
+  COMPLYADVANTAGE: [
+    EFunctions.FUNCTION_1_CLIENT_ONBOARDING,
+    EFunctions.FUNCTION_7_CLIENT_TX_MONITORING,
+    EFunctions.FUNCTION_10_RECORD_KEEPING_DOCS],
+  ELLIPTIC: [EFunctions.FUNCTION_7_CLIENT_TX_MONITORING, EFunctions.FUNCTION_10_RECORD_KEEPING_DOCS],
+  GOOGLE_IRELAND: [
+    EFunctions.FUNCTION_2_CLIENT_DATA_STORAGE_MANAGEMENT,
+    EFunctions.FUNCTION_3_TRANSFERRING_ASSETS,
+    EFunctions.FUNCTION_6_DASHBOARD,
+    EFunctions.FUNCTION_4_TRADING,
+    EFunctions.FUNCTION_5_PORT_MANAGEMENT,
+    EFunctions.FUNCTION_7_CLIENT_TX_MONITORING,
+    EFunctions.FUNCTION_10_RECORD_KEEPING_DOCS,
+    EFunctions.FUNCTION_11_MARKETING_COMMUNICATION,
+    EFunctions.FUNCTION_12_EMAILING,
+    EFunctions.FUNCTION_1_CLIENT_ONBOARDING,
+    EFunctions.FUNCTION_14_INVOICING,
+  ],
+  MICROSOFT: [
+    EFunctions.FUNCTION_10_RECORD_KEEPING_DOCS,
+    EFunctions.FUNCTION_12_EMAILING,
+    EFunctions.FUNCTION_9_HR_TALENT_MANAGEMENT
+  ],
+  SECUROSYS: [EFunctions.FUNCTION_4_TRADING, EFunctions.FUNCTION_1_CLIENT_ONBOARDING],
+  VERCEL: [EFunctions.FUNCTION_6_DASHBOARD, EFunctions.FUNCTION_11_MARKETING_COMMUNICATION],
+
+  /**
+   * NON-CRITICAL
+   */
+  AFAS: [],
+  ALPHABET: [],
+  BITVAVO: [],
+  BITWARDEN: [],
+  BLOCKCHAINDOTCOM: [],
+  BLOCKRISE: [],
+  BLOCKRISE_GROUP: [],
+  CHAINSTACK: [],
+  COINGECKO: [],
+  COLT: [],
+  GITHUB: [],
+  GLASSNODE: [],
+  GOOGLE: [],
+  GRAFANA: [],
+  HEXNODE: [],
+  IDIN: [],
+  ING: [],
+  KRAKEN: [],
+  KWINZO: [],
+  LINEAR: [],
+  MEMPOOL: [],
+  NEXTNOVATE: [],
+  NOTION: [],
+  PAY_DOT: [],
+  POSTCODEAPI: [],
+  QUICKNODE: [],
+  SANITY: [],
+  SCRIVE: [],
+  SENDGRID: [],
+  SENTRY: [],
+  SHIFTBASE: [],
+  SLACK: [],
+  SONARCLOUD: [],
+  STICHTING_BLOCKRISE: [],
+  SUREPAY: [],
+  TWILIO: [],
+  UBIQUITI: [],
+  UNISCAPE: [],
+  VERIFF: [],
+  ZENDESK: []
+};

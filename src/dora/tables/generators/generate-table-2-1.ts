@@ -1,6 +1,6 @@
 import { EntryTable2_1 } from '../entry-template/table-2-1.entry';
-import { CONTRACT_INSTANCES } from '../../classes/instances';
+import { CRITICAL_CONTRACTS } from '../../classes/contract-instances';
 
 export function generateTable2_1() {
-  return CONTRACT_INSTANCES.map((x) => new EntryTable2_1(x));
+  return CRITICAL_CONTRACTS.map((x) => new EntryTable2_1(x));
 }

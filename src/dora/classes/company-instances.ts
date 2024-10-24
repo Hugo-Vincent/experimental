@@ -1,4 +1,5 @@
 import { ECompanies } from '../common/companies.enum';
+import { Company } from './company';
 
 const CRITICALITY_TPSPS = {
   /**
@@ -109,11 +110,48 @@ const _NON_CRITICAL_TPSPS: Record<TNonCriticalTPSP, boolean> = {
   [ECompanies.UNISCAPE]: undefined,
   [ECompanies.VERIFF]: undefined,
 } as const;
+
+/**
+ * CRITICAL TPSPs
+ */
 export type TCriticalTPSP = keyof {
   [P in keyof typeof CRITICALITY_TPSPS as typeof CRITICALITY_TPSPS[P] extends 'critical' ? P : never]: true;
 };
+export const CRITICAL_TPSP_KEYS: TCriticalTPSP[] = Object.keys(_CRITICAL_TPSPS) as TCriticalTPSP[];
+export const CRITICAL_TPSP_INSTANCES = CRITICAL_TPSP_KEYS.reduce((map, x) => {
+  map[x] = new Company(x);
+  return map;
+}, {} as Record<TCriticalTPSP, Company>);
+export const CRITICAL_TPSP_INSTANCES_ARRAY = Object.values(CRITICAL_TPSP_INSTANCES);
+
+/**
+ * NON-CRITICAL TPSPs
+ */
 export type TNonCriticalTPSP = keyof {
   [P in keyof typeof CRITICALITY_TPSPS as typeof CRITICALITY_TPSPS[P] extends 'non-critical' ? P : never]: true;
 }
-export const CRITICAL_TPSP_KEYS: TCriticalTPSP[] = Object.keys(_CRITICAL_TPSPS) as TCriticalTPSP[];
 export const NON_CRITICAL_TPSPS_KEYS: TNonCriticalTPSP[] = Object.keys(_NON_CRITICAL_TPSPS) as TNonCriticalTPSP[];
+export const NON_CRITICAL_TPSP_INSTANCES = NON_CRITICAL_TPSPS_KEYS.reduce((map, x) => {
+  map[x] = new Company(x);
+  return map;
+}, {} as Record<TNonCriticalTPSP, Company>);
+export const NON_CRITICAL_TPSP_INSTANCES_ARRAY = Object.values(NON_CRITICAL_TPSP_INSTANCES);
+
+/**
+ * REST TPSPs
+ */
+const _OTHER_COMPANIES: Record<Exclude<ECompanies, TNonCriticalTPSP | TCriticalTPSP>, Company> = {
+  [ECompanies.ALPHABET]: new Company(ECompanies.ALPHABET),
+  [ECompanies.BLOCKRISE_GROUP]: new Company(ECompanies.BLOCKRISE_GROUP),
+  [ECompanies.BLOCKRISE]: new Company(ECompanies.BLOCKRISE, {
+    totalAssetValue: 1e7,
+  }),
+  [ECompanies.STICHTING_BLOCKRISE]: new Company(ECompanies.STICHTING_BLOCKRISE, {
+    totalAssetValue: 0,
+  }),
+};
+export const ALL_COMPANY_INSTANCES: Record<ECompanies, Company> = {
+  ...CRITICAL_TPSP_INSTANCES,
+  ...NON_CRITICAL_TPSP_INSTANCES,
+  ..._OTHER_COMPANIES,
+};

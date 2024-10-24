@@ -3,7 +3,7 @@ import { TICTService } from '../../closed-options/ict-service-types';
 import { TCodeType } from '../../common/general-types';
 import { Company } from '../../classes/company';
 import { ECompanies } from '../../common/companies.enum';
-import { ALL_COMPANY_INSTANCES } from '../../classes/instances';
+import { ALL_COMPANY_INSTANCES } from '../../classes/company-instances';
 
 export class EntryTable5_2 extends TableEntry {
   contractRefNumber: string;
