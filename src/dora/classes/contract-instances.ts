@@ -1,31 +1,66 @@
-import { Countries } from '../common/countries.enum';
-import { CRITICAL_TPSP_INSTANCES_ARRAY } from './company-instances';
+import { TCriticalTPSP } from './company-instances';
 import { Contract } from './contract';
-import { Currencies } from '../common/currencies.enum';
-import { DELETION_DATE_PLACEHOLDER } from '../common/data-constants';
+import { ECompanies } from '../common/companies.enum';
 
-/**
- * CONTRACTS
- */
-export const CRITICAL_CONTRACTS = CRITICAL_TPSP_INSTANCES_ARRAY.map((x, i) => {
-  const contract = new Contract(
-    x,
-    `CONTRACT_${i + 1}`,
-    1,
-    Currencies.EUR,
-    0,
-    `FUNCTION_${i + 1}`,
-    18,
-    '2022-01-01',
-    DELETION_DATE_PLACEHOLDER,
-    30,
-    90,
-    Countries.US,
-    Countries.US,
-    'No',
-    'High',
-    4,
-  );
-  x.contract = contract;
-  return contract;
-});
+const bunq = new Contract(
+  ECompanies.BUNQ,
+  19,
+  'No',
+  null,
+  null,
+);
+const complyAdvantage = new Contract(
+  ECompanies.COMPLYADVANTAGE,
+  19,
+  'No',
+  null,
+  null,
+);
+const elliptic = new Contract(
+  ECompanies.ELLIPTIC,
+  19,
+  'No',
+  null,
+  null
+);
+const googleIreland = new Contract(
+  ECompanies.GOOGLE_IRELAND,
+  17,
+  'No',
+  null,
+  null
+);
+const microsoft = new Contract(
+  ECompanies.MICROSOFT,
+  19,
+  'No',
+  null,
+  null
+);
+const securosys = new Contract(
+  ECompanies.SECUROSYS,
+  19,
+  'No',
+  null,
+  null
+);
+const vercel = new Contract(
+  ECompanies.VERCEL,
+  18,
+  'No',
+  null,
+  null
+);
+
+export const CRITICAL_CONTRACTS: {
+  [K in TCriticalTPSP]: Contract<K>
+} = {
+  [ECompanies.BUNQ]: bunq,
+  [ECompanies.COMPLYADVANTAGE]: complyAdvantage,
+  [ECompanies.ELLIPTIC]: elliptic,
+  [ECompanies.GOOGLE_IRELAND]: googleIreland,
+  [ECompanies.MICROSOFT]: microsoft,
+  [ECompanies.SECUROSYS]: securosys,
+  [ECompanies.VERCEL]: vercel,
+};
+export const CRITICAL_CONTRACTS_ARRAY = Object.values(CRITICAL_CONTRACTS);

@@ -10,7 +10,7 @@ export class EntryTable3_2 extends TableEntry {
   constructor(contract: Contract) {
     super(3, 2);
     this.contractReferenceNumber = contract.referenceNumber;
-    this.tpspIdCode = contract.tpsp.companyIdentification.code;
-    this.typeOfCode = contract.tpsp.companyIdentification.typeOfCode;
+    this.tpspIdCode = contract.tpspInstance.companyIdentification.code;
+    this.typeOfCode = contract.tpspInstance.companyIdentification.typeOfCode;
   }
 }

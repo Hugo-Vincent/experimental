@@ -252,4 +252,5 @@ export enum Countries {
   YE = 'YE',
   ZM = 'ZM',
   ZW = 'ZW',
+  UNKNOWN = 'UNKNOWN',
 }

@@ -23,6 +23,7 @@ const CRITICALITY_FUNCTIONS = {
   [EFunctions.FUNCTION_13_IT_SYSTEM_MNGMNT]: 'non-critical',
   [EFunctions.FUNCTION_14_INVOICING]: 'non-critical',
 } as const;
+
 const _CRITICAL_FUNCTIONS: Record<TCriticalFunction, undefined> = {
   [EFunctions.FUNCTION_2_CLIENT_DATA_STORAGE_MANAGEMENT]: undefined,
   [EFunctions.FUNCTION_3_TRANSFERRING_ASSETS]: undefined,
@@ -41,6 +42,7 @@ const _NON_CRITICAL_FUNCTIONS: Record<TNonCriticalFunction, boolean> = {
   [EFunctions.FUNCTION_13_IT_SYSTEM_MNGMNT]: undefined,
   [EFunctions.FUNCTION_14_INVOICING]: undefined
 } as const;
+
 export type TCriticalFunction = keyof {
   [P in keyof typeof CRITICALITY_FUNCTIONS as typeof CRITICALITY_FUNCTIONS[P] extends 'critical' ? P : never]: true;
 };
@@ -59,5 +61,4 @@ export const FUNCTION_INSTANCES = Object.values(EFunctions)
     return map;
   }, {} as Record<EFunctions, FunctionDescriptor>);
 export const CRITICAL_FUNCTION_INSTANCES = CRITICAL_FUNCTION_KEYS.map((x) => FUNCTION_INSTANCES[x]);
-export const CRITICAL_FUNCTION_INSTANCE_ARRAYS;
 export const NON_CRITICAL_FUNCTION_INSTANCES = NON_CRITICAL_FUNCTION_KEYS.map((x) => FUNCTION_INSTANCES[x]);

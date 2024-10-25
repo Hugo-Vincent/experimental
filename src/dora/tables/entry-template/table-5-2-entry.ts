@@ -16,7 +16,6 @@ export class EntryTable5_2 extends TableEntry {
 
   constructor(company: Company) {
     super(5, 2);
-    console.log(company);
     this.contractRefNumber = company.contract.referenceNumber;
     this.ictServiceType = company.contract.ictServicesType;
     this.idCodeTPSP = company.companyIdentification.code;

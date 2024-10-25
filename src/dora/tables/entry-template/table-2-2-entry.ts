@@ -7,7 +7,7 @@ export class EntryTable2_2 extends TableEntry {
   financialEntityLei: Contract['financialEntityLei'];
   tpspCompanyIdentificationCode: Company['companyIdentification']['code'];
   typeOfCode:  Company['companyIdentification']['typeOfCode'];
-  functionIdentifier: Contract['functionIdentifier'];
+  functionIdentifiers: Contract['functionIdentifiers'];
 
   ictServicesType: Contract['ictServicesType'];
   start: Contract['start'];
@@ -29,9 +29,9 @@ export class EntryTable2_2 extends TableEntry {
     super(2, 2);
     this.contractReferenceNumber = contract.referenceNumber;
     this.financialEntityLei = contract.financialEntityLei;
-    this.tpspCompanyIdentificationCode = contract.tpsp.companyIdentification.code;
-    this.typeOfCode = contract.tpsp.companyIdentification.typeOfCode;
-    this.functionIdentifier = contract.functionIdentifier;
+    this.tpspCompanyIdentificationCode = contract.tpspInstance.companyIdentification.code;
+    this.typeOfCode = contract.tpspInstance.companyIdentification.typeOfCode;
+    this.functionIdentifiers = contract.functionIdentifiers;
 
     this.ictServicesType = contract.ictServicesType;
     this.start = contract.start;
