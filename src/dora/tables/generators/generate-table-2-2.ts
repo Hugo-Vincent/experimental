@@ -1,6 +1,6 @@
 import { EntryTable2_2 } from '../entry-template/table-2-2-entry';
-import { CRITICAL_CONTRACTS_ARRAY } from '../../classes/contract-instances';
+import { MAIN_DB } from '../../data-getters/main-db';
 
 export function generateTable2_2() {
-  return CRITICAL_CONTRACTS_ARRAY.map((x) => new EntryTable2_2(x));
+  return MAIN_DB.contract.getCriticalContractsArray().map((x) => new EntryTable2_2(x));
 }

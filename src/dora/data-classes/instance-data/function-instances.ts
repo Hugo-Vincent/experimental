@@ -1,13 +1,14 @@
-import { EFunctions } from '../common/functions.enum';
-import { FunctionDescriptor } from './function';
+import { EFunctions } from '../../common/functions.enum';
+import { FunctionDescriptor } from '../../classes/function';
 
-const CRITICALITY_FUNCTIONS = {
+const CRITICALITY_FUNCTIONS: Record<EFunctions, 'critical' | 'non-critical'> = {
   /**
    * CRITICAL
    */
   [EFunctions.FUNCTION_2_CLIENT_DATA_STORAGE_MANAGEMENT]: 'critical',
   [EFunctions.FUNCTION_3_TRANSFERRING_ASSETS]: 'critical',
   [EFunctions.FUNCTION_6_DASHBOARD]: 'critical',
+
   /**
    * NON-CRITICAL
    */
@@ -43,22 +44,37 @@ const _NON_CRITICAL_FUNCTIONS: Record<TNonCriticalFunction, boolean> = {
   [EFunctions.FUNCTION_14_INVOICING]: undefined
 } as const;
 
-export type TCriticalFunction = keyof {
-  [P in keyof typeof CRITICALITY_FUNCTIONS as typeof CRITICALITY_FUNCTIONS[P] extends 'critical' ? P : never]: true;
-};
-export type TNonCriticalFunction = keyof {
-  [P in keyof typeof CRITICALITY_FUNCTIONS as typeof CRITICALITY_FUNCTIONS[P] extends 'non-critical' ? P : never]: true;
-};
-export const CRITICAL_FUNCTION_KEYS: TCriticalFunction[] = Object.keys(_CRITICAL_FUNCTIONS) as TCriticalFunction[];
-export const NON_CRITICAL_FUNCTION_KEYS: TNonCriticalFunction[] = Object.keys(_NON_CRITICAL_FUNCTIONS) as TNonCriticalFunction[];
-
 /**
- * FUNCTIONS
+ * ALL FUNCTIONS
  */
 export const FUNCTION_INSTANCES = Object.values(EFunctions)
   .reduce((map: Record<EFunctions, FunctionDescriptor>, functionId: EFunctions) => {
-    map[functionId] = new FunctionDescriptor(functionId, 6, 3, 'Fill in reasons for Criticality.', '9999-12-31', 4, 4, 3);
+    map[functionId] = new FunctionDescriptor(functionId, 3, 'Fill in reasons for Criticality.', '9999-12-31', 4, 4, 3);
     return map;
   }, {} as Record<EFunctions, FunctionDescriptor>);
-export const CRITICAL_FUNCTION_INSTANCES = CRITICAL_FUNCTION_KEYS.map((x) => FUNCTION_INSTANCES[x]);
-export const NON_CRITICAL_FUNCTION_INSTANCES = NON_CRITICAL_FUNCTION_KEYS.map((x) => FUNCTION_INSTANCES[x]);
+
+/**
+ * CRITICAL FUNCTIONS
+ */
+export type TCriticalFunction = keyof {
+  [P in keyof typeof CRITICALITY_FUNCTIONS as typeof CRITICALITY_FUNCTIONS[P] extends 'critical' ? P : never]: true;
+};
+export const CRITICAL_FUNCTION_KEYS: TCriticalFunction[] = Object.keys(_CRITICAL_FUNCTIONS) as TCriticalFunction[];
+export const CRITICAL_FUNCTION_INSTANCES = CRITICAL_FUNCTION_KEYS.reduce((acc: Record<TCriticalFunction, FunctionDescriptor>, x: TCriticalFunction) => {
+  acc[x] = FUNCTION_INSTANCES[x];
+  return acc;
+}, {} as Record<TCriticalFunction, FunctionDescriptor>);
+export const CRITICAL_FUNCTION_INSTANCES_ARRAY = Object.values(CRITICAL_FUNCTION_INSTANCES);
+
+/**
+ * NON-CRITICAL FUNCTIONS
+ */
+export type TNonCriticalFunction = keyof {
+  [P in keyof typeof CRITICALITY_FUNCTIONS as typeof CRITICALITY_FUNCTIONS[P] extends 'non-critical' ? P : never]: true;
+};
+export const NON_CRITICAL_FUNCTION_KEYS: TNonCriticalFunction[] = Object.keys(_NON_CRITICAL_FUNCTIONS) as TNonCriticalFunction[];
+export const NON_CRITICAL_FUNCTION_INSTANCES = NON_CRITICAL_FUNCTION_KEYS.reduce((acc: Record<TNonCriticalFunction, FunctionDescriptor>, x: TNonCriticalFunction) => {
+  acc[x] = FUNCTION_INSTANCES[x];
+  return acc;
+}, {} as Record<TNonCriticalFunction, FunctionDescriptor>);
+export const NON_CRITICAL_FUNCTION_INSTANCES_ARRAY = Object.values(NON_CRITICAL_FUNCTION_INSTANCES);

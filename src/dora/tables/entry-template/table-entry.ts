@@ -9,6 +9,7 @@ export abstract class TableEntry {
   constructor(tableNr: number, subTableNr: number) {
     this.tableNr = tableNr;
     this.subTableNr = subTableNr;
+    // We don't want these properties.
     this.superClassPropertyNames = ['superClassPropertyNames', ...Object.getOwnPropertyNames(this)];
   }
 

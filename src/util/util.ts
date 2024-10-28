@@ -4,6 +4,10 @@ export class Util {
   static isObject(obj: TAny): obj is TObject {
     return typeof obj === 'object' && !Array.isArray(obj) && obj !== null && obj !== undefined;
   }
+
+  static filterUniqueElements<T>(elements: T[]): T[] {
+    return elements.filter((value, index, self) => self.indexOf(value) === index);
+  }
 }
 
 export class CustomMaps {
@@ -106,9 +110,5 @@ export class CustomMaps {
       }
       return result;
     }, []);
-  }
-
-  public static filterUniqueElements<T>(elements: T[]): T[] {
-    return elements.filter((value, index, self) => self.indexOf(value) === index);
   }
 }

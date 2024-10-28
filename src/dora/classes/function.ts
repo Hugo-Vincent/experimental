@@ -1,24 +1,29 @@
-import { ENTITY_ACTIVITIES, TEntityActivity, TEntityActivityKey } from '../closed-options/entity-activities.constants';
+import { TEntityActivity, TEntityActivityKey } from '../data-classes/closed-options/entity-activities.constants';
 import {
   CRITICALITY_ASSESSMENT_TYPES,
   TCriticalityAssessment,
   TCriticalityAssessmentKey,
-} from '../closed-options/criticality-assessment-types';
+} from '../data-classes/closed-options/criticality-assessment-types';
 import { TDate } from '../common/general-types';
 import {
   DISCONTINUATION_IMPACT_TYPES,
   TDiscontinuationImpact,
   TDiscontinuationImpactKey,
-} from '../closed-options/discontinue-impact-types';
+} from '../data-classes/closed-options/discontinue-impact-types';
 import { ECompanies } from '../common/companies.enum';
 import { EFunctions } from '../common/functions.enum';
-import { FUNCTION_DESCRIPTIONS } from '../function-data/function-descriptions.constants';
-import { ALL_COMPANY_INSTANCES } from './company-instances';
+import { FUNCTION_DESCRIPTIONS } from '../data-classes/function-data/function-descriptions.constants';
+import { ALL_COMPANY_INSTANCES } from '../data-classes/instance-data/company-instances';
 import { Nullable } from '../../types/types';
 import { Company } from './company';
+import { FUNCTION_LICENSED_ACTIVITIES } from '../data-classes/function-data/function-licensed-acitivities.constants';
 
 export class FunctionDescriptor {
+  // ID and references
   id: EFunctions;
+  tpspInstances: Company[];
+
+  // Data
   licensedActivity: Nullable <TEntityActivity>;
   name: string;
   leiFinancialEntity: string;
@@ -28,11 +33,9 @@ export class FunctionDescriptor {
   recoveryTime: number;
   recoveryPoint: number;
   discontinuationImpact: TDiscontinuationImpact;
-  companies: Company[];
 
   constructor(
     id: EFunctions,
-    licensedActivityKey: Nullable<TEntityActivityKey>,
     criticalityAssessmentKey: TCriticalityAssessmentKey,
     reasonsForCriticality: string,
     dateOfLastAssessment: TDate,
@@ -41,8 +44,8 @@ export class FunctionDescriptor {
     discontinuationImpactKey: TDiscontinuationImpactKey,
   ) {
     this.id = id;
-    this.licensedActivity = licensedActivityKey ? ENTITY_ACTIVITIES[licensedActivityKey] : null;
     this.name = FUNCTION_DESCRIPTIONS[id];
+    this.licensedActivity = FUNCTION_LICENSED_ACTIVITIES[id];
     this.leiFinancialEntity = ALL_COMPANY_INSTANCES[ECompanies.BLOCKRISE].companyIdentification.code;
     this.criticalityAssessment = CRITICALITY_ASSESSMENT_TYPES[criticalityAssessmentKey];
     this.reasonsForCriticality = reasonsForCriticality;
@@ -50,6 +53,6 @@ export class FunctionDescriptor {
     this.recoveryTime = recoveryTime;
     this.recoveryPoint = recoveryPoint;
     this.discontinuationImpact = DISCONTINUATION_IMPACT_TYPES[discontinuationImpactKey];
-    this.companies = [];
+    this.tpspInstances = [];
   }
 }

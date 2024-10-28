@@ -1,6 +1,6 @@
 import { EntryTable5_1 } from '../entry-template/table-5-1-entry';
-import { CRITICAL_TPSP_INSTANCES_ARRAY } from '../../classes/company-instances';
+import { MAIN_DB } from '../../data-getters/main-db';
 
 export function generateTable5_1() {
-  return CRITICAL_TPSP_INSTANCES_ARRAY.map((x) => new EntryTable5_1(x));
+  return MAIN_DB.company.getCriticalTPSArray().map((x) => new EntryTable5_1(x));
 }

@@ -2,29 +2,27 @@ import {
   CONTRACTUAL_ARRANGEMENT_TYPES,
   TContractualArrangement,
   TContractualArrangementKey,
-} from '../closed-options/contractual-arrangement-types.constants';
+} from '../data-classes/closed-options/contractual-arrangement-types.constants';
 import { Currencies } from '../common/currencies.enum';
 import { TDate } from '../common/general-types';
-import { CONTRACT_TERMINATION_REASONS, TTerminationReason } from '../closed-options/termination-reasons';
+import { CONTRACT_TERMINATION_REASONS, TTerminationReason } from '../data-classes/closed-options/termination-reasons';
 import { Countries } from '../common/countries.enum';
-import { CONTRACT_RELIANCE_LEVELS, TRelianceLevel, TRelianceLevelKey } from '../closed-options/reliance-levels';
-import { ICT_SERVICE_TYPES, TICTService, TICTServiceKey } from '../closed-options/ict-service-types';
+import { CONTRACT_RELIANCE_LEVELS, TRelianceLevel, TRelianceLevelKey } from '../data-classes/closed-options/reliance-levels';
+import { TICTService, TICTServiceKey } from '../data-classes/closed-options/ict-service-types';
 import { ECompanies } from '../common/companies.enum';
-import { ALL_COMPANY_INSTANCES } from './company-instances';
 import { EContracts } from '../common/contracts.enum';
-import { CONTRACT_COSTS } from '../contract-data/contract-costs.constants';
+import { CONTRACT_COSTS } from '../data-classes/contract-data/contract-costs.constants';
 import { Company } from './company';
-import { FunctionDescriptor } from './function';
-import { EFunctions } from '../common/functions.enum';
+import { CONTRACT_ICT_SERVICE_TYPES } from '../data-classes/contract-data/contract-ict-service-type.constants';
+import { ALL_COMPANY_INSTANCES } from '../data-classes/instance-data/company-instances';
 
-export class Contract<T extends ECompanies = ECompanies> {
-  tpspEnum: T;
+export class Contract {
+  // ID and references
+  id: EContracts;
   tpspInstance: Company;
-  functionDescriptorInstances: FunctionDescriptor[];
-  financialEntityLei: string;
 
-  // Table 02.01
-  referenceNumber: EContracts;
+  // Data
+  financialEntityLei: string;
   contractType: TContractualArrangement;
   overarchingContractualArrangementReferenceNumber: string;
   annualCostcurrency: Currencies;
@@ -51,8 +49,7 @@ export class Contract<T extends ECompanies = ECompanies> {
   relianceLevel: TRelianceLevel;
 
   constructor(
-    tpspEnum: T,
-    ictServicesTypeKey: TICTServiceKey,
+    id: EContracts,
     storageOfData: 'Yes' | 'No',
     dataSensitivity: 'Low or Medium' | 'High',
     relianceLevelKey: TRelianceLevelKey,
@@ -67,14 +64,20 @@ export class Contract<T extends ECompanies = ECompanies> {
     dataLocation = Countries.UNKNOWN,
     processingLocation = Countries.UNKNOWN,
   ) {
-    this.tpspEnum = tpspEnum;
-    this.financialEntityLei = ALL_COMPANY_INSTANCES[ECompanies.BLOCKRISE].companyIdentification.code;
-    this.referenceNumber = EContracts[tpspEnum as ECompanies];
+    // References
+    this.id = id;
+
+    // Contract data
+    this.financialEntityLei = ALL_COMPANY_INSTANCES[
+      id === EContracts.BUNQ_BLOCKRISE_STICHTING
+        ? ECompanies.STICHTING_BLOCKRISE
+        : ECompanies.BLOCKRISE
+      ].companyIdentification.code;
     this.contractType = CONTRACTUAL_ARRANGEMENT_TYPES[contractTypeKey];
-    this.annualCostcurrency = CONTRACT_COSTS[this.referenceNumber].annualCostCurrency;
-    this.annualExpense = CONTRACT_COSTS[this.referenceNumber].annualCost;
-    this.start = CONTRACT_COSTS[this.referenceNumber].start;
-    this.ictServicesType = ICT_SERVICE_TYPES[ictServicesTypeKey];
+    this.annualCostcurrency = CONTRACT_COSTS[this.id].annualCostCurrency;
+    this.annualExpense = CONTRACT_COSTS[this.id].annualCost;
+    this.start = CONTRACT_COSTS[this.id].start;
+    this.ictServicesType = CONTRACT_ICT_SERVICE_TYPES[this.id]
     this.end = end;
     this.noticePeriodFinEntity = noticePeriodFinEntity;
     this.noticePeriodTpsp = noticePeriodTpsp;
@@ -83,10 +86,6 @@ export class Contract<T extends ECompanies = ECompanies> {
     this.storageOfData = storageOfData;
     this.dataSensitivity = dataSensitivity;
     this.relianceLevel = CONTRACT_RELIANCE_LEVELS[relianceLevelKey];
-
-    // References
-    this.tpspInstance = ALL_COMPANY_INSTANCES[tpspEnum];
-    this.tpspInstance.contract = this;
 
     // Optional things
     if (contractTypeKey === 3) {
@@ -105,7 +104,15 @@ export class Contract<T extends ECompanies = ECompanies> {
     this.processingLocation = processingLocation ?? '';
   }
 
-  get functionIdentifiers(): EFunctions[] {
-    return this.functionDescriptorInstances.map(x => x.id);
+  get functionIdentifiers(): string {
+    let functionIdentifierPattern = '';
+    const functionIds = this.tpspInstance.functions.map(x => x.id);
+    for (let i = 0; i < functionIds.length; i++) {
+      functionIdentifierPattern += functionIds[i];
+      if (i !== functionIds.length - 1) {
+        functionIdentifierPattern += ', ';
+      }
+    }
+    return functionIdentifierPattern;
   }
 }

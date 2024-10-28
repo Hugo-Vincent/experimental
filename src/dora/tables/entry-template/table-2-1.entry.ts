@@ -1,6 +1,6 @@
 import { TableEntry } from './table-entry';
 import { Currencies } from '../../common/currencies.enum';
-import { TContractualArrangement } from '../../closed-options/contractual-arrangement-types.constants';
+import { TContractualArrangement } from '../../data-classes/closed-options/contractual-arrangement-types.constants';
 import { Contract } from '../../classes/contract';
 
 export class EntryTable2_1 extends TableEntry {
@@ -12,7 +12,7 @@ export class EntryTable2_1 extends TableEntry {
 
   constructor(contract: Contract) {
     super(2, 1);
-    this.contractReferenceNumber = contract.referenceNumber;
+    this.contractReferenceNumber = contract.id;
     this.typeOfContract = contract.contractType;
     this.overarchingContractReferenceNumber = contract.overarchingContractualArrangementReferenceNumber;
     this.annualCostCurrency = contract.annualCostcurrency;

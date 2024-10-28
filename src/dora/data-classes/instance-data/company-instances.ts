@@ -1,5 +1,5 @@
-import { ECompanies } from '../common/companies.enum';
-import { Company } from './company';
+import { ECompanies } from '../../common/companies.enum';
+import { Company } from '../../classes/company';
 
 const CRITICALITY_TPSPS = {
   /**
@@ -138,9 +138,20 @@ export const NON_CRITICAL_TPSP_INSTANCES = NON_CRITICAL_TPSPS_KEYS.reduce((map, 
 export const NON_CRITICAL_TPSP_INSTANCES_ARRAY = Object.values(NON_CRITICAL_TPSP_INSTANCES);
 
 /**
+ * CRITICAL AND NON-CRITICAL TPSPs
+ */
+export type TTPSP = TCriticalTPSP | TNonCriticalTPSP;
+export const ALL_TPSP_INSTANCES: Record<TNonCriticalTPSP | TCriticalTPSP, Company> = {
+  ...CRITICAL_TPSP_INSTANCES,
+  ...NON_CRITICAL_TPSP_INSTANCES,
+}
+export const ALL_TPSP_INSTANCES_ARRAY = Object.values(ALL_TPSP_INSTANCES);
+export const ALL_TPSP_KEYS = Object.keys(ALL_TPSP_INSTANCES) as TTPSP[];
+
+/**
  * REST TPSPs
  */
-const _OTHER_COMPANIES: Record<Exclude<ECompanies, TNonCriticalTPSP | TCriticalTPSP>, Company> = {
+export const _OTHER_COMPANIES: Record<Exclude<ECompanies, TNonCriticalTPSP | TCriticalTPSP>, Company> = {
   [ECompanies.ALPHABET]: new Company(ECompanies.ALPHABET),
   [ECompanies.BLOCKRISE_GROUP]: new Company(ECompanies.BLOCKRISE_GROUP),
   [ECompanies.BLOCKRISE]: new Company(ECompanies.BLOCKRISE, {
@@ -150,6 +161,10 @@ const _OTHER_COMPANIES: Record<Exclude<ECompanies, TNonCriticalTPSP | TCriticalT
     totalAssetValue: 0,
   }),
 };
+
+/**
+ * ALL TPSPs
+ */
 export const ALL_COMPANY_INSTANCES: Record<ECompanies, Company> = {
   ...CRITICAL_TPSP_INSTANCES,
   ...NON_CRITICAL_TPSP_INSTANCES,

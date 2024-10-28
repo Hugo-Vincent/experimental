@@ -1,9 +1,14 @@
 import { TDate } from 'src/util/types/generic-types';
-import { EContracts } from '../common/contracts.enum';
-import { Currencies } from '../common/currencies.enum';
+import { EContracts } from '../../common/contracts.enum';
+import { Currencies } from '../../common/currencies.enum';
 
 export const CONTRACT_COSTS: Record<EContracts, { annualCost: number, annualCostCurrency: Currencies, start: TDate }> = {
-  [EContracts.BUNQ]: { // Jos Slack
+  [EContracts.BUNQ_BLOCKRISE_BV]: { // Jos Slack
+    annualCost: 60000,
+    annualCostCurrency: Currencies.EUR,
+    start: '2022-12-28',
+  },
+  [EContracts.BUNQ_BLOCKRISE_STICHTING]: { // Jos Slack
     annualCost: 60000,
     annualCostCurrency: Currencies.EUR,
     start: '2022-12-28',

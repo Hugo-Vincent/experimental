@@ -1,8 +1,8 @@
-import { ECompanies } from './companies.enum';
-import { TCompanyIdentifiers } from './general-types';
-import { COMPANY_LEI_CODES } from '../company-data/company-lei-codes.constants';
+import { ECompanies } from '../companies.enum';
+import { TCompanyIdentifiers } from '../general-types';
+import { COMPANY_LEI_CODES } from '../../data-classes/company-data/company-lei-codes.constants';
 import { ICompanyIndentification } from '../interfaces/company-id.interface';
-import { COMPANY_CRN_CODES } from '../company-data/company-registration-numbers.constants';
+import { COMPANY_CRN_CODES } from '../../data-classes/company-data/company-registration-numbers.constants';
 
 export const CODETYPE_TO_CODEMAP: Record<
   TCompanyIdentifiers,
@@ -14,3 +14,4 @@ export const CODETYPE_TO_CODEMAP: Record<
   ['PNR']: null,
   ['NIN']: null,
 };
+

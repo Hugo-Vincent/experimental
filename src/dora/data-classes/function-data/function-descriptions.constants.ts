@@ -1,4 +1,4 @@
-import { EFunctions } from '../common/functions.enum';
+import { EFunctions } from '../../common/functions.enum';
 
 export const FUNCTION_DESCRIPTIONS: Record<EFunctions, string> = {
   [EFunctions.FUNCTION_1_CLIENT_ONBOARDING]: 'Client Onboarding (inc. KYC)',

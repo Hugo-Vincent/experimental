@@ -1,4 +1,4 @@
-import { Countries } from '../common/countries.enum';
+import { Countries } from '../countries.enum';
 
 export interface ICompanyIndentification {
   country: Countries;

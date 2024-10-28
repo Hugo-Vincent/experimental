@@ -3,7 +3,7 @@ import { Contract } from '../../classes/contract';
 import { Company } from '../../classes/company';
 
 export class EntryTable2_2 extends TableEntry {
-  contractReferenceNumber: Contract['referenceNumber'];
+  contractReferenceNumber: Contract['id'];
   financialEntityLei: Contract['financialEntityLei'];
   tpspCompanyIdentificationCode: Company['companyIdentification']['code'];
   typeOfCode:  Company['companyIdentification']['typeOfCode'];
@@ -27,7 +27,7 @@ export class EntryTable2_2 extends TableEntry {
 
   constructor(contract: Contract) {
     super(2, 2);
-    this.contractReferenceNumber = contract.referenceNumber;
+    this.contractReferenceNumber = contract.id;
     this.financialEntityLei = contract.financialEntityLei;
     this.tpspCompanyIdentificationCode = contract.tpspInstance.companyIdentification.code;
     this.typeOfCode = contract.tpspInstance.companyIdentification.typeOfCode;

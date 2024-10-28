@@ -1,9 +1,9 @@
 import { TableEntry } from './table-entry';
-import { TICTService } from '../../closed-options/ict-service-types';
+import { TICTService } from '../../data-classes/closed-options/ict-service-types';
 import { TCodeType } from '../../common/general-types';
 import { Company } from '../../classes/company';
 import { ECompanies } from '../../common/companies.enum';
-import { ALL_COMPANY_INSTANCES } from '../../classes/company-instances';
+import { ALL_COMPANY_INSTANCES } from '../../data-classes/instance-data/company-instances';
 
 export class EntryTable5_2 extends TableEntry {
   contractRefNumber: string;
@@ -16,7 +16,7 @@ export class EntryTable5_2 extends TableEntry {
 
   constructor(company: Company) {
     super(5, 2);
-    this.contractRefNumber = company.contract.referenceNumber;
+    this.contractRefNumber = company.contract.id;
     this.ictServiceType = company.contract.ictServicesType;
     this.idCodeTPSP = company.companyIdentification.code;
     this.typeOfCodeTPSP = company.companyIdentification.typeOfCode;
