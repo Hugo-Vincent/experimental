@@ -27,7 +27,7 @@ class MainDB {
     });
 
     // Connect Contracts and Companies
-    this.contract.getCriticalContractsArray().forEach((contract) => {
+    this.contract.getAllContractsArray().forEach((contract) => {
       const companyId = CONTRACT_TO_COMPANY_MAPPING[contract.id];
       const tpsp = this.company.getCompany(companyId);
       // Set TPSP on Contract

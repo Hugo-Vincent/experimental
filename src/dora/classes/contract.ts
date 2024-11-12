@@ -15,6 +15,8 @@ import { CONTRACT_COSTS } from '../data-classes/contract-data/contract-costs.con
 import { Company } from './company';
 import { CONTRACT_ICT_SERVICE_TYPES } from '../data-classes/contract-data/contract-ict-service-type.constants';
 import { ALL_COMPANY_INSTANCES } from '../data-classes/instance-data/company-instances';
+import { TSubstitutability } from '../data-classes/closed-options/substitutability.types';
+import { CONTRACT_SUBSTITUTABILITY } from '../data-classes/contract-data/contract-substitutability.constants';
 
 export class Contract {
   // ID and references
@@ -28,7 +30,7 @@ export class Contract {
   annualCostcurrency: Currencies;
   annualExpense: number;
 
-  // Table 02.02
+  // 02.02
   ictServicesType: TICTService;
   start: TDate;
   end: TDate;
@@ -47,6 +49,10 @@ export class Contract {
   processingLocation: Countries | '';
   dataSensitivity: 'Low or Medium' | 'High';
   relianceLevel: TRelianceLevel;
+  lastAuditDate: TDate;
+
+  // 07.01
+  substitutability: TSubstitutability;
 
   constructor(
     id: EContracts,
@@ -86,6 +92,9 @@ export class Contract {
     this.storageOfData = storageOfData;
     this.dataSensitivity = dataSensitivity;
     this.relianceLevel = CONTRACT_RELIANCE_LEVELS[relianceLevelKey];
+
+    this.substitutability = CONTRACT_SUBSTITUTABILITY[this.id];
+    this.lastAuditDate = '9999-12-31';
 
     // Optional things
     if (contractTypeKey === 3) {

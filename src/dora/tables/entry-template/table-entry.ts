@@ -2,8 +2,8 @@ import { TABLE_SPECS } from '../constants/table-specs.constants';
 import { TAny } from '../../../util/types/generic-types';
 
 export abstract class TableEntry {
-  protected tableNr: number;
-  protected subTableNr: number;
+  tableNr: number;
+  subTableNr: number;
   protected superClassPropertyNames: string[];
 
   constructor(tableNr: number, subTableNr: number) {

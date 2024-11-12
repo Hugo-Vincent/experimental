@@ -30,7 +30,7 @@ export abstract class FileWriter {
     }
   }
 
-  protected wipeFile (path: string): void {
+  wipeFile (path: string): void {
     fs.writeFileSync(path, '');
   };
 }

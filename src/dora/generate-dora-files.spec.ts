@@ -3,7 +3,7 @@ import { COMPANY_COUNTRY_CODES } from './data-classes/company-data/company-count
 import { COMPANY_LEI_CODES } from './data-classes/company-data/company-lei-codes.constants';
 import { ECompanies } from './common/companies.enum';
 import { COMPANY_CRN_CODES } from './data-classes/company-data/company-registration-numbers.constants';
-
+import { DownTimeIncidents } from './data-classes/company-data/downtime/down-time-incident';
 
 describe('Create Files', () => {
   it('Create JSON files', () => {
@@ -30,6 +30,15 @@ describe('Create Files', () => {
         throw new Error('Mismatching countries: ' + company + ' ' + companyCountry + ' ' + leiCountry + ' ' + crnCountry);
       }
     });
+  });
+});
+
+describe('getDownTimes', () => {
+  it('gets downtimes', () => {
+    const downTimeYear = new DownTimeIncidents();
+    downTimeYear.addIncident(0, 15, 1);
+    const meanDownTime = downTimeYear.calculateMeanDownTime();
+    console.log(meanDownTime);
   });
 });
 

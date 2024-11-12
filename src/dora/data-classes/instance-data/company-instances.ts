@@ -149,7 +149,7 @@ export const ALL_TPSP_INSTANCES_ARRAY = Object.values(ALL_TPSP_INSTANCES);
 export const ALL_TPSP_KEYS = Object.keys(ALL_TPSP_INSTANCES) as TTPSP[];
 
 /**
- * REST TPSPs
+ * REST
  */
 export const _OTHER_COMPANIES: Record<Exclude<ECompanies, TNonCriticalTPSP | TCriticalTPSP>, Company> = {
   [ECompanies.ALPHABET]: new Company(ECompanies.ALPHABET),

@@ -1,4 +1,4 @@
-import { TEntityActivity, TEntityActivityKey } from '../data-classes/closed-options/entity-activities.constants';
+import { TEntityActivity } from '../data-classes/closed-options/entity-activities.constants';
 import {
   CRITICALITY_ASSESSMENT_TYPES,
   TCriticalityAssessment,
@@ -8,15 +8,14 @@ import { TDate } from '../common/general-types';
 import {
   DISCONTINUATION_IMPACT_TYPES,
   TDiscontinuationImpact,
-  TDiscontinuationImpactKey,
 } from '../data-classes/closed-options/discontinue-impact-types';
 import { ECompanies } from '../common/companies.enum';
 import { EFunctions } from '../common/functions.enum';
 import { FUNCTION_DESCRIPTIONS } from '../data-classes/function-data/function-descriptions.constants';
 import { ALL_COMPANY_INSTANCES } from '../data-classes/instance-data/company-instances';
-import { Nullable } from '../../types/types';
 import { Company } from './company';
 import { FUNCTION_LICENSED_ACTIVITIES } from '../data-classes/function-data/function-licensed-acitivities.constants';
+import { FUNCTION_RECOVERY_TIMES } from '../data-classes/function-data/function-recovery-times.constants';
 
 export class FunctionDescriptor {
   // ID and references
@@ -24,7 +23,7 @@ export class FunctionDescriptor {
   tpspInstances: Company[];
 
   // Data
-  licensedActivity: Nullable <TEntityActivity>;
+  licensedActivity: TEntityActivity | '';
   name: string;
   leiFinancialEntity: string;
   criticalityAssessment: TCriticalityAssessment;
@@ -37,22 +36,17 @@ export class FunctionDescriptor {
   constructor(
     id: EFunctions,
     criticalityAssessmentKey: TCriticalityAssessmentKey,
-    reasonsForCriticality: string,
-    dateOfLastAssessment: TDate,
-    recoveryTime: number,
-    recoveryPoint: number,
-    discontinuationImpactKey: TDiscontinuationImpactKey,
   ) {
     this.id = id;
     this.name = FUNCTION_DESCRIPTIONS[id];
-    this.licensedActivity = FUNCTION_LICENSED_ACTIVITIES[id];
+    this.licensedActivity = FUNCTION_LICENSED_ACTIVITIES[id] ?? '';
     this.leiFinancialEntity = ALL_COMPANY_INSTANCES[ECompanies.BLOCKRISE].companyIdentification.code;
     this.criticalityAssessment = CRITICALITY_ASSESSMENT_TYPES[criticalityAssessmentKey];
-    this.reasonsForCriticality = reasonsForCriticality;
-    this.dateOfLastAssessment = dateOfLastAssessment;
-    this.recoveryTime = recoveryTime;
-    this.recoveryPoint = recoveryPoint;
-    this.discontinuationImpact = DISCONTINUATION_IMPACT_TYPES[discontinuationImpactKey];
+    this.dateOfLastAssessment = '2024-09-10';
+    this.recoveryTime = FUNCTION_RECOVERY_TIMES[id];
+    this.recoveryPoint = null;
+    this.discontinuationImpact = DISCONTINUATION_IMPACT_TYPES[3];
+    this.reasonsForCriticality = '';
     this.tpspInstances = [];
   }
 }

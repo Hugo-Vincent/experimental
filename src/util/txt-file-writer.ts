@@ -6,15 +6,16 @@ export class TxtFileWriter extends FileWriter {
     super(basePath);
   }
 
-  write(objectsToWrite: TAny[], fileName: string, wipeOldFile = true, basePath?: string): void {
+
+  write(objectsToWrite: TAny[], fileName: string,  header: string, wipeOldFile = true, basePath?: string): void {
     const path = (basePath ?? this.basePath) + fileName + '.txt';
     if (wipeOldFile) this.wipeFile(path);
     const objectProperties = Object.keys(objectsToWrite[0]);
-    let txt = '';
+    let txt = header + '\n\n';
     for (const key of objectProperties) {
+      txt += '================================' + '\n';
       for (const element of objectsToWrite) {
-        txt += element[key];
-        txt += '\n';
+        txt += element[key] + '\n';
       }
       txt += '\n';
     }

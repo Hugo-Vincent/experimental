@@ -17,6 +17,6 @@ export function createTxtFiles(): void {
   const mapOfTables = new TableGenerator().generateAll();
   const txtWriter = new TxtFileWriter(txtFilePath);
   Object.entries(mapOfTables).forEach(([key, tableEntries]) => {
-    txtWriter.write(tableEntries.map((y) => y.toJSONFormat()), key);
+    txtWriter.write(tableEntries.map((y) => y.toJSONFormat()), key, key);
   });
 }

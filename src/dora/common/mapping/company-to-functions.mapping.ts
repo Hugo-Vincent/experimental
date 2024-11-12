@@ -6,6 +6,8 @@ export const TPSP_TO_FUNCTIONS_MAPPING: Record<TTPSP, EFunctions[]> = {
   /**
    * CRITICAL
    */
+
+  // Functions 8 and 13 don't belong to any of the 7 critical parties.
   [ECompanies.BUNQ]: [EFunctions.FUNCTION_3_TRANSFERRING_ASSETS],
   [ECompanies.COMPLYADVANTAGE]: [
     EFunctions.FUNCTION_1_CLIENT_ONBOARDING,
