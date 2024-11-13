@@ -9,6 +9,7 @@ export class EntryTable7_1 extends TableEntry {
   ictSDerviceType: Contract['ictServicesType'];
   substitutability: Contract['substitutability'];
   lastAuditDate: Contract['lastAuditDate'];
+  exitPlanExists: Contract['exitPlanExists'];
 
   constructor(contract: Contract) {
     super(7, 1);
@@ -18,5 +19,6 @@ export class EntryTable7_1 extends TableEntry {
     this.ictSDerviceType = contract.ictServicesType;
     this.substitutability = contract.substitutability;
     this.lastAuditDate = contract.lastAuditDate;
+    this.exitPlanExists =
   }
 }

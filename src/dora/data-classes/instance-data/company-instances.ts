@@ -11,11 +11,11 @@ const CRITICALITY_TPSPS = {
   [ECompanies.GOOGLE_IRELAND]: 'critical',
   [ECompanies.MICROSOFT]: 'critical',
   [ECompanies.SECUROSYS]: 'critical',
-  [ECompanies.VERCEL]: 'critical',
 
   /**
    * NOT CRITICAL
    */
+  [ECompanies.VERCEL]: 'non-critical', // (moved to non-critical 13-11-2024)
   [ECompanies.AFAS]: 'non-critical',
   [ECompanies.BITVAVO]: 'non-critical',
   [ECompanies.CHAINSTACK]: 'non-critical',
@@ -70,9 +70,9 @@ const _CRITICAL_TPSPS: Record<TCriticalTPSP, boolean> = {
   [ECompanies.GOOGLE_IRELAND]: undefined,
   [ECompanies.MICROSOFT]: undefined,
   [ECompanies.SECUROSYS]: undefined,
-  [ECompanies.VERCEL]: undefined,
 } as const;
 const _NON_CRITICAL_TPSPS: Record<TNonCriticalTPSP, boolean> = {
+  [ECompanies.VERCEL]: undefined,
   [ECompanies.AFAS]: undefined,
   [ECompanies.BITVAVO]: undefined,
   [ECompanies.BITWARDEN]: undefined,

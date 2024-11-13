@@ -7,7 +7,11 @@ import { Currencies } from '../common/currencies.enum';
 import { TDate } from '../common/general-types';
 import { CONTRACT_TERMINATION_REASONS, TTerminationReason } from '../data-classes/closed-options/termination-reasons';
 import { Countries } from '../common/countries.enum';
-import { CONTRACT_RELIANCE_LEVELS, TRelianceLevel, TRelianceLevelKey } from '../data-classes/closed-options/reliance-levels';
+import {
+  CONTRACT_RELIANCE_LEVELS,
+  TRelianceLevel,
+  TRelianceLevelKey,
+} from '../data-classes/closed-options/reliance-levels';
 import { TICTService, TICTServiceKey } from '../data-classes/closed-options/ict-service-types';
 import { ECompanies } from '../common/companies.enum';
 import { EContracts } from '../common/contracts.enum';
@@ -17,6 +21,11 @@ import { CONTRACT_ICT_SERVICE_TYPES } from '../data-classes/contract-data/contra
 import { ALL_COMPANY_INSTANCES } from '../data-classes/instance-data/company-instances';
 import { TSubstitutability } from '../data-classes/closed-options/substitutability.types';
 import { CONTRACT_SUBSTITUTABILITY } from '../data-classes/contract-data/contract-substitutability.constants';
+import { ICompanyIndentification } from '../common/interfaces/company-id.interface';
+import {
+  SUBSTITUTABILITY_REASONS,
+  TSubstitutabilityReason,
+} from '../data-classes/closed-options/substitutability-reasons.types';
 
 export class Contract {
   // ID and references
@@ -36,6 +45,11 @@ export class Contract {
   end: TDate;
   reasonForTermination: TTerminationReason | '';
 
+  // 03.01
+  contractUser: ICompanyIndentification['code'];
+  contractSigner: ICompanyIndentification['code'];
+
+
   // How many days at least we must give tpsp before we cancel a contract with them.
   noticePeriodFinEntity: number;
   // How many days the tpsp must give us before they cancel their contract with us.
@@ -49,10 +63,13 @@ export class Contract {
   processingLocation: Countries | '';
   dataSensitivity: 'Low or Medium' | 'High';
   relianceLevel: TRelianceLevel;
-  lastAuditDate: TDate;
+
 
   // 07.01
   substitutability: TSubstitutability;
+  reasonSubstitutability: TSubstitutabilityReason;
+  lastAuditDate: TDate;
+
 
   constructor(
     id: EContracts,
@@ -93,7 +110,11 @@ export class Contract {
     this.dataSensitivity = dataSensitivity;
     this.relianceLevel = CONTRACT_RELIANCE_LEVELS[relianceLevelKey];
 
+    this.contractUser = ALL_COMPANY_INSTANCES[ECompanies.BLOCKRISE].companyIdentification.code;
+    this.contractSigner = ALL_COMPANY_INSTANCES[id === EContracts.SECUROSYS ? ECompanies.STICHTING_BLOCKRISE : ECompanies.BLOCKRISE].companyIdentification.code;
+
     this.substitutability = CONTRACT_SUBSTITUTABILITY[this.id];
+    this.reasonSubstitutability = SUBSTITUTABILITY_REASONS[];
     this.lastAuditDate = '9999-12-31';
 
     // Optional things
