@@ -20,11 +20,14 @@ import { Company } from './company';
 import { CONTRACT_ICT_SERVICE_TYPES } from '../data-classes/contract-data/contract-ict-service-type.constants';
 import { ALL_COMPANY_INSTANCES } from '../data-classes/instance-data/company-instances';
 import { TSubstitutability } from '../data-classes/closed-options/substitutability.types';
-import { CONTRACT_SUBSTITUTABILITY } from '../data-classes/contract-data/contract-substitutability.constants';
+import {
+  CONTRACT_SUBSTITUTABILITY,
+  CONTRACT_SUBSTITUTABILITY_COMPLEX_REASONS,
+} from '../data-classes/contract-data/contract-substitutability.constants';
 import { ICompanyIndentification } from '../common/interfaces/company-id.interface';
 import {
   SUBSTITUTABILITY_REASONS,
-  TSubstitutabilityReason,
+  TSubstitutabilityReason, TSubstitutabilityReasonKey,
 } from '../data-classes/closed-options/substitutability-reasons.types';
 
 export class Contract {
@@ -69,6 +72,7 @@ export class Contract {
   substitutability: TSubstitutability;
   reasonSubstitutability: TSubstitutabilityReason;
   lastAuditDate: TDate;
+  exitPlanExists: 'Yes' | 'No';
 
 
   constructor(
@@ -114,8 +118,9 @@ export class Contract {
     this.contractSigner = ALL_COMPANY_INSTANCES[id === EContracts.SECUROSYS ? ECompanies.STICHTING_BLOCKRISE : ECompanies.BLOCKRISE].companyIdentification.code;
 
     this.substitutability = CONTRACT_SUBSTITUTABILITY[this.id];
-    this.reasonSubstitutability = SUBSTITUTABILITY_REASONS[];
+    this.reasonSubstitutability = id in CONTRACT_SUBSTITUTABILITY_COMPLEX_REASONS ? CONTRACT_SUBSTITUTABILITY_COMPLEX_REASONS[id] : '';
     this.lastAuditDate = '9999-12-31';
+    this.exitPlanExists = 'Yes';
 
     // Optional things
     if (contractTypeKey === 3) {

@@ -19,6 +19,6 @@ export class EntryTable7_1 extends TableEntry {
     this.ictSDerviceType = contract.ictServicesType;
     this.substitutability = contract.substitutability;
     this.lastAuditDate = contract.lastAuditDate;
-    this.exitPlanExists =
+    this.exitPlanExists = contract.exitPlanExists;
   }
 }
