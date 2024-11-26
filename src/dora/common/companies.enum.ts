@@ -30,6 +30,7 @@ export enum ECompanies {
   CHAINSTACK = 'CHAINSTACK',
   COINGECKO = 'COINGECKO',
   COLT = 'COLT',
+  EXPO = 'EXPO',
   GITHUB = 'GITHUB',
   GLASSNODE = 'GLASSNODE', // Only used by Corporate for chart analysis
   GRAFANA = 'GRAFANA',

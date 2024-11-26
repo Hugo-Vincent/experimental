@@ -28,6 +28,7 @@ const CRITICALITY_TPSPS = {
   [ECompanies.TWILIO]: 'non-critical',
   [ECompanies.UBIQUITI]: 'non-critical',
   [ECompanies.ZENDESK]: 'non-critical',
+  [ECompanies.EXPO]: 'non-critical',
   [ECompanies.GLASSNODE]: 'non-critical',
   [ECompanies.GRAFANA]: 'non-critical',
   [ECompanies.BITWARDEN]: 'non-critical',
@@ -74,41 +75,52 @@ const _CRITICAL_TPSPS: Record<TCriticalTPSP, boolean> = {
 } as const;
 const _NON_CRITICAL_TPSPS: Record<TNonCriticalTPSP, boolean> = {
   [ECompanies.VERCEL]: undefined,
-  [ECompanies.AFAS]: undefined,
-  [ECompanies.BITVAVO]: undefined,
-  [ECompanies.BITWARDEN]: undefined,
-  [ECompanies.CHAINSTACK]: undefined,
-  [ECompanies.HEXNODE]: undefined,
-  [ECompanies.KRAKEN]: undefined,
   [ECompanies.KWINZO]: undefined,
-  [ECompanies.NOTION]: undefined,
-  [ECompanies.SANITY]: undefined,
-  [ECompanies.SENDGRID]: undefined,
-  [ECompanies.TWILIO]: undefined,
-  [ECompanies.UBIQUITI]: undefined,
-  [ECompanies.ZENDESK]: undefined,
   [ECompanies.GLASSNODE]: undefined,
   [ECompanies.GRAFANA]: undefined,
   [ECompanies.BLOCKCHAINDOTCOM]: undefined,
-  [ECompanies.COINGECKO]: undefined,
-  [ECompanies.COLT]: undefined,
-  [ECompanies.GITHUB]: undefined,
   [ECompanies.GOOGLE]: undefined,
-  [ECompanies.IDIN]: undefined,
-  [ECompanies.ING]: undefined,
-  [ECompanies.LINEAR]: undefined,
   [ECompanies.MEMPOOL]: undefined,
   [ECompanies.NEXTNOVATE]: undefined,
-  [ECompanies.PAY_DOT]: undefined,
-  [ECompanies.POSTCODEAPI]: undefined,
   [ECompanies.QUICKNODE]: undefined,
-  [ECompanies.SCRIVE]: undefined,
-  [ECompanies.SENTRY]: undefined,
+
+
+
+
+  [ECompanies.COINGECKO]: undefined,
+  [ECompanies.SANITY]: undefined,
+  [ECompanies.ZENDESK]: undefined,
+  [ECompanies.COLT]: undefined,
+  [ECompanies.ING]: undefined,
   [ECompanies.SHIFTBASE]: undefined,
   [ECompanies.SLACK]: undefined,
+  [ECompanies.EXPO]: undefined,
+
+
+  // B04 Document
+  [ECompanies.BITWARDEN]: undefined,
+  [ECompanies.GITHUB]: undefined,
+  [ECompanies.NOTION]: undefined,
   [ECompanies.SONARCLOUD]: undefined,
-  [ECompanies.SUREPAY]: undefined,
   [ECompanies.UNISCAPE]: undefined,
+  [ECompanies.UBIQUITI]: undefined,
+  [ECompanies.SENTRY]: undefined,
+  [ECompanies.HEXNODE]: undefined,
+  [ECompanies.LINEAR]: undefined,
+
+
+  // 3rd party ICT service providers
+  [ECompanies.AFAS]: undefined,
+  [ECompanies.BITVAVO]: undefined,
+  [ECompanies.CHAINSTACK]: undefined,
+  [ECompanies.IDIN]: undefined,
+  [ECompanies.KRAKEN]: undefined,
+  [ECompanies.PAY_DOT]: undefined,
+  [ECompanies.SENDGRID]: undefined,
+  [ECompanies.POSTCODEAPI]: undefined,
+  [ECompanies.SCRIVE]: undefined,
+  [ECompanies.SUREPAY]: undefined,
+  [ECompanies.TWILIO]: undefined,
   [ECompanies.VERIFF]: undefined,
 } as const;
 
