@@ -129,6 +129,11 @@ export const COMPANY_CRN_CODES: Record<
     code: '701536', // Ireland CRO
     link: 'https://core.cro.ie/search', // Search for "Payward"
   },
+  [ECompanies.MICROSOFT_IRELAND]: {
+    country: Countries.IE,
+    code: '',
+    link: '',
+  },
 
   // Sweden - Swedish Companies Registration Office - Registration Number
   [ECompanies.SCRIVE]: {

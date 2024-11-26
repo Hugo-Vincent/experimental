@@ -28,7 +28,7 @@ export const CONTRACT_COSTS: Record<EContracts, { annualCost: number, annualCost
     annualCostCurrency: Currencies.EUR,
     start: '2020-12-01'
   },
-  [EContracts.MICROSOFT]: { // Jos Slack
+  [EContracts.MICROSOFT_IRELAND]: { // Jos Slack
     annualCost: 3250,
     annualCostCurrency: Currencies.EUR,
     start: '2022-05-13'

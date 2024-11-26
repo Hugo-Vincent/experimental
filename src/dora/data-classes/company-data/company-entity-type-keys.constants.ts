@@ -17,7 +17,6 @@ export const COMPANY_ENTITY_TYPES: Record<ECompanies, TEntity> = {
 
   [ECompanies.BUNQ]: ENTITY_TYPES[1],
   [ECompanies.CHAINSTACK]: ENTITY_TYPES[1],
-  // [ECompanies.CLOUDFLARE]: ENTITY_TYPES[1],
   [ECompanies.COLT]: ENTITY_TYPES[1],
   [ECompanies.COINGECKO]: ENTITY_TYPES[1],
   [ECompanies.COMPLYADVANTAGE]: ENTITY_TYPES[1],
@@ -35,6 +34,7 @@ export const COMPANY_ENTITY_TYPES: Record<ECompanies, TEntity> = {
   [ECompanies.LINEAR]: ENTITY_TYPES[1],
   [ECompanies.MEMPOOL]: ENTITY_TYPES[1],
   [ECompanies.MICROSOFT]: ENTITY_TYPES[1],
+  [ECompanies.MICROSOFT_IRELAND]: ENTITY_TYPES[1],
   [ECompanies.NEXTNOVATE]: ENTITY_TYPES[1],
   [ECompanies.NOTION]: ENTITY_TYPES[1],
   [ECompanies.POSTCODEAPI]: ENTITY_TYPES[1],

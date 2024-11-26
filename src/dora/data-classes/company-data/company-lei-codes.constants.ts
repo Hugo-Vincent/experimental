@@ -69,6 +69,11 @@ export const COMPANY_LEI_CODES: Record<
     code: 'INR2EJN1ERAN0W5ZP974',
     link: 'https://lei.info/fullsearch?for=Microsoft',
   },
+  [ECompanies.MICROSOFT_IRELAND]: {
+    country: Countries.IE,
+    code: '549300WCLFVEBTBNRF76',
+    link: 'https://leiworldwide.com/lei_record/549300WCLFVEBTBNRF76',
+  },
   [ECompanies.NEXTNOVATE]: null,
   [ECompanies.NOTION]: null,
   [ECompanies.POSTCODEAPI]: null,

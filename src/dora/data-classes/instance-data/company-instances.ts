@@ -9,7 +9,7 @@ const CRITICALITY_TPSPS = {
   [ECompanies.COMPLYADVANTAGE]: 'critical',
   [ECompanies.ELLIPTIC]: 'critical',
   [ECompanies.GOOGLE_IRELAND]: 'critical',
-  [ECompanies.MICROSOFT]: 'critical',
+  [ECompanies.MICROSOFT_IRELAND]: 'critical',
   [ECompanies.SECUROSYS]: 'critical',
 
   /**
@@ -59,6 +59,7 @@ const CRITICALITY_TPSPS = {
   [ECompanies.ALPHABET]: 'not applicable',
   [ECompanies.BLOCKRISE]: 'not applicable',
   [ECompanies.BLOCKRISE_GROUP]: 'not applicable',
+  [ECompanies.MICROSOFT]: 'not applicable',
   [ECompanies.STICHTING_BLOCKRISE]: 'not applicable',
 
   // CLOUDFLARE: 'deleted',
@@ -68,7 +69,7 @@ const _CRITICAL_TPSPS: Record<TCriticalTPSP, boolean> = {
   [ECompanies.COMPLYADVANTAGE]: undefined,
   [ECompanies.ELLIPTIC]: undefined,
   [ECompanies.GOOGLE_IRELAND]: undefined,
-  [ECompanies.MICROSOFT]: undefined,
+  [ECompanies.MICROSOFT_IRELAND]: undefined,
   [ECompanies.SECUROSYS]: undefined,
 } as const;
 const _NON_CRITICAL_TPSPS: Record<TNonCriticalTPSP, boolean> = {
@@ -157,6 +158,7 @@ export const _OTHER_COMPANIES: Record<Exclude<ECompanies, TNonCriticalTPSP | TCr
   [ECompanies.BLOCKRISE]: new Company(ECompanies.BLOCKRISE, {
     totalAssetValue: 1e7,
   }),
+  [ECompanies.MICROSOFT]: new Company(ECompanies.MICROSOFT),
   [ECompanies.STICHTING_BLOCKRISE]: new Company(ECompanies.STICHTING_BLOCKRISE, {
     totalAssetValue: 0,
   }),

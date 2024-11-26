@@ -13,7 +13,6 @@ export const COMPANY_PARENT_UNDERTAKINGS: Record<ECompanies, ECompanies> = {
 
   [ECompanies.BUNQ]: undefined,
   [ECompanies.CHAINSTACK]: undefined,
-  // [ECompanies.CLOUDFLARE]: undefined,
   [ECompanies.COINGECKO]: undefined,
   [ECompanies.COLT]: undefined,
   [ECompanies.COMPLYADVANTAGE]: undefined,
@@ -31,6 +30,7 @@ export const COMPANY_PARENT_UNDERTAKINGS: Record<ECompanies, ECompanies> = {
   [ECompanies.LINEAR]: undefined,
   [ECompanies.MEMPOOL]: undefined,
   [ECompanies.MICROSOFT]: null,
+  [ECompanies.MICROSOFT_IRELAND]: null,
   [ECompanies.NEXTNOVATE]: undefined,
   [ECompanies.NOTION]: undefined,
   [ECompanies.PAY_DOT]: undefined,

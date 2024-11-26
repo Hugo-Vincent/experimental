@@ -32,7 +32,7 @@ export const TPSP_TO_FUNCTIONS_MAPPING: Record<TTPSP, EFunctions[]> = {
     EFunctions.FUNCTION_12_EMAILING,
     EFunctions.FUNCTION_14_INVOICING,
   ],
-  [ECompanies.MICROSOFT]: [
+  [ECompanies.MICROSOFT_IRELAND]: [
     EFunctions.FUNCTION_9_HR_TALENT_MANAGEMENT,
     EFunctions.FUNCTION_10_RECORD_KEEPING_DOCS,
     EFunctions.FUNCTION_12_EMAILING,

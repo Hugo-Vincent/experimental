@@ -26,7 +26,7 @@ export const NOTICE_PERIODS: Record<TCriticalTPSP, { theyBreakContract: number, 
     theyBreakContract: 30,
     weBreakContract: 30
   },
-  [ECompanies.MICROSOFT]: {
+  [ECompanies.MICROSOFT_IRELAND]: {
     // https://www.microsoft.com/en-us/servicesagreement
     theyBreakContract: 0,
     weBreakContract: 0 // No problem we can cancel any time.

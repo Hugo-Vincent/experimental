@@ -10,7 +10,7 @@ const _CRITICALITY_CONTRACTS = {
   [EContracts.COMPLYADVANTAGE]: 'critical',
   [EContracts.ELLIPTIC]: 'critical',
   [EContracts.GOOGLE_IRELAND]: 'critical',
-  [EContracts.MICROSOFT]: 'critical',
+  [EContracts.MICROSOFT_IRELAND]: 'critical',
   [EContracts.SECUROSYS]: 'critical',
   [EContracts.VERCEL]: 'non-critical',
 
@@ -61,7 +61,7 @@ const _CRITICAL_CONTRACTS: Record<TCriticalContract, boolean> = {
   [EContracts.COMPLYADVANTAGE]: undefined,
   [EContracts.ELLIPTIC]: undefined,
   [EContracts.GOOGLE_IRELAND]: undefined,
-  [EContracts.MICROSOFT]: undefined,
+  [EContracts.MICROSOFT_IRELAND]: undefined,
   [EContracts.SECUROSYS]: undefined,
 };
 const _NON_CRITICAL_CONTRACTS: Record<TNonCriticalContract, boolean> = {

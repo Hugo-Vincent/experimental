@@ -10,7 +10,7 @@ export const CONTRACT_TO_COMPANY_MAPPING: Record<EContracts, ECompanies> = {
   [EContracts.COMPLYADVANTAGE]: ECompanies.COMPLYADVANTAGE,
   [EContracts.ELLIPTIC]: ECompanies.ELLIPTIC,
   [EContracts.GOOGLE_IRELAND]: ECompanies.GOOGLE_IRELAND,
-  [EContracts.MICROSOFT]: ECompanies.MICROSOFT,
+  [EContracts.MICROSOFT_IRELAND]: ECompanies.MICROSOFT_IRELAND,
   [EContracts.SECUROSYS]: ECompanies.SECUROSYS,
   [EContracts.VERCEL]: ECompanies.VERCEL,
 

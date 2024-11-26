@@ -11,7 +11,6 @@ const _COMPANY_LEGAL_NAMES = {
   [ECompanies.STICHTING_BLOCKRISE]: 'Stichting Blockrise',
   [ECompanies.BUNQ]: 'Bunq B.V.',
   [ECompanies.CHAINSTACK]: 'Chainstack Pte. Ltd.',
-  // [ECompanies.CLOUDFLARE]: 'Cloudflare Inc.',
   [ECompanies.COLT]: 'Colt Technology Services Europe Ltd.',
   [ECompanies.COINGECKO]: 'Gecko Labs Pte. Ltd.',
   [ECompanies.COMPLYADVANTAGE]: 'Compliance Advantage Ltd.',
@@ -29,6 +28,7 @@ const _COMPANY_LEGAL_NAMES = {
   [ECompanies.LINEAR]: 'Linear Orbit Inc.',
   [ECompanies.MEMPOOL]: 'Mempool Space Co. Ltd.', // Or Mempool Space K.K. (K.K. = Kabushiki Kaisha = Co. Ltd.)
   [ECompanies.MICROSOFT]: 'Microsoft Corporation',
+  [ECompanies.MICROSOFT_IRELAND]: 'Microsoft Ireland Operations Ltd.',
   [ECompanies.NEXTNOVATE]: 'NextNovate B.V.',
   [ECompanies.NOTION]: 'Notion Labs Inc.',
   [ECompanies.POSTCODEAPI]: 'Postcode API B.V.',

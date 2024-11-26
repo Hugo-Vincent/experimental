@@ -17,7 +17,6 @@ export const COMPANY_HIERARCHY_TYPE_KEYS: Record<ECompanies, THierarchyKey> = {
 
   [ECompanies.BUNQ]: 1,
   [ECompanies.CHAINSTACK]: 1,
-  // [ECompanies.CLOUDFLARE]: 1,
   [ECompanies.COLT]: 1,
   [ECompanies.COINGECKO]: 1,
   [ECompanies.COMPLYADVANTAGE]: 1,
@@ -35,6 +34,7 @@ export const COMPANY_HIERARCHY_TYPE_KEYS: Record<ECompanies, THierarchyKey> = {
   [ECompanies.LINEAR]: 1,
   [ECompanies.MEMPOOL]: 1,
   [ECompanies.MICROSOFT]: 1,
+  [ECompanies.MICROSOFT_IRELAND]: 1,
   [ECompanies.NEXTNOVATE]: 1,
   [ECompanies.NOTION]: 1,
   [ECompanies.POSTCODEAPI]: 1,
