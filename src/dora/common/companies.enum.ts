@@ -45,6 +45,7 @@ export enum ECompanies {
   NEXTNOVATE = 'NEXTNOVATE', // Only as "Betaalconstructie" for payment to Google Cloud. If Nextnovate falls out then we can still pay directly to Google.
   NOTION = 'NOTION',
   POSTCODEAPI = 'POSTCODEAPI',
+  POSTCODEDOTNL = 'POSTCODEDOTNL',
   PAY_DOT = 'PAY_DOT',
   QUICKNODE = 'QUICKNODE',
   SANITY = 'SANITY',

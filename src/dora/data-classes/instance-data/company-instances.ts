@@ -15,13 +15,14 @@ const CRITICALITY_TPSPS = {
   /**
    * NOT CRITICAL
    */
-  [ECompanies.VERCEL]: 'non-critical', // (moved to non-critical 13-11-2024)
   [ECompanies.AFAS]: 'non-critical',
   [ECompanies.BITVAVO]: 'non-critical',
+  [ECompanies.BITWARDEN]: 'non-critical',
   [ECompanies.CHAINSTACK]: 'non-critical',
+  [ECompanies.COLT]: 'non-critical', // Or Uniscape ???
+  // [ECompanies.UNISCAPE]: 'non-critical',
   [ECompanies.HEXNODE]: 'non-critical',
   [ECompanies.KRAKEN]: 'non-critical',
-  [ECompanies.KWINZO]: 'non-critical',
   [ECompanies.NOTION]: 'non-critical',
   [ECompanies.SANITY]: 'non-critical',
   [ECompanies.SENDGRID]: 'non-critical',
@@ -29,29 +30,21 @@ const CRITICALITY_TPSPS = {
   [ECompanies.UBIQUITI]: 'non-critical',
   [ECompanies.ZENDESK]: 'non-critical',
   [ECompanies.EXPO]: 'non-critical',
-  [ECompanies.GLASSNODE]: 'non-critical',
-  [ECompanies.GRAFANA]: 'non-critical',
-  [ECompanies.BITWARDEN]: 'non-critical',
-  [ECompanies.BLOCKCHAINDOTCOM]: 'non-critical',
-  [ECompanies.COINGECKO]: 'non-critical',
-  [ECompanies.COLT]: 'non-critical',
+
+
+
   [ECompanies.GITHUB]: 'non-critical',
-  [ECompanies.GOOGLE]: 'non-critical',
   [ECompanies.IDIN]: 'non-critical',
-  [ECompanies.ING]: 'non-critical',
   [ECompanies.LINEAR]: 'non-critical',
-  [ECompanies.MEMPOOL]: 'non-critical',
-  [ECompanies.NEXTNOVATE]: 'non-critical',
   [ECompanies.PAY_DOT]: 'non-critical',
-  [ECompanies.POSTCODEAPI]: 'non-critical',
-  [ECompanies.QUICKNODE]: 'non-critical',
+  [ECompanies.POSTCODEDOTNL]: 'non-critical',
+
   [ECompanies.SCRIVE]: 'non-critical',
   [ECompanies.SENTRY]: 'non-critical',
-  [ECompanies.SHIFTBASE]: 'non-critical',
   [ECompanies.SLACK]: 'non-critical',
   [ECompanies.SONARCLOUD]: 'non-critical',
   [ECompanies.SUREPAY]: 'non-critical',
-  [ECompanies.UNISCAPE]: 'non-critical',
+  [ECompanies.VERCEL]: 'non-critical',
   [ECompanies.VERIFF]: 'non-critical',
 
   /**
@@ -60,10 +53,24 @@ const CRITICALITY_TPSPS = {
   [ECompanies.ALPHABET]: 'not applicable',
   [ECompanies.BLOCKRISE]: 'not applicable',
   [ECompanies.BLOCKRISE_GROUP]: 'not applicable',
+  [ECompanies.GOOGLE]: 'not-applicable',
   [ECompanies.MICROSOFT]: 'not applicable',
   [ECompanies.STICHTING_BLOCKRISE]: 'not applicable',
 
-  // CLOUDFLARE: 'deleted',
+  /**
+   * DISCARDED
+   */
+  [ECompanies.BLOCKCHAINDOTCOM]: 'discarded',
+  [ECompanies.COINGECKO]: 'discarded',
+  [ECompanies.GLASSNODE]: 'discarded',
+  [ECompanies.GRAFANA]: 'discarded',
+  [ECompanies.ING]: 'discarded',
+  [ECompanies.KWINZO]: 'discarded',
+  [ECompanies.MEMPOOL]: 'discarded',
+  [ECompanies.NEXTNOVATE]: 'discarded',
+  [ECompanies.POSTCODEAPI]: 'discarded',
+  [ECompanies.QUICKNODE]: 'discarded',
+  [ECompanies.SHIFTBASE]: 'discarded',
 } as const;
 const _CRITICAL_TPSPS: Record<TCriticalTPSP, boolean> = {
   [ECompanies.BUNQ]: undefined,
@@ -75,24 +82,11 @@ const _CRITICAL_TPSPS: Record<TCriticalTPSP, boolean> = {
 } as const;
 const _NON_CRITICAL_TPSPS: Record<TNonCriticalTPSP, boolean> = {
   [ECompanies.VERCEL]: undefined,
-  [ECompanies.KWINZO]: undefined,
-  [ECompanies.GLASSNODE]: undefined,
-  [ECompanies.GRAFANA]: undefined,
-  [ECompanies.BLOCKCHAINDOTCOM]: undefined,
-  [ECompanies.GOOGLE]: undefined,
-  [ECompanies.MEMPOOL]: undefined,
-  [ECompanies.NEXTNOVATE]: undefined,
-  [ECompanies.QUICKNODE]: undefined,
-
-
-
-
+  [ECompanies.COLT]: undefined, // Supplier of Uniscape
   [ECompanies.COINGECKO]: undefined,
   [ECompanies.SANITY]: undefined,
   [ECompanies.ZENDESK]: undefined,
-  [ECompanies.COLT]: undefined,
-  [ECompanies.ING]: undefined,
-  [ECompanies.SHIFTBASE]: undefined,
+
   [ECompanies.SLACK]: undefined,
   [ECompanies.EXPO]: undefined,
 
@@ -100,14 +94,13 @@ const _NON_CRITICAL_TPSPS: Record<TNonCriticalTPSP, boolean> = {
   // B04 Document
   [ECompanies.BITWARDEN]: undefined,
   [ECompanies.GITHUB]: undefined,
-  [ECompanies.NOTION]: undefined,
-  [ECompanies.SONARCLOUD]: undefined,
-  [ECompanies.UNISCAPE]: undefined,
-  [ECompanies.UBIQUITI]: undefined,
-  [ECompanies.SENTRY]: undefined,
   [ECompanies.HEXNODE]: undefined,
   [ECompanies.LINEAR]: undefined,
-
+  [ECompanies.NOTION]: undefined,
+  [ECompanies.SENTRY]: undefined,
+  [ECompanies.SONARCLOUD]: undefined,
+  [ECompanies.UBIQUITI]: undefined,
+  [ECompanies.UNISCAPE]: undefined,
 
   // 3rd party ICT service providers
   [ECompanies.AFAS]: undefined,
@@ -116,8 +109,8 @@ const _NON_CRITICAL_TPSPS: Record<TNonCriticalTPSP, boolean> = {
   [ECompanies.IDIN]: undefined,
   [ECompanies.KRAKEN]: undefined,
   [ECompanies.PAY_DOT]: undefined,
+  [ECompanies.POSTCODEDOTNL]: undefined,
   [ECompanies.SENDGRID]: undefined,
-  [ECompanies.POSTCODEAPI]: undefined,
   [ECompanies.SCRIVE]: undefined,
   [ECompanies.SUREPAY]: undefined,
   [ECompanies.TWILIO]: undefined,
