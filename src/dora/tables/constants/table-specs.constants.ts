@@ -5,7 +5,7 @@ export const TABLE_SPECS = {
     3: 4,
   },
   2: {
-    1: 5,
+    1: 6,
     2: 18,
     3: 2,
   },

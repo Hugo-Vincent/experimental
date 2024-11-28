@@ -25,7 +25,6 @@ export class EntryTable5_1 extends TableEntry {
     this.name = company.legalName;
     this.typeOfPerson = 'Legal person';
     this.countryOfHQ = company.country;
-    console.log(company);
     this.currency = company.contract.annualCostcurrency;
     if (company.id === ECompanies.BUNQ) {
       this.annualExpense = CONTRACT_COSTS[EContracts.BUNQ_BLOCKRISE_BV].annualCost + CONTRACT_COSTS[EContracts.BUNQ_BLOCKRISE_STICHTING].annualCost;

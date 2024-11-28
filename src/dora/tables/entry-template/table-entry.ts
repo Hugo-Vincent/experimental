@@ -1,4 +1,3 @@
-import { TABLE_SPECS } from '../constants/table-specs.constants';
 import { TAny } from '../../../util/types/generic-types';
 
 export abstract class TableEntry {
@@ -15,9 +14,10 @@ export abstract class TableEntry {
 
   toJSONFormat(): TAny {
     const values = this.getValuesForJson();
+    console.log(values);
     const table = {};
-    const cols = TABLE_SPECS[this.tableNr][this.subTableNr];
-    for (let i = 1; i <= cols; i++) {
+    // const cols = TABLE_SPECS[this.tableNr][this.subTableNr];
+    for (let i = 1; i <= values.length; i++) {
       const key = `RT.${this.stringifyNumbers(this.tableNr)}.${this.stringifyNumbers(
         this.subTableNr,
       )}.0${this.stringifyNumbers(i)}0`;

@@ -2,6 +2,7 @@ import { TableEntry } from './table-entry';
 import { Currencies } from '../../common/currencies.enum';
 import { TContractualArrangement } from '../../data-classes/closed-options/contractual-arrangement-types.constants';
 import { Contract } from '../../classes/contract';
+import { ECompanies } from '../../common/companies.enum';
 
 export class EntryTable2_1 extends TableEntry {
   contractReferenceNumber: string;
