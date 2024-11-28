@@ -63,10 +63,10 @@ export const COMPANY_CRN_CODES: Record<
     code: '24283498',
     link: 'https://www.kvk.nl/bestellen/#/24283498/',
   },
-  [ECompanies.POSTCODEAPI]: {
+  [ECompanies.POSTCODEDOTNL]: {
     country: Countries.NL,
-    code: '68503326',
-    link: 'https://www.kvk.nl/bestellen/#/68503326/',
+    code: '34185878',
+    link: 'https://www.kvk.nl/bestellen/#/34185878',
   },
   [ECompanies.SHIFTBASE]: {
     country: Countries.NL,
@@ -185,6 +185,11 @@ export const COMPANY_CRN_CODES: Record<
   //   code: '0460442',
   //   link: 'https://data.sfgov.org/widgets/g8m3-pdis',
   // },
+  [ECompanies.EXPO]: {
+    country: Countries.US,
+    code: '',
+    link: 'https://trademarks.justia.com/874/29/expo-87429860.html',
+  },
   [ECompanies.GITHUB]: {
     country: Countries.US,
     code: '0456831',

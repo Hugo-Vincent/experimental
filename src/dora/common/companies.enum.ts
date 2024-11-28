@@ -13,10 +13,8 @@ export enum ECompanies {
   COMPLYADVANTAGE = 'COMPLYADVANTAGE',
   ELLIPTIC = 'ELLIPTIC',
   GOOGLE_IRELAND = 'GOOGLE_IRELAND',
-  MICROSOFT = 'MICROSOFT',
   MICROSOFT_IRELAND = 'MICROSOFT_IRELAND',
   SECUROSYS = 'SECUROSYS',
-  VERCEL = 'VERCEL',
 
 
   /**
@@ -42,9 +40,9 @@ export enum ECompanies {
   KWINZO = 'KWINZO',
   LINEAR = 'LINEAR',
   MEMPOOL = 'MEMPOOL',
+  MICROSOFT = 'MICROSOFT',
   NEXTNOVATE = 'NEXTNOVATE', // Only as "Betaalconstructie" for payment to Google Cloud. If Nextnovate falls out then we can still pay directly to Google.
   NOTION = 'NOTION',
-  POSTCODEAPI = 'POSTCODEAPI',
   POSTCODEDOTNL = 'POSTCODEDOTNL',
   PAY_DOT = 'PAY_DOT',
   QUICKNODE = 'QUICKNODE',
@@ -59,71 +57,7 @@ export enum ECompanies {
   TWILIO = 'TWILIO',
   UBIQUITI = 'UBIQUITI', // Unifi
   UNISCAPE = 'UNISCAPE',
+  VERCEL = 'VERCEL',
   VERIFF = 'VERIFF',
   ZENDESK = 'ZENDESK',
-
-  /**
-   * Deleted
-   */
-  // CLOUDFLARE = 'CLOUDFLARE',
 }
-
-// Vercel
-// Google Cloud
-// Cloudflare
-// Securosys
-// Bitwarden
-// Postcode API
-// Scrive
-// Bluem (IDIN + SurePay)
-// Veriff
-// ING
-// Pay.
-//   Twilio
-// Sanity
-// Zendesk
-// Sendgrid
-// Shiftbase
-// Notion
-// Kwinzo
-// Microsoft
-// GRC Tool
-// ComplyAdvantage
-// Grafana
-// Glassnode
-// Mempool
-// Blockchain.com
-// Bitvavo
-// Kraken
-// Ubiquity
-// Hexnode
-// AFAS
-// Bunq
-// Elliptic
-// Chainstack
-
-
-
-
-
-// COINGECKO
-// COLT
-// GITHUB
-// LINEAR
-// SENTRY
-// SLACK
-// SONARCLOUD
-
-
-
-
-// BLOCKCHAINDOTCOM = 'BLOCKCHAINDOTCOM'
-// GLASSNODE = 'GLASSNODE'
-// GRAFANA = 'GRAFANA'
-// GRCTOOL = 'GRCTOOL'
-// HEXNODE = 'HEXNODE'
-// ING = 'ING'
-// KWINZO = 'KWINZO'
-// MEMPOOL = 'MEMPOOL'
-// SHIFTBASE  = 'SHIFT'
-// ZENDESK = 'ZENDESK'

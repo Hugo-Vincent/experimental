@@ -4,13 +4,13 @@ import {
   _OTHER_COMPANIES,
   ALL_COMPANY_INSTANCES, ALL_TPSP_INSTANCES, ALL_TPSP_INSTANCES_ARRAY,
   CRITICAL_TPSP_INSTANCES,
-  CRITICAL_TPSP_INSTANCES_ARRAY, NON_CRITICAL_TPSP_INSTANCES, NON_CRITICAL_TPSP_INSTANCES_ARRAY,
-  TCriticalTPSP, TNonCriticalTPSP,
+  CRITICAL_TPSP_INSTANCES_ARRAY, NON_CRITICAL_TPSP_INSTANCES, NON_CRITICAL_TPSP_INSTANCES_ARRAY, TCompanies,
+  TCriticalTPSP, TNonCriticalTPSP, TOtherCompanies,
 } from '../data-classes/instance-data/company-instances';
 
 
 export class CompanyData {
-  getAllCompanies(): Record<ECompanies, Company> {
+  getAllCompanies(): Record<TCompanies, Company> {
     return ALL_COMPANY_INSTANCES;
   }
 
@@ -49,7 +49,7 @@ export class CompanyData {
   getOtherCompany(companyKey: Exclude<ECompanies, TNonCriticalTPSP | TCriticalTPSP>): Company {
     return _OTHER_COMPANIES[companyKey];
   }
-  getOtherCompanies(): Record<Exclude<ECompanies, TNonCriticalTPSP | TCriticalTPSP>, Company> {
+  getOtherCompanies(): Record<TOtherCompanies, Company> {
     return _OTHER_COMPANIES;
   }
 }

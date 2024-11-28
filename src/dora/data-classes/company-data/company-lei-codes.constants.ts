@@ -45,6 +45,7 @@ export const COMPANY_LEI_CODES: Record<
   [ECompanies.COINGECKO]: null,
   [ECompanies.COMPLYADVANTAGE]: null,
   [ECompanies.ELLIPTIC]: null,
+  [ECompanies.EXPO]: null,
   [ECompanies.GITHUB]: null,
   [ECompanies.GOOGLE]: {
     country: Countries.US,
@@ -76,7 +77,7 @@ export const COMPANY_LEI_CODES: Record<
   },
   [ECompanies.NEXTNOVATE]: null,
   [ECompanies.NOTION]: null,
-  [ECompanies.POSTCODEAPI]: null,
+  [ECompanies.POSTCODEDOTNL]: null,
   [ECompanies.PAY_DOT]: {
     country: Countries.NL,
     code: '724500NG2W3S69V8WP89',
