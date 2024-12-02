@@ -188,7 +188,7 @@ export const COMPANY_CRN_CODES: Record<
   [ECompanies.EXPO]: {
     country: Countries.US,
     code: '',
-    link: 'https://trademarks.justia.com/874/29/expo-87429860.html',
+    link: '',
   },
   [ECompanies.GITHUB]: {
     country: Countries.US,
