@@ -19,8 +19,8 @@ const CRITICALITY_TPSPS = {
   [ECompanies.BITVAVO]: 'non-critical',
   [ECompanies.BITWARDEN]: 'non-critical',
   [ECompanies.CHAINSTACK]: 'non-critical',
-  [ECompanies.COLT]: 'non-critical', // Or Uniscape ???
-  // [ECompanies.UNISCAPE]: 'non-critical',
+  // Colt re-sells Uniscape's product called Uniscape.
+  [ECompanies.COLT]: 'non-critical',
   [ECompanies.EXPO]: 'non-critical',
   [ECompanies.GITHUB]: 'non-critical',
   [ECompanies.HEXNODE]: 'non-critical',
@@ -39,6 +39,8 @@ const CRITICALITY_TPSPS = {
   [ECompanies.SUREPAY]: 'non-critical',
   [ECompanies.TWILIO]: 'non-critical',
   [ECompanies.UBIQUITI]: 'non-critical',
+  // The party Uniscape sells a product called Uniscape
+  [ECompanies.UNISCAPE]: 'non-critical',
   [ECompanies.VERCEL]: 'non-critical',
   [ECompanies.VERIFF]: 'non-critical',
   [ECompanies.ZENDESK]: 'non-critical',
@@ -99,6 +101,7 @@ const _NON_CRITICAL_TPSPS: Record<TNonCriticalTPSP, boolean> = {
   [ECompanies.SUREPAY]: undefined,
   [ECompanies.TWILIO]: undefined,
   [ECompanies.UBIQUITI]: undefined,
+  [ECompanies.UNISCAPE]: undefined,
   [ECompanies.VERCEL]: undefined,
   [ECompanies.VERIFF]: undefined,
   [ECompanies.ZENDESK]: undefined,

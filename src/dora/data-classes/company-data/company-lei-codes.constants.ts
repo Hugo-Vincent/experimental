@@ -43,7 +43,11 @@ export const COMPANY_LEI_CODES: Record<
     link: 'https://leiworldwide.com/lei_record/2138004U3BWMFNR4ZW05',
   },
   [ECompanies.COINGECKO]: null,
-  [ECompanies.COMPLYADVANTAGE]: null,
+  [ECompanies.COMPLYADVANTAGE]: {
+    country: Countries.GB,
+    code: '254900VBEUEJAX6XPW79',
+    link: 'https://www.lei-lookup.com/record/?keyword=IVXS%20UK%20Ltd',
+  },
   [ECompanies.ELLIPTIC]: null,
   [ECompanies.EXPO]: null,
   [ECompanies.GITHUB]: null,
