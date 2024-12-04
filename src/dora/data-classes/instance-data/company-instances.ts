@@ -15,16 +15,16 @@ const CRITICALITY_TPSPS = {
   /**
    * NOT CRITICAL
    */
-  [ECompanies.AFAS]: 'non-critical',
   [ECompanies.BITVAVO]: 'non-critical',
   [ECompanies.BITWARDEN]: 'non-critical',
+  [ECompanies.BLUEM]: 'non-critical',
   [ECompanies.CHAINSTACK]: 'non-critical',
   // Colt re-sells Uniscape's product called Uniscape.
   [ECompanies.COLT]: 'non-critical',
   [ECompanies.EXPO]: 'non-critical',
   [ECompanies.GITHUB]: 'non-critical',
+  [ECompanies.FLANTUA]: 'non-critical',
   [ECompanies.HEXNODE]: 'non-critical',
-  [ECompanies.IDIN]: 'non-critical',
   [ECompanies.KRAKEN]: 'non-critical',
   [ECompanies.LINEAR]: 'non-critical',
   [ECompanies.NOTION]: 'non-critical',
@@ -36,7 +36,6 @@ const CRITICALITY_TPSPS = {
   [ECompanies.SENTRY]: 'non-critical',
   [ECompanies.SLACK]: 'non-critical',
   [ECompanies.SONARCLOUD]: 'non-critical',
-  [ECompanies.SUREPAY]: 'non-critical',
   [ECompanies.TWILIO]: 'non-critical',
   [ECompanies.UBIQUITI]: 'non-critical',
   // The party Uniscape sells a product called Uniscape
@@ -51,7 +50,6 @@ const CRITICALITY_TPSPS = {
   [ECompanies.ALPHABET]: 'other',
   [ECompanies.BLOCKRISE]: 'other',
   [ECompanies.BLOCKRISE_GROUP]: 'other',
-  [ECompanies.GOOGLE]: 'other',
   [ECompanies.MICROSOFT]: 'other',
   [ECompanies.STICHTING_BLOCKRISE]: 'other',
 
@@ -78,15 +76,15 @@ const _CRITICAL_TPSPS: Record<TCriticalTPSP, boolean> = {
   [ECompanies.SECUROSYS]: undefined,
 } as const;
 const _NON_CRITICAL_TPSPS: Record<TNonCriticalTPSP, boolean> = {
-  [ECompanies.AFAS]: undefined,
   [ECompanies.BITVAVO]: undefined,
   [ECompanies.BITWARDEN]: undefined,
+  [ECompanies.BLUEM]: undefined,
   [ECompanies.CHAINSTACK]: undefined,
   [ECompanies.COLT]: undefined, // Supplier of Uniscape
   [ECompanies.EXPO]: undefined,
+  [ECompanies.FLANTUA]: undefined,
   [ECompanies.GITHUB]: undefined,
   [ECompanies.HEXNODE]: undefined,
-  [ECompanies.IDIN]: undefined,
   [ECompanies.KRAKEN]: undefined,
   [ECompanies.LINEAR]: undefined,
   [ECompanies.NOTION]: undefined,
@@ -98,7 +96,6 @@ const _NON_CRITICAL_TPSPS: Record<TNonCriticalTPSP, boolean> = {
   [ECompanies.SENTRY]: undefined,
   [ECompanies.SLACK]: undefined,
   [ECompanies.SONARCLOUD]: undefined,
-  [ECompanies.SUREPAY]: undefined,
   [ECompanies.TWILIO]: undefined,
   [ECompanies.UBIQUITI]: undefined,
   [ECompanies.UNISCAPE]: undefined,
@@ -156,7 +153,6 @@ export const _OTHER_COMPANIES: Record<TOtherCompanies, Company> = {
   [ECompanies.BLOCKRISE]: new Company(ECompanies.BLOCKRISE, {
     totalAssetValue: 1e7,
   }),
-  [ECompanies.GOOGLE]: new Company(ECompanies.GOOGLE),
   [ECompanies.MICROSOFT]: new Company(ECompanies.MICROSOFT),
   [ECompanies.STICHTING_BLOCKRISE]: new Company(ECompanies.STICHTING_BLOCKRISE, {
     totalAssetValue: 0,

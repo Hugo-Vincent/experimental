@@ -1,6 +1,6 @@
 import { CompanyData } from './company-data';
 import {
-  TPSP_TO_FUNCTIONS_MAPPING,
+  CONTRACT_TO_FUNCTIONS_MAPPING,
 } from '../common/mapping/company-to-functions.mapping';
 import { EFunctions } from '../common/functions.enum';
 import { FUNCTION_INSTANCES } from '../data-classes/instance-data/function-instances';
@@ -20,16 +20,14 @@ class MainDB {
   // Initialization
   private setup(): void {
     // Connect Functions and Companies
-    this.company.getAllTPSPsArray().forEach((tpsp) => {
+    this.contract.getAllContractsArray().forEach((contract) => {
       // Set functions on Company
-      tpsp.functions = TPSP_TO_FUNCTIONS_MAPPING[tpsp.id].map((y: EFunctions) => FUNCTION_INSTANCES[y]);
+      contract.functions = CONTRACT_TO_FUNCTIONS_MAPPING[contract.id].map((y: EFunctions) => FUNCTION_INSTANCES[y]);
 
       // Set Companies on Function
-      tpsp.functions.forEach((func) => func.tpspInstances.push(tpsp));
+      contract.functions.forEach((func) => func.contractInstances.push(contract));
     });
-
     // Connect Contracts and Companies
-    console.log(this.contract.getAllContractsArray().map(x => x.id));
     this.contract.getAllContractsArray().forEach((contract) => {
       const companyId = CONTRACT_TO_COMPANY_MAPPING[contract.id];
       const tpsp = this.company.getCompany(companyId);
@@ -38,6 +36,7 @@ class MainDB {
       // Set Contract on TPSP
       tpsp.contract = contract;
     });
+    console.log(this.contract.getAllContractsArray().map(x => x.tpspInstance.legalName));
   }
 }
 export const MAIN_DB = new MainDB();

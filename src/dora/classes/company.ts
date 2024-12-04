@@ -17,7 +17,7 @@ import { ALL_COMPANY_INSTANCES, TCriticalTPSP, TNonCriticalTPSP } from '../data-
 import { Contract } from './contract';
 import { COMPANY_PARENT_UNDERTAKINGS } from '../data-classes/company-data/company-parent-undertakings.constants';
 import { TPersonTPSP, TPSP_PERSON_TYPE } from '../data-classes/closed-options/person-type.constants';
-import { FunctionDescriptor } from './function';
+import { COMPANY_VAT_NUMBERS } from '../data-classes/company-data/company-vat-numbers.constants';
 
 interface ICompanyOptions {
   parent?: Optional<{
@@ -32,7 +32,6 @@ export class Company {
   // ID and references
   id: ECompanies;
   contract: Contract;
-  functions: FunctionDescriptor[];
 
   // Data
   legalName: TLegalName;
@@ -50,7 +49,6 @@ export class Company {
     options: Nullable<ICompanyOptions> = null,
   ) {
     this.id = company;
-    this.functions = [];
 
     this.legalName = COMPANY_LEGAL_NAMES[company];
     this.tradeMark = COMPANY_TRADEMARKS[company];
@@ -72,6 +70,9 @@ export class Company {
     }
     if (COMPANY_CRN_CODES[company]) {
       return 'CRN';
+    }
+    if (COMPANY_VAT_NUMBERS[company]) {
+      return 'VAT';
     }
     throw new Error('No valid identification code type');
   }

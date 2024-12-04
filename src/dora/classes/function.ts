@@ -13,14 +13,14 @@ import { ECompanies } from '../common/companies.enum';
 import { EFunctions } from '../common/functions.enum';
 import { FUNCTION_DESCRIPTIONS } from '../data-classes/function-data/function-descriptions.constants';
 import { ALL_COMPANY_INSTANCES } from '../data-classes/instance-data/company-instances';
-import { Company } from './company';
 import { FUNCTION_LICENSED_ACTIVITIES } from '../data-classes/function-data/function-licensed-acitivities.constants';
 import { FUNCTION_RECOVERY_TIMES } from '../data-classes/function-data/function-recovery-times.constants';
+import { Contract } from './contract';
 
 export class FunctionDescriptor {
   // ID and references
   id: EFunctions;
-  tpspInstances: Company[];
+  contractInstances: Contract[];
 
   // Data
   licensedActivity: TEntityActivity | '';
@@ -47,6 +47,6 @@ export class FunctionDescriptor {
     this.recoveryPoint = null;
     this.discontinuationImpact = DISCONTINUATION_IMPACT_TYPES[3];
     this.reasonsForCriticality = '';
-    this.tpspInstances = [];
+    this.contractInstances = [];
   }
 }

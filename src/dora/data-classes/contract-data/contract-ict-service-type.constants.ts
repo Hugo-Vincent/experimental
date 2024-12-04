@@ -42,4 +42,5 @@ export const CONTRACT_ICT_SERVICE_TYPES: Record<EContracts, TICTService> = {
   CONTRACT_31: undefined,
   CONTRACT_32: undefined,
   CONTRACT_33: undefined,
+  CONTRACT_34: undefined,
 }

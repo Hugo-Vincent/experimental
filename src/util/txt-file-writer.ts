@@ -6,6 +6,9 @@ export class TxtFileWriter extends FileWriter {
     super(basePath);
   }
 
+  static fromDirectory(directory: string): TxtFileWriter {
+    return new TxtFileWriter(`src/${directory}/files`);
+  }
 
   write(objectsToWrite: TAny[], fileName: string,  header: string, wipeOldFile = true, basePath?: string): void {
     const path = (basePath ?? this.basePath) + fileName + '.txt';
@@ -21,4 +24,14 @@ export class TxtFileWriter extends FileWriter {
     }
     this.writeToFile(path, txt);
   };
+
+  writeArrayAsList(arrayToWrite: TAny[], fileName: string, wipeOldFile = true, basePath?: string) {
+    const path = (basePath ?? this.basePath) + fileName + '.txt';
+    if (wipeOldFile) this.wipeFile(path);
+    let  txt = '';
+    for (const element of arrayToWrite) {
+      txt += String(element) + '\n';
+    }
+    this.writeToFile(path, txt);
+  }
 }

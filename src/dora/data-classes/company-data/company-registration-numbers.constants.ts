@@ -8,11 +8,6 @@ export const COMPANY_CRN_CODES: Record<
   Nullable<ICompanyIndentification>
 > = {
   // Netherlands - KVK - KVK Nummer
-  [ECompanies.AFAS]: {
-    country: Countries.NL,
-    code: '31046821',
-    link: 'https://www.kvk.nl/bestellen/#/31046821/',
-  },
   [ECompanies.BITVAVO]: {
     country: Countries.NL,
     code: '68743424',
@@ -38,10 +33,15 @@ export const COMPANY_CRN_CODES: Record<
     code: '54992060',
     link: 'https://www.kvk.nl/bestellen/#/54992060/',
   },
-  [ECompanies.IDIN]: {
+  [ECompanies.BLUEM]: {
     country: Countries.NL,
-    code: '67439594',
-    link: 'https://www.kvk.nl/bestellen/#/67439594/',
+    code: '32081330',
+    link: 'https://www.kvk.nl/bestellen/#/32081330000012672483',
+  },
+  [ECompanies.FLANTUA]: {
+    country: Countries.NL,
+    code: '53179455',
+    link: 'https://www.kvk.nl/bestellen/#/53179455000023058684',
   },
   [ECompanies.ING]: {
     country: Countries.NL,
@@ -72,11 +72,6 @@ export const COMPANY_CRN_CODES: Record<
     country: Countries.NL,
     code: '59514701',
     link: 'https://www.kvk.nl/bestellen/#/59514701000021590567',
-  },
-  [ECompanies.SUREPAY]: {
-    country: Countries.NL,
-    code: '77251733',
-    link: 'https://www.kvk.nl/bestellen/#/77251733/',
   },
   [ECompanies.UNISCAPE]: {
     country: Countries.NL,
@@ -185,11 +180,7 @@ export const COMPANY_CRN_CODES: Record<
   //   code: '0460442',
   //   link: 'https://data.sfgov.org/widgets/g8m3-pdis',
   // },
-  [ECompanies.EXPO]: {
-    country: Countries.US,
-    code: '',
-    link: '',
-  },
+  [ECompanies.EXPO]: null,
   [ECompanies.GITHUB]: {
     country: Countries.US,
     code: '0456831',
@@ -241,7 +232,7 @@ export const COMPANY_CRN_CODES: Record<
     link: 'https://data.sfgov.org/widgets/g8m3-pdis',
   },
   [ECompanies.ALPHABET]: null, // Google Parent Company
-  [ECompanies.GOOGLE]: null, // Registered in multiple states with multiple codes it seems
+  // [ECompanies.GOOGLE]: null, // Registered in multiple states with multiple codes it seems
   [ECompanies.GOOGLE_IRELAND]: null, // Registered in multiple states with multiple codes it seems
 
   // Florida - Registration number

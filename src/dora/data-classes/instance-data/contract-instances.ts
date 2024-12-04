@@ -120,3 +120,4 @@ export const ALL_CONTRACT_INSTANCES = {
   ...NON_CRITICAL_CONTRACTS,
 } as const;
 export const ALL_CONTRACT_INSTANCES_ARRAY = Object.values(ALL_CONTRACT_INSTANCES);
+export type TContract = TCriticalContract | TNonCriticalContract;

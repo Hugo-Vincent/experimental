@@ -7,7 +7,6 @@ export const COMPANY_LEI_CODES: Record<
   ECompanies,
   Nullable<ICompanyIndentification>
 > = {
-  [ECompanies.AFAS]: null,
   [ECompanies.ALPHABET]: {
     country: Countries.US,
     code: '5493006MHB84DD0ZWV18',
@@ -26,6 +25,7 @@ export const COMPANY_LEI_CODES: Record<
   },
   [ECompanies.STICHTING_BLOCKRISE]: null,
   [ECompanies.BLOCKRISE_GROUP]: null,
+  [ECompanies.BLUEM]: null,
   [ECompanies.BUNQ]: {
     country: Countries.NL,
     code: '7245002ZUXNOEJ0QPZ44',
@@ -50,18 +50,18 @@ export const COMPANY_LEI_CODES: Record<
   },
   [ECompanies.ELLIPTIC]: null,
   [ECompanies.EXPO]: null,
+  [ECompanies.FLANTUA]: null,
   [ECompanies.GITHUB]: null,
-  [ECompanies.GOOGLE]: {
-    country: Countries.US,
-    code: '7ZW8QJWVPR4P1J1KQY45',
-    link: 'https://leiworldwide.com/lei_record/7ZW8QJWVPR4P1J1KQY45',
-  },
+  // [ECompanies.GOOGLE]: {
+  //   country: Countries.US,
+  //   code: '7ZW8QJWVPR4P1J1KQY45',
+  //   link: 'https://leiworldwide.com/lei_record/7ZW8QJWVPR4P1J1KQY45',
+  // },
   [ECompanies.GOOGLE_IRELAND]: {
     country: Countries.IE,
     code: 'YYPPRNO5HB304LHFVG31',
     link: 'https://leiworldwide.com/lei_record/YYPPRNO5HB304LHFVG31',
   },
-  [ECompanies.IDIN]: null,
   [ECompanies.ING]: {
     country: Countries.NL,
     code: '3TK20IVIUJ8J3ZU0QE75',
@@ -95,11 +95,11 @@ export const COMPANY_LEI_CODES: Record<
   [ECompanies.SENTRY]: null,
   [ECompanies.SLACK]: null, // 5493001KJTIIGC8Y1R12 but it is lapsed..
   [ECompanies.SONARCLOUD]: null,
-  [ECompanies.SUREPAY]: {
-    country: Countries.NL,
-    code: '7245002VP75ES3R96S70',
-    link: 'https://lei-nederland.nl/gedetailleerde-informatie/37590705/7245002VP75ES3R96S70/surepay-b-v/',
-  },
+  // [ECompanies.SUREPAY]: {
+  //   country: Countries.NL,
+  //   code: '7245002VP75ES3R96S70',
+  //   link: 'https://lei-nederland.nl/gedetailleerde-informatie/37590705/7245002VP75ES3R96S70/surepay-b-v/',
+  // },
   [ECompanies.TWILIO]: {
     country: Countries.US,
     code: '5493004W8TRGD63APX93',

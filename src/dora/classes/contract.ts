@@ -26,14 +26,15 @@ import {
 } from '../data-classes/contract-data/contract-substitutability.constants';
 import { ICompanyIndentification } from '../common/interfaces/company-id.interface';
 import {
-  SUBSTITUTABILITY_REASONS,
-  TSubstitutabilityReason, TSubstitutabilityReasonKey,
+  TSubstitutabilityReason,
 } from '../data-classes/closed-options/substitutability-reasons.types';
+import { FunctionDescriptor } from './function';
 
 export class Contract {
   // ID and references
   id: EContracts;
   tpspInstance: Company;
+  functions: FunctionDescriptor[];
 
   // Data
   financialEntityLei: string;
@@ -93,6 +94,7 @@ export class Contract {
   ) {
     // References
     this.id = id;
+    this.functions = [];
 
     // Contract data
     this.financialEntityLei = ALL_COMPANY_INSTANCES[
@@ -141,7 +143,7 @@ export class Contract {
 
   get functionIdentifiers(): string {
     let functionIdentifierPattern = '';
-    const functionIds = this.tpspInstance.functions.map(x => x.id);
+    const functionIds = this.functions.map(x => x.id);
     for (let i = 0; i < functionIds.length; i++) {
       functionIdentifierPattern += functionIds[i];
       if (i !== functionIds.length - 1) {

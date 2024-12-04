@@ -17,7 +17,7 @@ export const CONTRACT_TO_COMPANY_MAPPING: Record<EContracts, ECompanies> = {
   /**
    * NOT CRITICAL
    */
-  [EContracts.AFAS]: ECompanies.AFAS,
+  [EContracts.AFAS]: ECompanies.FLANTUA,
   [EContracts.BITVAVO]: ECompanies.BITVAVO,
   [EContracts.CHAINSTACK]: ECompanies.CHAINSTACK,
   [EContracts.EXPO]: ECompanies.EXPO,
@@ -32,7 +32,7 @@ export const CONTRACT_TO_COMPANY_MAPPING: Record<EContracts, ECompanies> = {
   [EContracts.BITWARDEN]: ECompanies.BITWARDEN,
   [EContracts.COLT]: ECompanies.COLT,
   [EContracts.GITHUB]: ECompanies.GITHUB,
-  [EContracts.IDIN]: ECompanies.IDIN,
+  [EContracts.IDIN]: ECompanies.BLUEM,
   [EContracts.LINEAR]: ECompanies.LINEAR,
   [EContracts.PAY_DOT]: ECompanies.PAY_DOT,
   [EContracts.POSTCODEDOTNL]: ECompanies.POSTCODEDOTNL,
@@ -40,6 +40,7 @@ export const CONTRACT_TO_COMPANY_MAPPING: Record<EContracts, ECompanies> = {
   [EContracts.SENTRY]: ECompanies.SENTRY,
   [EContracts.SLACK]: ECompanies.SLACK,
   [EContracts.SONARCLOUD]: ECompanies.SONARCLOUD,
-  [EContracts.SUREPAY]: ECompanies.SUREPAY,
+  [EContracts.SUREPAY]: ECompanies.BLUEM,
+  [EContracts.UNISCAPE]: ECompanies.UNISCAPE,
   [EContracts.VERIFF]: ECompanies.VERIFF,
 };

@@ -68,5 +68,6 @@ export const CONTRACT_COSTS: Record<EContracts, { annualCost: number, annualCost
   [EContracts.SLACK]: { annualCost: undefined, annualCostCurrency: undefined, start: undefined },
   [EContracts.SONARCLOUD]: { annualCost: undefined, annualCostCurrency: undefined, start: undefined },
   [EContracts.SUREPAY]: { annualCost: undefined, annualCostCurrency: undefined, start: undefined },
+  [EContracts.UNISCAPE]: { annualCost: undefined, annualCostCurrency: undefined, start: undefined },
   [EContracts.VERIFF]: { annualCost: undefined, annualCostCurrency: undefined, start: undefined },
 };

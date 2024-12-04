@@ -1,7 +1,6 @@
 import { ECompanies } from '../../common/companies.enum';
 
 const _COMPANY_TRADEMARKS = {
-  [ECompanies.AFAS]: 'AFAS',
   [ECompanies.ALPHABET]: 'Alphabet',
   [ECompanies.BITVAVO]: 'Bitvavo',
   [ECompanies.BITWARDEN]: 'Bitwarden',
@@ -9,6 +8,7 @@ const _COMPANY_TRADEMARKS = {
   [ECompanies.BLOCKRISE]: 'Blockrise',
   [ECompanies.BLOCKRISE_GROUP]: 'Blockrise Group',
   [ECompanies.STICHTING_BLOCKRISE]: 'Stichting Blockrise',
+  [ECompanies.BLUEM]: 'Bluem',
   [ECompanies.BUNQ]: 'Bunq',
   [ECompanies.CHAINSTACK]: 'Chainstack',
   [ECompanies.COLT]: 'Colt',
@@ -16,13 +16,12 @@ const _COMPANY_TRADEMARKS = {
   [ECompanies.COMPLYADVANTAGE]: 'ComplyAdvantage',
   [ECompanies.ELLIPTIC]: 'Elliptic',
   [ECompanies.EXPO]: 'Expo',
+  [ECompanies.FLANTUA]: 'Flantua',
   [ECompanies.GITHUB]: 'Github',
   [ECompanies.GLASSNODE]: 'Glassnode',
-  [ECompanies.GOOGLE]: 'Google',
   [ECompanies.GOOGLE_IRELAND]: 'Google (Ireland)',
   [ECompanies.GRAFANA]: 'Grafana',
   [ECompanies.HEXNODE]: 'HexNode',
-  [ECompanies.IDIN]: 'iDIN',
   [ECompanies.ING]: 'ING',
   [ECompanies.KRAKEN]: 'Kraken',
   [ECompanies.KWINZO]: 'Kwinzo',
@@ -43,7 +42,6 @@ const _COMPANY_TRADEMARKS = {
   [ECompanies.SHIFTBASE]: 'Shiftbase',
   [ECompanies.SLACK]: 'Slack',
   [ECompanies.SONARCLOUD]: 'SonarCloud',
-  [ECompanies.SUREPAY]: 'SurePay',
   [ECompanies.TWILIO]: 'Twilio',
   [ECompanies.UBIQUITI]: 'Ubiquiti',
   [ECompanies.UNISCAPE]: 'Uniscape',

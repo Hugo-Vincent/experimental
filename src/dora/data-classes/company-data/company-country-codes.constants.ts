@@ -2,10 +2,10 @@ import { ECompanies } from '../../common/companies.enum';
 import { Countries } from '../../common/countries.enum';
 
 export const COMPANY_COUNTRY_CODES: Record<ECompanies, Countries> = {
-  [ECompanies.AFAS]: Countries.NL,
   [ECompanies.ALPHABET]: Countries.US,
   [ECompanies.BITVAVO]: Countries.NL,
   [ECompanies.BITWARDEN]: Countries.US,
+  [ECompanies.BLUEM]: Countries.NL,
   [ECompanies.BLOCKRISE]: Countries.NL,
   [ECompanies.BLOCKRISE_GROUP]: Countries.NL,
   [ECompanies.STICHTING_BLOCKRISE]: Countries.NL,
@@ -15,11 +15,10 @@ export const COMPANY_COUNTRY_CODES: Record<ECompanies, Countries> = {
   [ECompanies.COMPLYADVANTAGE]: Countries.GB,
   [ECompanies.ELLIPTIC]: Countries.GB,
   [ECompanies.EXPO]: Countries.US,
+  [ECompanies.FLANTUA]: Countries.NL,
   [ECompanies.GITHUB]: Countries.US,
-  [ECompanies.GOOGLE]: Countries.US,
   [ECompanies.GOOGLE_IRELAND]: Countries.IE,
   [ECompanies.HEXNODE]: Countries.US,
-  [ECompanies.IDIN]: Countries.NL,
   [ECompanies.KRAKEN]: Countries.IE,
   [ECompanies.LINEAR]: Countries.US,
   [ECompanies.MICROSOFT]: Countries.US,
@@ -34,7 +33,6 @@ export const COMPANY_COUNTRY_CODES: Record<ECompanies, Countries> = {
   [ECompanies.SENTRY]: Countries.US,
   [ECompanies.SLACK]: Countries.US,
   [ECompanies.SONARCLOUD]: Countries.CH,
-  [ECompanies.SUREPAY]: Countries.NL,
   [ECompanies.TWILIO]: Countries.US,
   [ECompanies.UBIQUITI]: Countries.US,
   [ECompanies.UNISCAPE]: Countries.NL,

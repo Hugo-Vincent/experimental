@@ -1,6 +1,6 @@
 export enum EContracts {
   /**
-   * CRITICAL
+   * CRITICAL (7)
    */
   BUNQ_BLOCKRISE_BV = 'CONTRACT_1',
   BUNQ_BLOCKRISE_STICHTING = 'CONTRACT_2',
@@ -10,7 +10,7 @@ export enum EContracts {
   MICROSOFT_IRELAND = 'CONTRACT_6',
   SECUROSYS = 'CONTRACT_7',
   /**
-   * NON-CRITICAL
+   * NON-CRITICAL (27)
    */
   AFAS = 'CONTRACT_8',
   BITVAVO = 'CONTRACT_9',

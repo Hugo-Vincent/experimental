@@ -1,7 +1,6 @@
 import { ECompanies } from '../../common/companies.enum';
 
 const _COMPANY_LEGAL_NAMES = {
-  [ECompanies.AFAS]: 'Afas Software B.V.',
   [ECompanies.ALPHABET]: 'Alphabet Inc.',
   [ECompanies.BITVAVO]: 'Bitvavo B.V.',
   [ECompanies.BITWARDEN]: 'Bitwarden Inc.',
@@ -9,6 +8,7 @@ const _COMPANY_LEGAL_NAMES = {
   [ECompanies.BLOCKRISE]: 'Blockrise Capital B.V.',
   [ECompanies.BLOCKRISE_GROUP]: 'Blockrise Group B.V.',
   [ECompanies.STICHTING_BLOCKRISE]: 'Stichting Blockrise',
+  [ECompanies.BLUEM]: 'Bluem B.V.',
   [ECompanies.BUNQ]: 'Bunq B.V.',
   [ECompanies.CHAINSTACK]: 'Chainstack Pte. Ltd.',
   [ECompanies.COLT]: 'Colt Technology Services Europe Ltd.',
@@ -16,13 +16,12 @@ const _COMPANY_LEGAL_NAMES = {
   [ECompanies.COMPLYADVANTAGE]: 'Compliance Advantage Ltd.',
   [ECompanies.ELLIPTIC]: 'Elliptic Enterprises Ltd.',
   [ECompanies.EXPO]: '650 Industries, Inc.',
+  [ECompanies.FLANTUA]: 'Flantua Accountants en Adviseurs B.V.',
   [ECompanies.GITHUB]: 'Github Inc.',
   [ECompanies.GLASSNODE]: 'Glassnode Services AG',
-  [ECompanies.GOOGLE]: 'Google LLC',
   [ECompanies.GOOGLE_IRELAND]: 'Google Ireland Ltd.',
   [ECompanies.GRAFANA]: 'Grafana Labs Ltd.',
   [ECompanies.HEXNODE]: 'Mitsogo Technologies Pte. Ltd.',
-  [ECompanies.IDIN]: 'iDIN B.V.',
   [ECompanies.ING]: 'ING Bank N.V.',
   [ECompanies.KRAKEN]: 'Payward Continental Services Limited',
   [ECompanies.KWINZO]: 'Kwinzo B.V.',
@@ -43,7 +42,6 @@ const _COMPANY_LEGAL_NAMES = {
   [ECompanies.SHIFTBASE]: 'Shiftbase B.V.',
   [ECompanies.SLACK]: 'Slack Technologies Inc.',
   [ECompanies.SONARCLOUD]: 'SonarSource SA',
-  [ECompanies.SUREPAY]: 'SurePay B.V.',
   [ECompanies.TWILIO]: 'Twilio Inc.',
   [ECompanies.UBIQUITI]: 'Ubiquiti Inc.',
   [ECompanies.UNISCAPE]: 'Uniscape B.V.',

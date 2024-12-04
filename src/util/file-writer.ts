@@ -13,6 +13,10 @@ export abstract class FileWriter {
     }
   }
 
+  readFile(fileName: string) {
+    return fs.readFileSync(this.basePath + fileName, 'utf8');
+  }
+
   protected writeToFile(path: string, content: string) {
     const stream = fs.createWriteStream(path, { flags: 'a' });
     stream.write(content);
