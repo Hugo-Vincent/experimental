@@ -103,9 +103,9 @@ export const COMPANY_CRN_CODES: Record<
     link: 'https://find-and-update.company-information.service.gov.uk/company/11654191',
   },
   [ECompanies.COLT]: {
-    country: Countries.GB,
-    code: '03218510',
-    link: 'https://find-and-update.company-information.service.gov.uk/company/03218510',
+    country: Countries.NL,
+    code: '33303165',
+    link: 'https://www.kvk.nl/bestellen/#/33303165000017182891?origin=search',
   },
   [ECompanies.ELLIPTIC]: {
     country: Countries.GB,

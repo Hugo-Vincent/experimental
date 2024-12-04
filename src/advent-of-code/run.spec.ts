@@ -12,7 +12,7 @@ describe('run', () => {
     console.log(result);
   });
   it('Day 3', () => {
-    const result = new Day3().run();
+    const result = new Day3().runTwo();
     console.log(result);
   });
 });

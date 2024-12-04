@@ -37,11 +37,7 @@ export const COMPANY_LEI_CODES: Record<
   //   code: '5493007DY18BGNLDWU14',
   //   link: 'https://leiworldwide.com/lei_record/5493007DY18BGNLDWU14',
   // },
-  [ECompanies.COLT]: {
-    country: Countries.GB,
-    code: '2138004U3BWMFNR4ZW05',
-    link: 'https://leiworldwide.com/lei_record/2138004U3BWMFNR4ZW05',
-  },
+  [ECompanies.COLT]: null,
   [ECompanies.COINGECKO]: null,
   [ECompanies.COMPLYADVANTAGE]: {
     country: Countries.GB,

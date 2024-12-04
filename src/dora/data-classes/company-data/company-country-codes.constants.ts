@@ -11,7 +11,7 @@ export const COMPANY_COUNTRY_CODES: Record<ECompanies, Countries> = {
   [ECompanies.STICHTING_BLOCKRISE]: Countries.NL,
   [ECompanies.BUNQ]: Countries.NL,
   [ECompanies.CHAINSTACK]: Countries.SG,
-  [ECompanies.COLT]: Countries.GB,
+  [ECompanies.COLT]: Countries.NL,
   [ECompanies.COMPLYADVANTAGE]: Countries.GB,
   [ECompanies.ELLIPTIC]: Countries.GB,
   [ECompanies.EXPO]: Countries.US,

@@ -11,7 +11,7 @@ const _COMPANY_LEGAL_NAMES = {
   [ECompanies.BLUEM]: 'Bluem B.V.',
   [ECompanies.BUNQ]: 'Bunq B.V.',
   [ECompanies.CHAINSTACK]: 'Chainstack Pte. Ltd.',
-  [ECompanies.COLT]: 'Colt Technology Services Europe Ltd.',
+  [ECompanies.COLT]: 'Colt Technology Services B.V.',
   [ECompanies.COINGECKO]: 'Gecko Labs Pte. Ltd.',
   [ECompanies.COMPLYADVANTAGE]: 'Compliance Advantage Ltd.',
   [ECompanies.ELLIPTIC]: 'Elliptic Enterprises Ltd.',
