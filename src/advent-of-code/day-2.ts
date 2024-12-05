@@ -5,14 +5,13 @@ export class Day2 extends Day {
     super(2);
   }
 
-  parse(rawFile: string): number[][] {
-    const lines = rawFile.split('\n');
+  parse(): number[][] {
+    const lines = this.rawFile.split('\n');
     return lines.map(x => x.split(' ').map(x => Number(x)));
   }
 
   run(): number {
-    const rawFile = super.load();
-    const input = this.parse(rawFile);
+    const input = this.parse();
     let safeCount = 0;
     for (const report of input) {
       const permutations = this.createReportPermutations(report);

@@ -2,17 +2,14 @@ import { TxtFileWriter } from '../util/txt-file-writer';
 import { DIRECTORY } from './constants';
 
 export abstract class Day {
-  protected fileName: string;
+  protected rawFile: string;
 
   protected constructor(fileID: number) {
-    this.fileName = `day-${fileID}.txt`
-  }
-
-  protected load(): string {
     const txtWriter = TxtFileWriter.fromDirectory(DIRECTORY);
-    return txtWriter.readFile(this.fileName);
+    this.rawFile = txtWriter.readFile(`day-${fileID}.txt`)
   }
 
-  protected abstract parse(rawFile: string): any;
-  protected abstract run(): void;
+  protected abstract parse(): any;
+
+  abstract run(): void;
 }
