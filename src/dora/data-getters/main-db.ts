@@ -36,7 +36,8 @@ class MainDB {
       // Set Contract on TPSP
       tpsp.contract = contract;
     });
-    console.log(this.contract.getAllContractsArray().map(x => x.tpspInstance.legalName));
+    console.log(this.contract.getAllContractsArray().map(x => x.tpspInstance.id).slice(0,10));
+    console.log(this.contract.getNonCriticalContractsArray().map(x => x.tpspInstance.id));
   }
 }
 export const MAIN_DB = new MainDB();

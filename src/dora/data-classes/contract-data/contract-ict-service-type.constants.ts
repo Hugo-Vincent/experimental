@@ -12,11 +12,11 @@ export const CONTRACT_ICT_SERVICE_TYPES: Record<EContracts, TICTService> = {
   CONTRACT_5: ICT_SERVICE_TYPES[17],
   CONTRACT_6: ICT_SERVICE_TYPES[19],
   CONTRACT_7: ICT_SERVICE_TYPES[19],
-  CONTRACT_8: ICT_SERVICE_TYPES[18],
 
   /**
    * NON-CRITICAL
    */
+  CONTRACT_8: undefined,
   CONTRACT_9: undefined,
   CONTRACT_10: undefined,
   CONTRACT_11: undefined,

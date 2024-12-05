@@ -56,7 +56,7 @@ export class Company {
     this.entityType = COMPANY_ENTITY_TYPES[company];
 
     const companyIdType = this.getIdType(company);
-    const typeOfCode: TCodeType = companyIdType === 'LEI' ? 'LEI' : `${this.country}_${companyIdType}`;
+    const typeOfCode: TCodeType = companyIdType === 'LEI' ? 'LEI' : `${CODETYPE_TO_CODEMAP[companyIdType][company].country}_${companyIdType}`;
     this.companyIdentification = { ...CODETYPE_TO_CODEMAP[companyIdType][company], typeOfCode };
     this.hierarchy = HIERARCHY_TYPES[COMPANY_HIERARCHY_TYPE_KEYS[company]];
     this.parentID = COMPANY_PARENT_UNDERTAKINGS[company];

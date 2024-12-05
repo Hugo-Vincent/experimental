@@ -16,7 +16,7 @@ const _CRITICALITY_CONTRACTS = {
   /**
    * NOT CRITICAL
    */
-  [EContracts.AFAS]: 'non-critical',
+  [EContracts.AFAS_VIA_FLANTUA]: 'non-critical',
   [EContracts.BITVAVO]: 'non-critical',
   [EContracts.CHAINSTACK]: 'non-critical',
   [EContracts.EXPO]: 'non-critical',
@@ -26,20 +26,20 @@ const _CRITICALITY_CONTRACTS = {
 
   [EContracts.ZENDESK]: 'non-critical',
   [EContracts.BITWARDEN]: 'non-critical',
-  [EContracts.COLT]: 'non-critical',
+  [EContracts.UNISCAPE_COLT]: 'non-critical',
   [EContracts.GITHUB]: 'non-critical',
-  [EContracts.IDIN]: 'non-critical',
+  [EContracts.IDIN_VIA_BLUEM]: 'non-critical',
   [EContracts.LINEAR]: 'non-critical',
   [EContracts.PAY_DOT]: 'non-critical',
   [EContracts.POSTCODEDOTNL]: 'non-critical',
 
   [EContracts.SANITY]: 'non-critical',
-  [EContracts.SCRIVE]: 'non-critical',
-  [EContracts.SENDGRID]: 'non-critical',
+  [EContracts.SCRIVE_VIA_BLUEM]: 'non-critical',
+  [EContracts.SENDGRID_VIA_TWILIO]: 'non-critical',
   [EContracts.SENTRY]: 'non-critical',
   [EContracts.SLACK]: 'non-critical',
   [EContracts.SONARCLOUD]: 'non-critical',
-  [EContracts.SUREPAY]: 'non-critical',
+  [EContracts.SUREPAY_VIA_BLUEM]: 'non-critical',
   [EContracts.TWILIO]: 'non-critical',
   [EContracts.UBIQUITI]: 'non-critical',
   [EContracts.UNISCAPE]: 'non-critical',
@@ -57,34 +57,35 @@ const _CRITICAL_CONTRACTS: Record<TCriticalContract, boolean> = {
   [EContracts.SECUROSYS]: undefined,
 };
 const _NON_CRITICAL_CONTRACTS: Record<TNonCriticalContract, boolean> = {
-  [EContracts.AFAS]: undefined,
+  [EContracts.AFAS_VIA_FLANTUA]: undefined,
   [EContracts.BITVAVO]: undefined,
   [EContracts.BITWARDEN]: undefined,
   [EContracts.CHAINSTACK]: undefined,
-  [EContracts.COLT]: undefined,
   [EContracts.EXPO]: undefined,
   [EContracts.GITHUB]: undefined,
   [EContracts.HEXNODE]: undefined,
-  [EContracts.IDIN]: undefined,
+  [EContracts.IDIN_VIA_BLUEM]: undefined,
+  [EContracts.SCRIVE_VIA_BLUEM]: undefined,
+  [EContracts.SUREPAY_VIA_BLUEM]: undefined,
   [EContracts.KRAKEN]: undefined,
   [EContracts.LINEAR]: undefined,
   [EContracts.NOTION]: undefined,
   [EContracts.PAY_DOT]: undefined,
   [EContracts.POSTCODEDOTNL]: undefined,
   [EContracts.SANITY]: undefined,
-  [EContracts.SCRIVE]: undefined,
-  [EContracts.SENDGRID]: undefined,
   [EContracts.SENTRY]: undefined,
   [EContracts.SLACK]: undefined,
   [EContracts.SONARCLOUD]: undefined,
-  [EContracts.SUREPAY]: undefined,
   [EContracts.TWILIO]: undefined,
+  [EContracts.SENDGRID_VIA_TWILIO]: undefined,
   [EContracts.UBIQUITI]: undefined,
   [EContracts.UNISCAPE]: undefined,
+  [EContracts.UNISCAPE_COLT]: undefined,
   [EContracts.VERCEL]: undefined,
   [EContracts.VERIFF]: undefined,
   [EContracts.ZENDESK]: undefined,
 };
+
 
 /**
  * CRITICAL

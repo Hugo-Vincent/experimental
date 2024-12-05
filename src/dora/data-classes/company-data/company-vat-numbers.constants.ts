@@ -16,13 +16,15 @@ export const COMPANY_VAT_NUMBERS: Record<
   BITVAVO: undefined,
   BITWARDEN: undefined,
   BLOCKCHAINDOTCOM: undefined,
+
   BLOCKRISE: undefined,
   BLOCKRISE_GROUP: undefined,
+  STICHTING_BLOCKRISE: undefined,
+
   BLUEM: undefined,
   BUNQ: undefined,
   CHAINSTACK: undefined,
   COINGECKO: undefined,
-  COLT: undefined,
   COMPLYADVANTAGE: undefined,
   ELLIPTIC: undefined,
   FLANTUA: undefined,
@@ -44,18 +46,32 @@ export const COMPANY_VAT_NUMBERS: Record<
   POSTCODEDOTNL: undefined,
   QUICKNODE: undefined,
   SANITY: undefined,
-  SCRIVE: undefined,
   SECUROSYS: undefined,
-  SENDGRID: undefined,
-  SENTRY: undefined,
+  SENTRY: {
+    code: 'EU372050121',
+    country: 'EU' as Countries, // This company has a weird VAT given to foreign companies to do business in the EU
+    link: '', // Jasper invoice
+  },
   SHIFTBASE: undefined,
-  SLACK: undefined,
+  SLACK: {
+    code: 'IE3336483DH',
+    country: Countries.IE,
+    link: '', // Jasper invoice
+  },
   SONARCLOUD: undefined,
-  STICHTING_BLOCKRISE: undefined,
-  TWILIO: undefined,
+
+  TWILIO: {
+    code: 'IE3335493BH',
+    country: Countries.IE,
+    link: '', // Jasper invoice
+  },
   UBIQUITI: undefined,
   UNISCAPE: undefined,
   VERCEL: undefined,
-  VERIFF: undefined,
+  VERIFF: {
+    code: 'EE101828178',
+    country: Countries.EE,
+    link: '',
+  },
   ZENDESK: undefined,
 };
