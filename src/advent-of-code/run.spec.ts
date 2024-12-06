@@ -22,7 +22,7 @@ describe('run', () => {
     console.log(result);
   });
   it('Day 5', () => {
-    const result = new Day5().run();
+    const result = new Day5().run([]);
     console.log(result);
   });
 });
