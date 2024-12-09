@@ -48,9 +48,9 @@ export class Day5 extends Day {
         }
       }
     }
-    console.log(invalidUpdatesArr);
     return sum;
   }
+
 
   runTwo() {
     const { rulesMap, updates } = this.parse();
@@ -61,7 +61,6 @@ export class Day5 extends Day {
     // Fix all updates by reference
     for (const update of invalidUpdatesArray) {
       for (let i = update.length - 1; i > 0; i--) {
-        console.log(i);
         const currentNumber = update[i];
         if (!rulesMap[currentNumber]) continue;
         let fixedNumber = true;
@@ -80,6 +79,8 @@ export class Day5 extends Day {
     return sum;
   }
 
+
+
   private fixOneUpdateNumber(update: number[], i: number, currentNumber: number, rulesMap: Record<number, number[]>) {
     let fixedSomething = false;
     for (const ruleNum of rulesMap[currentNumber]) {
@@ -87,8 +88,8 @@ export class Day5 extends Day {
         let ruleNumIndex = update.findIndex((x) => x === ruleNum);
         while (ruleNumIndex < i) {
           const tempRight = update[ruleNumIndex + 1];
-          const tempLeft = update[ruleNumIndex];
-          update[ruleNumIndex + 1] = tempLeft;
+          const current = update[ruleNumIndex];
+          update[ruleNumIndex + 1] = current;
           update[ruleNumIndex] = tempRight;
           ruleNumIndex++;
           fixedSomething = true;
