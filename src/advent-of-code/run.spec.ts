@@ -21,14 +21,14 @@ describe('run', () => {
   it('Day 4', () => {
     const result = new Day4().runTwo();
     console.log(result);
+    console.log([3, 1, 7, 0].sort());
   });
   it('Day 5', () => {
     const result = new Day5().runTwo();
     console.log(result);
   });
-
   it('Day 7', () => {
-    const result = new Day7().run();
+    const result = new Day7().test();
     console.log(result);
   });
 });

@@ -49,8 +49,7 @@ export class Day4 extends Day {
           lines[i + 1][j - 1] + lines[i][j] + lines[i - 1][j + 1],
         ];
         if (i === lines.length - 2) {
-          console.log(tlbrDiagonals);
-          console.log(bltrDiagonals);
+
         }
         const ltbrCount = tlbrDiagonals
           .map(x => x.match(this.regexpMas)).filter(x => x).length;
